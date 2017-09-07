@@ -57,8 +57,6 @@ $limit = 100;
 
 while ($row = mysqli_fetch_row($stmt)) {
 
-
-
     $cnt ++;
 
     if ($limit == $cnt) { //刷新一下输出buffer，防止由于数据过多造成问题

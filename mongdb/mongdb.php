@@ -16,15 +16,15 @@ $db = $conn->test;
 // 制定结果集（表名：user）
 $collection = $db->user;
 //新增
-$user = array('name' => "张三", 'email' => 'admin@three.com');
-$collection->insert($user);
+//$user = array('name' => "张三", 'email' => 'admin@three.com');
+//$collection->insert($user);
 // 修改更新
-$newdata = array('$set' => array("email" => "test@test.com"));
-$collection->update(array("name" => "张三"), $newdata);
+//$newdata = array('$set' => array("email" => "test@test.com"));
+//$collection->update(array("name" => "张三"), $newdata);
 //查找一条
 //$user = $collection->findOne(array('name' => '张三'), array('email'))['email'];      // 查找一条name为张三的email
 $user = $collection->findOne(array('name' => "张三"));      // 查找一条name为张三的所有信息
-var_dump($user);
+//$cursor = $collection->find(array('name' => "张三"));      // 查找所有name为张三的所有信息
 //$collection->remove(array('name'=>'张三'), array("justOne" => true));      // 删除
 $cursor=$collection->find();
 foreach ($cursor as $obj)
@@ -34,7 +34,7 @@ foreach ($cursor as $obj)
 //统计个数
 echo $collection->count();
 //删除所有数据
-$collection->remove();
+//$collection->remove();
 //断开MongoDB连接
 $conn->close();
 
