@@ -1,5 +1,7 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
+ini_set("memory_limit",-1);
+//$mongo=new Mongo();
 $mongo=new Mongo();
 $md=$mongo->test->md;//md集合
 $row=$md->find();
@@ -9,7 +11,7 @@ foreach ($row as $k){
 if(empty($exist)||!isset($exist)){
     $conn=mysqli_connect("127.0.0.1",'root','root','test')or die('error');
     mysqli_query($conn,'set names utf8');
-    $sql="select * from md limit 2";
+    $sql="select * from md limit 50";
     $stmt=mysqli_query($conn,$sql);
     foreach ($stmt as $v){
         $data[]=$v;

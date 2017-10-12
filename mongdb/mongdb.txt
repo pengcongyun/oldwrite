@@ -1,48 +1,48 @@
-¿ªÆô£º
-D:\MongoDB\bin> mongod.exe --dbpath "d:\MongoDB\data" 
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+D:\MongoDB\bin> mongod.exe --dbpath "d:\mongdb\data"
 D:\MongoDB\bin> mongo.exe
 
-±£´æ
+ï¿½ï¿½ï¿½ï¿½
 db.test.save({"a":11})
 db.test.insert({"name":222})
-¶ÁÈ¡
+ï¿½ï¿½È¡
 db.test.find()
 
-Êý¾Ý¿â²Ù×÷£º
+ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 show dbs
 use test
 
-´´½¨Êý¾Ý¿â
-use data1   ½¨±ídata1
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
+use data1   ï¿½ï¿½ï¿½ï¿½data1
 
-¼ì²éµ±Ç°Ê¹ÓÃµÄÊý¾Ý¿â£º
+ï¿½ï¿½éµ±Ç°Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ý¿â£º
 db 
 
-É¾³ýÊý¾Ý¿â
+É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
 use test1
-db.dropDatebase()  //É¾³ýÊý¾Ý¿âtest1
+db.dropDatebase()  //É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½test1
 
-Ê¹ÓÃ¼¯ºÏ
-´´½¨¼¯ºÏmycol
+Ê¹ï¿½Ã¼ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mycol
 db.createCollection("mycol", { capped : true, autoIndexID : true, size : 6142800, max : 10000 } )
-ÔÚMongoDBÖÐ²¢²»ÐèÒª´´½¨¼¯ºÏ¡£ µ±²åÈëÒ»Ð©ÎÄµµ MongoDB »á×Ô¶¯´´½¨¼¯ºÏ¡£
+ï¿½ï¿½MongoDBï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ð©ï¿½Äµï¿½ MongoDB ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½
 db.yiibai.insert({"name" : "yiibai"})
-É¾³ý¼¯ºÏ 
-db.COLLECTION_NAME.drop()   //¼¯ºÏÃû
-ÒªÒÔµ¥¸ö²éÑ¯²åÈë¶à¸öÎÄµµ£¬¿ÉÒÔÍ¨¹ýÎÄµµ insert() ÃüÁîµÄÊý×é·½Ê½
+É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+db.COLLECTION_NAME.drop()   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+Òªï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Äµï¿½ insert() ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é·½Ê½
 
-MongoDB Update() ·½·¨
+MongoDB Update() ï¿½ï¿½ï¿½ï¿½
 db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}})
-MongoDB Save() ·½·¨
+MongoDB Save() ï¿½ï¿½ï¿½ï¿½
 db.mycol.save(
    {
       "_id" : ObjectId(5983548781331adf45ec7), "title":"Yiibai Yiibai New Topic", "by":"Yiibai Yiibai"
    }
 )
-É¾³ýÖ¸¶¨
+É¾ï¿½ï¿½Ö¸ï¿½ï¿½
 db.mycol.remove({'title':'MongoDB Overview'})
-É¾³ý¼¯ºÏËùÓÐ
+É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 db.mycol.remove()
 
-mongdbÀ©Õ¹ÏÂÔØ
+mongdbï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½
 http://pecl.php.net/package/mongo

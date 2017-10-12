@@ -16,8 +16,8 @@ $db = $conn->test;
 // 制定结果集（表名：user）
 $collection = $db->user;
 //新增
-//$user = array('name' => "张三", 'email' => 'admin@three.com');
-//$collection->insert($user);
+$user = array('name' => "张三", 'email' => 'admin@three.com');
+$collection->insert($user);
 // 修改更新
 //$newdata = array('$set' => array("email" => "test@test.com"));
 //$collection->update(array("name" => "张三"), $newdata);
