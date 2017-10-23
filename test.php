@@ -3,4 +3,4 @@
         <input type="text" placeholder="请输入动态密码" class="yanzheng">
         <input type="button" value="获取动态密码" class="bt" id="btn">
         <input type="submit" value="登陆" class="denglu">
-  </form>
+</form>
