@@ -12,3 +12,4 @@ echo '$hello';
 echo "$a";
 echo '$a';
 
+echo 1111;
