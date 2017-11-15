@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片剪切</title>
+    <script src="./jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<h2 class="title">
+    <a href="http://www.sucaihuo.com/js/73.html">PHP+Jcrop+artDialog头像上传</a>
+</h2>
+<input type="file" name="head_photo" id="head_photo" value="" />
+<input type="hidden" name="photo_pic" id="photo_pic" value="" />
+<!--头像显示-->
+<div id="show_photo" style="border:1px solid #f7f7f7;width:66px;height:66px;">
+    <img id="head_photo_src" src="" />
+</div>
+<!--<div class="container">-->
+    <!--<div class="demo">-->
+        <!--<h2 class="title"><a href="http://www.sucaihuo.com/js/73.html">PHP+Jcrop+artDialog头像上传</a></h2>-->
+        <!--<input type="file" name="head_photo" id="head_photo" value="">-->
+        <!--<input type="hidden" name="photo_pic" id="photo_pic" value="">-->
+        <!--&lt;!&ndash;头像显示&ndash;&gt;-->
+        <!--<div id="show_photo" style="border:1px solid #f7f7f7;width:66px;height:66px;"><img id="head_photo_src" src=""></div>-->
+    <!--</div>-->
+<!--</div>-->
+</body>
+<script type="text/javascript" src="./jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./js/ajaxfileupload.js"></script>
+<script type="text/javascript" src="./js/jquery.artDialog.js?skin=default"></script>
+<script type="text/javascript" src="./js/iframeTools.js"></script>
+<script>
+//    function ajaxFileUploadview(imgid, hiddenid, url) {
+//        $.ajaxFileUpload({
+//            url: url,
+//            secureuri: false,
+//            fileElementId: imgid,
+//            dataType: 'json',
+//            data: {
+//                name: 'logan',
+//                id: 'id'
+//            },
+//            success: function(data, status) {
+//                if (typeof(data.error) != 'undefined') {
+//                    if (data.error != '') {
+//                        var dialog = art.dialog({
+//                            title: false,
+//                            fixed: true,
+//                            padding: 0
+//                        });
+//                        dialog.time(2).content("<div class='tips'>" + data.error + "</div>");
+//                    } else {
+//                        var resp = data.msg;
+//                        if (resp != '0000') {
+//                            var dialog = art.dialog({
+//                                title: false,
+//                                fixed: true,
+//                                padding: 0
+//                            });
+//                            dialog.time(2).content("<div class='tips'>" + data.error + "</div>");
+//                            return false;
+//                        } else {
+//                            $('#' + hiddenid).val(data.imgurl);
+//
+//                            art.dialog.open("crop_image.php?img=" + data.imgurl, {
+//                                title: '裁剪头像',
+//                                width: '580px',
+//                                height: '400px'
+//                            });
+//
+//                            //dialog.time(3).content("<div class='msg-all-succeed'>上传成功！</div>");
+//                        }
+//                    }
+//                }
+//            },
+//            error: function(data, status, e) {
+//                dialog.time(3).content("<div class='tips'>" + e + "</div>");
+//            }
+//        })
+//
+//        return false;
+//    }
+</script>
+<script type="text/javascript">
+    $(function() {
+        $('#head_photo').live('change', function() {
+            ajaxFileUploadview('head_photo', 'photo_pic', "upload.php");
+        });
+
+    });
+    function show_head(head_file) {
+        //$.post("{:U('Home/Index/update_head')}",{head_file:head_file},function(result){
+        $("#head_photo_src").attr('src', head_file);
+        //});
+    }
+
+    //文件上传带预览
+    function ajaxFileUploadview(imgid, hiddenid, url) {
+        $.ajaxFileUpload({
+            url: url,
+            secureuri: false,
+            fileElementId: imgid,
+            dataType: 'json',
+            data: {name: 'logan', id: 'id'},
+            success: function(data, status) {
+                if (typeof (data.error) != 'undefined') {
+                    if (data.error != '') {
+                        var dialog = art.dialog({title: false, fixed: true, padding: 0});
+                        dialog.time(2).content("<div class='tips'>" + data.error + "</div>");
+                    } else {
+                        var resp = data.msg;
+                        if (resp != '0000') {
+                            var dialog = art.dialog({title: false, fixed: true, padding: 0});
+                            dialog.time(2).content("<div class='tips'>" + data.error + "</div>");
+                            return false;
+                        } else {
+                            $('#' + hiddenid).val(data.imgurl);
+
+                            art.dialog.open("crop_image.php?img=" + data.imgurl, {
+                                title: '裁剪头像',
+                                width: '580px',
+                                height: '400px'
+                            });
+
+                            //dialog.time(3).content("<div class='msg-all-succeed'>上传成功！</div>");
+                        }
+                    }
+                }
+            },
+            error: function(data, status, e) {
+                dialog.time(3).content("<div class='tips'>" + e + "</div>");
+            }
+        })
+
+        return false;
+    }
+
+</script>
+</html>
