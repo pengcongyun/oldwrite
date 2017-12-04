@@ -12,4 +12,7 @@ fwrite( $ifp, base64_decode( $base_img) );
 fclose( $ifp );
 //file_put_contents('D:\phpStudy\WWW\oldwrite\qf\xx.jpg', base64_decode($base_img));
 //// 输出文件
-//echo json_encode($bases);
+$tip=[
+    'status'=>1
+];
+echo json_encode($tip);

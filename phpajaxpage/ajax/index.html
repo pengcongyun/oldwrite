@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax获取数据</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <div id="data">
+        <table id="da">
+
+        </table>
+    </div>
+</body>
+<script>
+    $(function () {
+        $.ajax({
+            type: 'POST',
+            url: './data.php',
+//            data:{'type':counter+1},
+            dataType: "json",
+            success: function(msg){
+                var result='<tr><th>'+'ID号'+'<th><tr>';
+                for(i=0;i<msg.length;i++){
+                    result+='<tr>' +
+                        '<td>'+msg[i][0].article_id+'</td>' +
+                        '<td>'+msg[i][0].category+'</td>' +
+                        '</tr>';
+                }
+                $('#da').append(result);
+            },
+            error:function (ev) {
+                console.log(ev);
+            },
+            complete:function () {
+                console.log('数据加载完成')
+            }
+        })
+    })
+</script>
+</html>

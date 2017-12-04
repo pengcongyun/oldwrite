@@ -19,7 +19,7 @@ $configs = array(
     ),
     'list_url_regexes' => array(
         "http://www.mafengwo.cn/mdd/base/list/pagedata_citylist\?page=\d+",         // 城市列表页
-        "http://www.mafengwo.cn/gonglve/ajax.php\?act=get_travellist\&mddid=\d+",   // 文章列表页
+        "http://www.mafengwo.cn/gonglve/ajaxla.php\?act=get_travellist\&mddid=\d+",   // 文章列表页
     ),
     'content_url_regexes' => array(
         "http://www.mafengwo.cn/i/\d+.html",
@@ -89,7 +89,7 @@ $spider->on_list_page = function($page, $content, $phpspider)
         {
             foreach ($out[1] as $v) 
             {
-                $url = "http://www.mafengwo.cn/gonglve/ajax.php?act=get_travellist&mddid={$v}";
+                $url = "http://www.mafengwo.cn/gonglve/ajaxla.php?act=get_travellist&mddid={$v}";
                 $options = array(
                     'method' => 'post',
                     'params' => array(
@@ -122,7 +122,7 @@ $spider->on_list_page = function($page, $content, $phpspider)
                 for ($i = 0; $i < $out[1]; $i++) 
                 {
                     $v = $page['request']['params']['mddid'];
-                    $url = "http://www.mafengwo.cn/gonglve/ajax.php?act=get_travellist&mddid={$v}&page={$i}";
+                    $url = "http://www.mafengwo.cn/gonglve/ajaxla.php?act=get_travellist&mddid={$v}&page={$i}";
                     $options = array(
                         'method' => 'post',
                         'params' => array(
