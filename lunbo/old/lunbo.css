@@ -1,0 +1,53 @@
+.banner{
+    width: 600px;
+    height: 480px;
+    background: #333333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.banner #pic{
+    width: 3000px;
+    height: 480px;
+    position: absolute;
+}
+.banner #pic .pp{
+    float: left;
+    width: 600px;
+    height: 480px;
+}
+.banner #order{
+    position: absolute;
+    bottom: 20px;
+    width: 120px;
+    height: 20px;
+    left: 240px;
+}
+.banner #order span{
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.banner #order .on{
+    background-color: red;
+}
+.banner a{
+    color: red;
+    position: absolute;
+    text-decoration: none;
+}
+.banner .next{
+    right:10px;
+}
+.banner .pre{
+    left: 10px;
+}
+.banner .dd{cursor: pointer;top:240px;background-color: black;opacity: 0.2;filter:alpha(opacity=20);}
+.banner .dd:hover{opacity: 1;filter:alpha(opacity=50);}
+
+
