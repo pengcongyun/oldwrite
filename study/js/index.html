@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="banner">
+
+    </div>
+</body>
+<script>
+    var i,j=1;
+    console.log(j);
+    console.log(i);//undifed;
+    i=1;
+    j=2;
+    console.log(i+j);
+    var a=5;
+    console.log(a);
+//    函数调用
+    function show(a,b){
+        console.log("姓名："+a+"，年龄："+b);
+    }
+    show('张三',4);
+//    匿名函数调用 一般不用
+    (function(a,b){
+        console.log("姓名："+a+"，年龄："+b);
+    })('李四',23);
+    var f=function (a,b) {
+        console.log("姓名："+a+"，年龄："+b);
+    };
+    f('王五',22);
+
+</script>
+</html>
