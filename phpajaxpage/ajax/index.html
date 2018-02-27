@@ -6,6 +6,7 @@
     <script src="../jquery.js"></script>
 </head>
 <body>
+<button id="bt">获取数据</button>
     <div id="data">
         <table id="da">
 
@@ -13,7 +14,7 @@
     </div>
 </body>
 <script>
-    $(function () {
+    function  getd() {
         $.ajax({
             type: 'POST',
             url: './data.php',
@@ -36,6 +37,9 @@
                 console.log('数据加载完成')
             }
         })
+    }
+    $("#bt").click(function () {
+        getd();
     })
 </script>
 </html>

@@ -1,4 +1,4 @@
-������
+开启MongoDB
 D:\MongoDB\bin> mongod.exe --dbpath "d:\mongdb\data"
 D:\MongoDB\bin> mongo.exe
 

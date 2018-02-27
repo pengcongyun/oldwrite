@@ -584,7 +584,7 @@ class Mimetypes
         'prc' => 'application/x-mobipocket-ebook',
         'pre' => 'application/vnd.lotus-freelance',
         'prf' => 'application/pics-rules',
-        'ps' => 'application/postscript',
+        'ps.txt' => 'application/postscript',
         'psb' => 'application/vnd.3gpp.pic-bw-small',
         'psd' => 'image/vnd.adobe.photoshop',
         'psf' => 'application/x-font-linux-psf',
