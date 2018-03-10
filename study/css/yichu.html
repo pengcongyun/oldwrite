@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字溢出</title>
+    <style>
+        .one{
+            width: 200px;
+            height: 20px;
+            border: 1px solid red;
+            line-height: 20px;
+            /*单行打点尾部...三件套*/
+            overflow:hidden;
+            text-overflow: ellipsis;/*超出部分...代替*/
+            white-space: nowrap;/*强制不换行*/
+        }
+    </style>
+</head>
+<body>
+    溢出文字，打点展示:单行文本;多行文本（截断处理）
+    <hr>
+    <h4>第一种方式</h4>
+    <p class="one">
+        我是一名上班族，作为一当姐姐的，好不容易把家里的经济照顾好后，省吃俭用攒了点儿钱，高高兴兴地打算在华府板块买套用于自己居住和父母、奶奶养老的房子。想不到，在邦泰集团旗下的邦泰华府公馆的买房经历，深受打击
+    </p>
+</body>
+</html>

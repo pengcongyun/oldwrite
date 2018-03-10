@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+    <style>
+        .test::before{
+            content: "明天,";/*在html内容前加载*/
+        }
+        .test::after{
+            content: "后天你好";/*在HTML内容后加载*/
+        }
+    </style>
+</head>
+<body>
+    <div class="test">
+        你好;
+    </div>
+    <hr>
+伪元素可用于清除浮动流：后面的就不在一行了，用于 ul div 等等
+    <style>
+        .tes::after{
+            content:"";
+            display:block;
+            clear: both;
+        }
+    </style>
+    <hr>
+行级元素只能嵌套行级元素；块级元素可以嵌套任何元素 <br>
+    列如： <p><div></div></p> 错误
+</body>
+</html>
