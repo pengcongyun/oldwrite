@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 70px;
+            height:90px;
+            background-color: #00FF00;
+            display:inline-block;
+            /*vertical-align: middle;!*调右边文字对齐位置*!*/
+        }
+        img{
+            width: 70px;
+            height:90px;
+        }
+        #first{
+            /*vertical-align: -50px;*/
+            vertical-align: middle;
+        }
+        #two{
+            width: 1200px;
+            height: 150px;
+            margin: 0 auto;
+            background-color: #2a6496;
+        }
+        #two span{
+            width: 70px;
+            height:90px;
+            background-color: #00FF00;
+            display:inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<!--里面有东西，就文字最底下对齐，没有就底对齐-->
+<div>
+    里面有东西，就文字最底下对齐
+</div>
+里面有东西，就文字最底下对齐
+<hr>
+<div>
+
+</div>
+里面没有文字，就底对齐
+<hr>
+<img src="../../xx.jpg" alt="">文字和图片底对齐
+<hr>
+<img src="../../xx.jpg" alt="" id="first">设置vertical-align:middle; 后面文字对齐位置
+<hr>
+<div id="two">
+    <span></span>你好好信息
+</div>
+
+</body>
+</html>

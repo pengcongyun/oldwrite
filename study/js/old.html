@@ -167,11 +167,38 @@
 //    console.log(typeof (12)); // typeof(12)==typeof 12
 //    console.log(typeof 12);
 
+    // .charAt(1)  把字符串的第一位拿出来；
     //类型转换
 //    Number()  转为数字
-//    parseInt() 转为整数
-    
+//    parseInt() 转为整数  parseFloat() 转为浮点类型   string() 转为字符串  .toString() 把谁转为字符串
+//    var num = parseInt(window.prompt('输入数字'));
+//    switch (num){
+//        case 1:
+//            alert(1);
+//            break;
+//        case 2:
+//            alert(2);
+//            break;
+//    }
+    //递归：找规律 返回公式
+    //递归 求阶乘
+//    function mul(n) {
+//        if(n==1){
+//            return 1;
+//        }
+//        return n*mul(n-1);
+//    }
+//     console.log(mul(3));
+//    console.log(2);
+
+    //预编译 :
+    // 1.未声明的变量就是全局变量
+    a=10;//  ==> window.a=10;
+    var a;
+    console.log(a);
+    console.log(typeof(null));
 
 
 </script>
+
 </html>
