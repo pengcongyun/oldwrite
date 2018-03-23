@@ -11,7 +11,8 @@
         width:20px;
         height: 20px;
         border: 1px solid #ccc}
-    a.selected{background: #ccc}
+    /*a.selected{background: #ccc}*/
+    a.selected{background: red}
     </style>
     <script type="text/javascript" src="../jquery.js"></script>
 </head>
@@ -39,7 +40,7 @@
                 var json = $.parseJSON(response);  //将json字符串解析成对象
                 var s = '';
                 for (var i = 0; i < json.length - 1; i++) {   //取聊天记录
-                    s += '<tr><td>' + json[i].title + '</td>' +
+                    s += '<tr><td>' + json[i].id + '</td>' +
                         '<td>' + json[i].group_name + '</td>' +
                         '<td>' + json[i].message_to + '</td>' +
                         '<td>' + json[i].message_from + '</td>' +

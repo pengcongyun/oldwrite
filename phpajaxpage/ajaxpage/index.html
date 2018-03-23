@@ -22,10 +22,12 @@
 	* @param int pageNum 页码
 	* @return string
 	*/
+
 	var cache=new Array(); // 缓存变量，当数据被访问过之后放置在缓存中，加快访问速度
 	function setPage(pageNum) {
 		var fpage = document.getElementById('fpage'); // 获取 fpage 对象
 		// 如果缓存中存在数据，那么直接从缓存中读取；如果不存在数据，那么就从数据库中读取，并把数据存入缓存
+		console.log(cache[pageNum]);
 		if (typeof(cache[pageNum])=='undefined') {
 			var ajax = Ajax();
 			ajax.get('article.php?page='+pageNum, function(data){
@@ -37,4 +39,5 @@
 		}
 	}
 	setPage(1); // 默认执行
+
 </script>
