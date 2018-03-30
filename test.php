@@ -1,15 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <style>
+<?php
+class Response{
+    static public function xml($code,$info,$data){
 
-    </style>
-</head>
-<body>
-<a id="alert" style="color: #4B91E3;font-family: Arial;font-size: 14px;cursor: pointer;position: relative;overflow: hidden;display: inline-block">
-    修改头像<input type="file" name="pic1" id="imgPicker" style="color: #4B91E3;font-family: Arial;cursor: pointer;background-color: #FFFFfF;opacity: 0;width: 56px;position: absolute;left: 0;top: 0;height: 16px;overflow: hidden; font-size:0;">
-</a>
+    }
+    static public function json($code,$info,$data){
+        //是否是数字或数字字符串
+        //return 1;
+        // return json_encode($code);
+        //  return json_encode($data);
+        $arr=[
 
-</body>
-</html>
+            'code'=>$code,
+            'info'=>$info,
+            //  'data'=>$data,
+        ];
+
+//        return json_encode($arr);
+//        exit;
+        if(!is_numeric($code)){
+            //return 1;
+            return false;
+        }
+        if($info && $data) {
+            $arr=array(
+                'code'=>$code,
+                'info'=>$info,
+                'data'=>$data,
+            );
+            // return 1;
+//            var_dump(json_encode($arr) );
+            // var_dump(json_encode($arr));
+            return json_encode($arr);
+        }else{
+            // return 1;
+            return false;
+        }
+    }
+}
+$data=[
+    ['name'=>'user1','age'=>'12'],
+    ['name'=>'user2','age'=>'12'],
+    ['name'=>'user3','age'=>'12'],
+    ['name'=>'user4','age'=>'12'],
+    ['name'=>'user5','age'=>'12'],
+];
+//echo json_encode($data);
+echo Response::json('200','成功',$data);

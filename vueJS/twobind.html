@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向绑定</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+    <!--<div id="top">-->
+        <!--{{ value }}-->
+        <!--<input type="text" v-bind:value="value" v-on:input="textput">-->
+    <!--</div>-->
+<!--<script>-->
+    <!--new Vue({-->
+        <!--el:"#top",-->
+        <!--data:{-->
+            <!--value:"旧数据",-->
+        <!--},-->
+        <!--methods:{-->
+            <!--textput:function (event) {-->
+                <!--this.value=event.target.value;-->
+            <!--}-->
+        <!--}-->
+    <!--})-->
+<!--</script>-->
+<!--双向虚拟绑定简化版 v-model== v-bind v-on -->
+    <div id="top">
+        {{ value }}
+        <!--<input type="text" v-model="value">-->
+        <!--<input type="text" v-model.trim="value">  &lt;!&ndash;输出后过滤掉空格&ndash;&gt;-->
+        <!--<input type="text" v-model.number="value">  &lt;!&ndash;如果默认有文字输出文字，value默认数字输出类型是数字&ndash;&gt;-->
+        <input type="text" v-model.lazy="value">  <!--失去焦点才绑定上去-->
+        <hr> {{ typeof value }}
+    </div>
+    <script>
+        new Vue({
+            el:"#top",
+            data:{
+                value:"你好",
+            },
+        })
+    </script>
+</body>
+</html>

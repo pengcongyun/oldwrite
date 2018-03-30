@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-html绑定HTML代码</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+<div id="top">
+    <div v-html="html"></div>
+    <br>
+    <div v-once> {{ msg }} </div>  <!--v-once只渲染一次-->
+    <button v-on:click="msg='我好'">click me</button>
+    {{ msg }}
+</div>
+<script>
+    new Vue({
+        el:'#top',
+        data:{
+            html:"<h1>一级标题</h1>",
+            msg:'你好三',
+        }
+    })
+</script>
+</body>
+</html>

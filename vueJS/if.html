@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if条件 开关灯</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-if="score > 90">90分以上可以的</p>
+        <p v-else-if="score > 80">大于80分也还行</p>
+        <p v-else="score <= 80">小于80分去死吧</p>
+        <template v-if="score > 80">
+            <p>dear Lijia</p>
+            <p>dear Xiaojing</p>
+        </template>
+
+        <span v-show="show">出来</span>
+        <span v-show="!show">隐藏</span>
+        <button v-on:click="show=!show">click show</button>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                score:70,
+                show:true,
+            }
+        })
+    </script>
+</body>
+</html>
