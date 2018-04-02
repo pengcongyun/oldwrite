@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for循环</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+<div id="top">
+    <ul>
+        <!-- v-for  变量 in 数据-->
+        <p>循环数组</p>
+        <li v-for="name in datas">{{ name }}</li>
+        <hr>
+        <p>带索引循环</p>
+        <li v-for="(name,i) in datas">{{ name }} {{ i }}</li>
+        <hr>
+    </ul>
+    <p>循环对象</p>
+    <li v-for="row in rows">
+        {{ row.name }}
+    </li>
+    <hr>
+    <p>带别名 （数据，属性名，索引）  </p>
+    <li v-for="(row,prop,index) in obj">
+        {{ prop }}:{{ row }}({{ index }})
+    </li>
+    <hr>
+    <p>循环数据</p>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>sex</th>
+        </tr>
+        <tr v-for="row in rows">
+            <td>{{ row.name }}</td>
+            <td>{{ row.sex }}</td>
+        </tr>
+    </table>
+    <hr>
+    <p>循环数字</p>
+    <div v-for="n in 10">{{ n }}</div>
+    <hr>
+    <p>内部渲染</p>
+    <ul>
+        <li v-for="data in datas">{{ data }}</li>
+    </ul>
+    <button v-on:click="changestr">click me 变哈哈哈</button>
+</div>
+<script>
+    new Vue({
+        el:'#top',
+        data:{
+            datas:['李白','杜甫','白居易'],
+            obj:{name:'libai',sex:'f',love:'pcy'},
+            rows:[
+                {name:'libai',sex:'f'},
+                {name:'doufu',sex:'m'},
+                {name:'jiuer',sex:'m'},
+            ]
+        },
+        methods:{
+            changestr:function () {
+                Vue.set(this.datas,1,'哈哈哈哈');
+                alert(this.datas[1])
+            }
+        }
+    })
+</script>
+</body>
+</html>

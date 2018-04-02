@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性computed:只执行一次，改变在执行；methods:每次都要执行</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>{{ num }}</div>
+    <!--<div>{{ getFull() }}</div>-->
+    <div>{{ getFull }}</div>
+    <button v-on:click=" num++ ">自加</button>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            num:0,
+            firstname:'congyun',
+            lastname:'peng',
+        },
+//        methods:{
+//            getFull:function () {
+//                alert('执行了');
+//                return this.lastname+" "+this.firstname;
+//            }
+//        },
+        computed:{
+            getFull:function () {
+                alert('执行了');
+                return this.lastname+" "+this.firstname;
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>filters过滤</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ msg|uppercase }}
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"hello world!",
+            },
+            filters:{
+                uppercase:function (value) {
+//                    转为大写
+                    return value.toString().toUpperCase();
+                }
+            }
+        })
+    </script>
+</body>
+</html>
