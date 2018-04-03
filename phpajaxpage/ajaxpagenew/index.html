@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax分页刷新</title>
+    <style>td{border: 1px solid #ccc}
+    table{border-collapse:collapse;text-align: center}
+    #page{margin: 50px}
+    a{text-decoration: none;
+        padding: 10px;
+        width:20px;
+        height: 20px;
+        border: 1px solid #ccc}
+    /*a.selected{background: #ccc}*/
+    a.selected{background: red}
+    </style>
+    <script type="text/javascript" src="../jquery.js"></script>
+</head>
+<body>
+<table>
+    <thead>
+    <tr><td>id</td><td>讨论组名称</td><td>发给谁</td><td>谁发的</td><td>消息内容</td></tr>
+    </thead>
+    <tbody id="content">
+    </tbody>
+    <tfoot></tfoot>
+</table>
+<div id="page"></div>
+<script type="text/javascript">
+    var page=1;  //定义是第几页
+    getList(page);
+    function getList(page) {
+        $.ajax({
+            type: "post",
+            data: {
+                page: page   //把页码发送到后台
+            },
+            url: "a.php",   //后台url
+            success: function (response) {
+                var json = $.parseJSON(response);  //将json字符串解析成对象
+                var s = '';
+                for (var i = 0; i < json.length - 1; i++) {   //取聊天记录
+                    s += '<tr><td>' + json[i].id + '</td>' +
+                        '<td>' + json[i].group_name + '</td>' +
+                        '<td>' + json[i].message_to + '</td>' +
+                        '<td>' + json[i].message_from + '</td>' +
+                        '<td>' + json[i].message_content + '</td>' +
+                        '</tr>';
+                }
+                $("#content").html(s);
+                var s = '';
+                for (var j = 1; j <= json[i].total; j++) {  //json[i].total是后台传过来的页数
+                    //输出分页链接
+                    if (page == j) s += '<a href="javascript:void(0)" data="' + j + '" class="selected">' + j + '</a>';
+                    else s += '<a href="javascript:void(0)" data="' + j + '">' + j + '</a>';
+                }
+                $("#page").html(s);
+            }
+
+        });
+    }
+    $("#page").on('click','a',function () {   //为a标签动态绑定事件
+        var page=$(this).attr("data");  //获取链接里的页码
+        getList(page);
+    });
+</script>
+</body>
+</html>

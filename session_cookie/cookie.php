@@ -7,7 +7,9 @@
  */
 header('Content-type:text/html;charset=utf8');
 //设置cookie
-//setcookie('user',111,time()+120);
+setcookie('user',111,time()+120);
 if(isset($_COOKIE['user'])) {
     echo '您的浏览器是：' . $_COOKIE['user'];
+}else{
+    echo '没有cookie';
 }

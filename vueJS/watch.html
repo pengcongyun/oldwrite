@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>watch</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="namechange">
+    <div v-if="isShow">正在输入</div>
+    <ul>
+        <li v-for="row in result">{{ row }}</li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            namechange:"",
+            isShow:false,
+            result:[]
+        },
+        watch:{
+            namechange:function (e) {
+                this.isShow = true;
+                this.result=['xiaohong','gouhua','grey'];
+            }
+        }
+    })
+</script>
+</body>
+</html>

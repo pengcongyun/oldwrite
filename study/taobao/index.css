@@ -1,0 +1,65 @@
+/*重置属性*/
+div,h1,p,h2,h3,h4,h5,h6,body{ margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+img{  border:none; padding:0;}
+body{ margin:0; background-color:#ffffff;padding:0;min-width: 1200px}
+a{ text-decoration:none; border:none; padding:0;color: #333333;cursor: pointer}
+ul{margin:0;list-style:none;padding:0;}
+li{ list-style:none; margin: 0;padding:0;}
+input{ margin:0; padding:0; border:none; outline:none;}
+select{ border:none;margin: 0;padding: 0}
+select::-ms-expand {background-color: rgba(255, 255, 255, 0.1);border: none}
+option{ border:none;}
+button{ margin:0; padding:0; border:none; outline:none;}
+/*顶部导航*/
+#top{
+    height: 40px;
+    background-color: #cccccc;
+}
+#nav{
+    height: 40px;
+    width: 1200px;
+    line-height: 40px;
+    margin: 0 auto;
+    background-color: #f2dede;
+}
+#left{
+    float: left;
+}
+#place{
+    width: 90px;
+    height: 41px;
+    font-size: 14px;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+    padding-left: 12px;
+}
+select::-ms-expand { display: none; }
+#left li{
+    float: left;
+    min-width: 90px;
+    width: auto;
+    text-align: center;
+}
+#left li:hover{
+    background-color: #00FF00;
+    cursor: pointer;
+}
+#right{
+    float: right;
+}
+#right li{
+    width: 90px;
+    float: left;
+    text-align: center;
+}
+#right li:hover{
+    background-color: #00FF00;
+    cursor: pointer;
+}

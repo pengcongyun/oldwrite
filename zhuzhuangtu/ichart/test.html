@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="ichart.1.2.1.min.js"></script>
+    <script type='text/javascript'>
+        $(function(){
+            var chart = iChart.create({
+                render:"ichart-render",
+                width:600,
+                height:300,
+                background_color:"#fefefe",
+                gradient:false,
+                color_factor:0.2,
+                border:{
+                    color:"#fffcfc",
+                    width:1
+                },
+                align:"center",
+                offsetx:0,
+                offsety:0,
+                sub_option:{
+                    border:{
+                        color:"#bc5636",//柱状图边线颜色
+                        width:1
+                    },
+                    label:{
+//                        fontweight:500,
+////                        fontsize:11,
+                        fontsize:0,//柱状图值是否显示
+//                        color:"#b3b3b3",
+//                        sign:"square",
+//                        sign_size:12,
+//                        border:{
+//                            color:"#BCBCBC",
+//                            width:1
+//                        },
+//                        background_color:"#fefefe"
+                    }
+                },
+                shadow:true,
+                shadow_color:"#666666",
+                shadow_blur:2,
+                showpercent:false,
+                column_width:"25%",
+                bar_height:"70%",
+                radius:"90%",
+                title:{
+                    text:"近六月借款人数",
+                    color:"#111111",
+                    fontsize:16,
+                    font:"Arial",
+                    textAlign:"center",
+                    height:20,
+                    offsetx:-150,
+                    offsety:0
+                },
+                subtitle:{
+                    text:"",
+                    color:"#111111",
+                    fontsize:16,
+                    font:"微软雅黑",
+                    textAlign:"center",
+                    height:20,
+                    offsetx:0,
+                    offsety:0
+                },
+                footnote:{
+                    text:"",
+                    color:"#111111",
+                    fontsize:12,
+                    font:"微软雅黑",
+                    textAlign:"right",
+                    height:20,
+                    offsetx:0,
+                    offsety:0
+                },
+                legend:{
+                    enable:false,
+                    background_color:"#fefefe",
+                    color:"#333333",
+                    fontsize:12,
+                    border:{
+                        color:"#BCBCBC",
+                        width:1
+                    },
+                    column:1,
+                    align:"right",
+                    valign:"center",
+                    offsetx:0,
+                    offsety:0
+                },
+                coordinate:{//竖直线上设置
+                    width:"60%",
+                    height:"70%",
+                    background_color:"#ffffff",
+                    axis:{
+                        color:"#d9d9d9",
+                        width:[1,"",1,1]
+//                        width:["","","",""]
+                    },
+                    grid_color:"#d6d6d6",
+                    label:{
+                        fontweight:500,
+                        color:"#666666",//竖直线文字颜色
+                        fontsize:11
+                    },
+                    scale:[{
+                        position:'left',
+                        start_scale:0,
+                        end_scale:120000,
+                        scale_space:20000
+                    }],
+                },
+                label:{//下标的颜色，大小
+                    fontweight:500,
+                    color:"#666666",
+                    fontsize:11
+                },
+                type:"column2d",//2D 3D图
+                data:[//柱状上的值大小，颜色
+                    {
+                        name:"01",
+                        value:20010,
+                        color:"#79fe5b"
+                    },{
+                        name:"02",
+                        value:31130,
+                        color:"#1377fe"
+                    },{
+                        name:"03",
+                        value:42040,
+                        color:"#1377fe"
+                    },{
+                        name:"04",
+                        value:21459,
+                        color:"#1377fe"
+                    },{
+                        name:"05",
+                        value:71016,
+                        color:"#1377fe"
+                    },{
+                        name:"06",
+                        value:50125,
+                        color:"#1377fe"
+                    }
+                ]
+            });
+            //利用自定义组件构造左侧说明文本
+            chart.plugin(new iChart.Custom({
+                drawFn:function(){
+                    //计算位置
+                    var coo = chart.getCoordinate(),
+                        x = coo.get('originx'),
+                        y = coo.get('originy');
+                    //在左上侧的位置，渲染一个单位的文字
+                    chart.target.textAlign('start')
+                        .textBaseline('bottom')
+                        .textFont('600 11px Verdana')
+                        .fillText('(万人)',x-10,y-10,false,'#6d869f');
+                    //在右下侧的位置，渲染一个单位的文字
+                    chart.target.textAlign('start')
+                        .textBaseline('bottom')
+                        .textFont('600 11px Verdana')
+                        .fillText('(万人)',x+330,y+200,false,'#6d869f');
+                }
+            }));
+            chart.draw();
+        });
+    </script>
+</head>
+<body>
+    <div id='ichart-render'></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue js</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <i>name : </i>{{ name }}
+    <hr>
+    <span v-on:click="cme" style="cursor:pointer">click me</span>
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            name:"CleverCloud",
+
+        },
+        methods:{
+            cme:function () {
+                alert("click me");
+            }
+        }
+    })
+</script>
+</body>
+</html>

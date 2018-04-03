@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抛锚回找</title>
+</head>
+<body>
+<input type="text" name="username" value="请输入用户名" onblur="if(this.value==' '){this.value='请输入用户名'}" onfocus="if(this.value=='请输入用户名'){this.value=' '}">
+<hr>
+a标签使用：
+1.超链接；2.锚点；3.app里打电话 <a href="tel:18140014103">联系我们</a>
+4.发邮件(不常用) <a href="mailto:1558785477@qq.com">发邮件</a>
+5.协议限定符 <a href="javascript:alert(11)">跳转Javascript</a>
+<div id="red" style="width: 100px;height: 100px;background-color: red"></div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="blue" style="width: 100px;height: 100px;background-color: blue"></div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<a href="#red">找红</a>
+<a href="#blue">找蓝</a>
+</body>
+</html>

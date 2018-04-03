@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./jquery.js"></script>
+    <script src="./dropload.min.js"></script>
+    <script src="./zepto.min.js"></script>
+</head>
+<body>
+    无数据啊
+    <div id="drop">
+        <div id="da"></div>
+    </div>
+</body>
+<script>
+    $(function(){
+        var counter = 0;
+        $('.drop').dropload({
+            scrollArea : window,
+            loadDownFn : function(me){
+                $.ajax({
+                    type: 'POST',
+                    url: './data.php',
+                    data:{'type':counter+1},
+                    dataType: "json",
+                    success: function(msg){
+                    var result = '';
+                    counter++;
+                    for(var i = 0; i < msg.length; i++){
+                        result += '<div class="p-c-list-a" style="height: 20px;">' +
+                            ' <div class="p-c-l-a-title">'+msg[i]+'</div>' +
+                            '</div>';
+//                        if(msg.length-1==i){
+//                            me.noData();
+//                            me.lock();
+//                            break;
+//                        }
+                    }
+                    // 为了测试，延迟1秒加载
+                    setTimeout(function(){
+                        $('#da').append(result);
+                        // 每次数据加载完，必须重置
+                        me.resetload();
+                    },1000);
+                },
+                error: function(xhr, type){
+                    console.log('Ajax error!');
+                    // 即使加载出错，也得重置
+                    me.resetload();
+                }
+            });
+            }
+        });
+    });
+</script>
+</html>

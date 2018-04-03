@@ -1,0 +1,37 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title> 登录</title>
+    <style>
+        *{margin: 0;padding: 0;list-style: none}
+        body{overflow: hidden; }
+        #bg_wrap{width: 100%;height: 100%;position: absolute;left: 0px;top: 0px;overflow: hidden;}
+        #bg_wrap div{width: 100%;height: 100%;position: absolute;left: 0px;top: 0px;opacity: 0;transition:opacity 3s; }
+        #bg_wrap div:nth-of-type(1){opacity: 1;}
+    </style>
+    <script href="../../jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<div id="bg_wrap">
+    <div style="opacity: 0;"><img src="./img/1.jpg" alt="" width="100%" height="100%"></div>
+    <div style="opacity: 1;"><img src="./img/2.jpg" alt="" width="100%" height="100%"></div>
+    <div style="opacity: 0;"><img src="./img/3.jpg" alt="" width="100%" height="100%"></div>
+</div>
+
+<script>
+    //背景轮播
+    (function(){
+        var timer=null;
+        oImg=document.querySelectorAll('#bg_wrap div');
+        var len=oImg.length;
+        var index=0;
+        timer=setInterval(function () {
+            oImg[index].style.opacity=0;
+            index++;
+            index%=len;
+            oImg[index].style.opacity=1;
+        },3000)
+    })();
+</script>
+
+</body>
+</html>

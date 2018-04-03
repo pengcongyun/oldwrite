@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!--英文要换行加空格，才能识别出是一个单词，否则当成一个单词，不予换行，空格：文本分隔符，多少个都当一个使用-->
+    <div style="height: 150px;width: 150px;background-color: red;">
+        sdafasfs dafasdfsdaffsdafsda
+    </div>
+    <br>
+    <!--中文自动换行了-->
+    <div style="height: 150px;width: 150px;background-color: red;">
+        暗室逢灯是打发打发发是打发打发防守打法
+    </div>
+    <hr>
+    <!--有序列表-->
+    <ol type="1" reversed><!--默认type为1,reversed倒序-->
+        默认type为1,reversed倒序
+        <li>电影</li>
+        <li>电视</li>
+        <li>李嘉</li>
+        <li>至尊</li>
+    </ol>
+    <ol type="a" start="3"><!--多于26个就aa-->
+        多于26个就aa，start="3"从c开始排
+        <li>李嘉</li>
+        <li>至尊</li>
+    </ol>
+    <ol type="A">
+        <li>电影</li>
+        <li>电视</li>
+        <li>李嘉</li>
+        <li>至尊</li>
+    </ol>
+    <ol type="I">
+        <li>电影</li>
+        <li>电视</li>
+        <li>李嘉</li>
+        <li>至尊</li>
+    </ol>
+    <ol type="i">
+        <li>电影</li>
+        <li>电视</li>
+        <li>李嘉</li>
+        <li>至尊</li>
+    </ol>
+    <!--无序列表-->
+    <ul type="circle">
+        <!--去点-->	空心圆。
+        <li style="list-style: none;">无序</li>
+        <li>序序列表</li>
+    </ul>
+    <ul type="square">
+        <!--去点-->	实心方块。
+        <li style="list-style: none;">无序</li>
+        <li>序序列表</li>
+    </ul>
+    <ul type="disc">
+        <!--去点-->	默认值。实心圆。
+        <li style="list-style: none;">无序</li>
+        <li>序序列表</li>
+    </ul>
+</body>
+</html>

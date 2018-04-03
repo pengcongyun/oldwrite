@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ message }}</p>
+    <p>
+        全名:{{ getFullName() }}
+    </p>
+    <p>
+        使用函数拆分:{{ fullname.split(" ")[0] }}
+    </p>
+    <p>
+        传参传入:{{ getname(firstname,lastname) }}
+    </p>
+    <a :href="url">vue指令绑定</a>
+    <a v-bind:href="url">vue指令绑定</a>  <!--指令绑定2种方式-->
+    <hr>
+    <img :src="img" alt="" width="">
+    <!--<img v-bind:src="img" alt="">-->
+    <hr>
+    <button v-on:click="showsome()">点击我 事件绑定</button>
+    <hr>
+    <input type="text" v-on:keyup="keyup"> <!--()有传参-->
+    <input type="text" v-on:keyup.enter.space="keyup1">  <!--按键输入空格和enter都能触发-->
+    <hr>
+    <!--<form action="">-->
+    <form action="" v-on:submit.prevent="sub">
+        <input type="text">
+        <input type="submit" value="提交事件阻止">
+    </form>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!', //{{message}} 渲染到页面
+            firstname:"peng",
+            lastname:"yun",
+            fullname:"peng yun",
+            url:'http://www.baidu.com',
+            img:"../01.jpg"
+        },
+        methods:{//定义方法
+            getFullName : function(){
+                return this.firstname+" "+this.lastname;
+            },
+            getname:function (x,y) {
+                return x+" "+y;
+            },
+            showsome:function () {
+                console.log(event);
+                alert("show something");
+            },
+            keyup:function (event) {
+                if(event.which==13){
+                    alert("you press enter");
+                }
+            },
+            keyup1:function () {
+                alert(22);
+            },
+            sub:function () {
+                console.log('提交事件阻止');
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

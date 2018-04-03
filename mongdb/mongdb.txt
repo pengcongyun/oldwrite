@@ -1,48 +1,48 @@
-������
-D:\MongoDB\bin> mongod.exe --dbpath "d:\mongdb\data"
+开启：
+D:\MongoDB\bin> mongod.exe --dbpath "D:\mongdb\data"
 D:\MongoDB\bin> mongo.exe
 
-����
+保存
 db.test.save({"a":11})
 db.test.insert({"name":222})
-��ȡ
+读取
 db.test.find()
 
-���ݿ������
+数据库操作：
 show dbs
 use test
 
-�������ݿ�
-use data1   ����data1
+创建数据库
+use data1   建表data1
 
-��鵱ǰʹ�õ����ݿ⣺
-db 
+检查当前使用的数据库：
+db
 
-ɾ�����ݿ�
+删除数据库
 use test1
-db.dropDatebase()  //ɾ�����ݿ�test1
+db.dropdatabase()  //删除数据库test1
 
-ʹ�ü���
-��������mycol
+使用集合
+创建集合mycol
 db.createCollection("mycol", { capped : true, autoIndexID : true, size : 6142800, max : 10000 } )
-��MongoDB�в�����Ҫ�������ϡ� ������һЩ�ĵ� MongoDB ���Զ��������ϡ�
+在MongoDB中并不需要创建集合。 当插入一些文档 MongoDB 会自动创建集合。
 db.yiibai.insert({"name" : "yiibai"})
-ɾ������ 
-db.COLLECTION_NAME.drop()   //������
-Ҫ�Ե�����ѯ�������ĵ�������ͨ���ĵ� insert() ��������鷽ʽ
+删除集合
+db.COLLECTION_NAME.drop()   //集合名
+要以单个查询插入多个文档，可以通过文档 insert() 命令的数组方式
 
-MongoDB Update() ����
+MongoDB Update() 方法
 db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}})
-MongoDB Save() ����
+MongoDB Save() 方法
 db.mycol.save(
    {
       "_id" : ObjectId(5983548781331adf45ec7), "title":"Yiibai Yiibai New Topic", "by":"Yiibai Yiibai"
    }
 )
-ɾ��ָ��
+删除指定
 db.mycol.remove({'title':'MongoDB Overview'})
-ɾ����������
+删除集合所有
 db.mycol.remove()
 
-mongdb��չ����
+mongdb扩展下载 客户端
 http://pecl.php.net/package/mongo

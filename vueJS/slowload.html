@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>慢加载处理</title>
+    <style>
+        [v-cloak]{
+            display:none;
+        }
+    </style>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+    <div id="app" v-cloak>
+        {{ msg }}
+    </div>
+    <script>
+        setTimeout(function () {
+            new Vue({
+                el:'#app',
+                data:{
+                    msg:'数据出来'
+                }
+            })
+        },4000);
+    </script>
+</body>
+</html>

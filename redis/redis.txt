@@ -1,0 +1,14 @@
+启动
+redis-server.exe redis.conf  或者  redis-server.exe
+
+第一种：
+http://www.cnblogs.com/peteremperor/p/6635767.html
+redis-server.exe redis.windows.conf
+第二种：
+https://github.com/dmajkic/redis/downloads 下载第一个
+cd 64 目录  redis-server.exe redis.conf
+
+Windows各版本下载
+http://windows.php.net/downloads/pecl/releases/redis/2.2.7/
+解压发到 php ext里，然后在php.ini 添加这两个扩展；
+即可使用  redis 类

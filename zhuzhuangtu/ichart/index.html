@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>柱状图</title>
+    <script src="ichart.1.2.1.min.js"></script>
+</head>
+<body>
+http://www.ichartjs.com/
+    <div id='canvasDiv'></div>
+</body>
+<script>
+    $(function(){
+        var data = [
+            {
+//                name : '近六月借款人数',
+                value:[1045,1052,2054,4074,1090,8104],
+                color:'#1385a5'
+            }
+//            {
+//                name : 'DPS01B',
+//                value:[60,80,105,125,108,120],
+//                color:'#c56966'
+//            }
+        ];
+        var chart = new iChart.ColumnMulti2D({
+            render : 'canvasDiv',
+            data: data,
+            labels:["一月","二月","三月","四月","五月","六月"],
+            title : 'DPS01A型号比DPS01B型号的产品更受用户喜欢',
+            subtitle : '2012上半年DPS01A型号与DPS01B型号的鼠标销售比较,单位:万台',
+            footnote : '数据来源：销售中心',
+            width : 800,
+            height : 400,
+            background_color : '#ffffff',
+            legend:{
+                enable:true,
+                background_color : null,
+                border : {
+                    enable : false
+                }
+            },
+//            coordinate:{
+//                background_color : '#f1f1f1',
+//                scale:[{
+//                    position:'left',
+//                    start_scale:0,
+//                    end_scale:140,
+//                    scale_space:20
+//                }],
+//                width:600,
+//                height:260
+//            }
+            coordinate:{
+                background_color : '#f1f1f1',
+                scale:[{
+                    position:'left',
+                    start_scale:2000,
+                    end_scale:14000,
+                    scale_space:2000
+                }],
+//                width:150,
+//                height:200
+
+            }
+        });
+        chart.draw();
+    });
+</script>
+</html>
