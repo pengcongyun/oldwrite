@@ -1,0 +1,44 @@
+一、ajax传数据两种方式
+1.vue-resource.js
+this.$http.get('ajax.php').then(function(data) {
+    msgg=JSON.parse(data.body);//将字符串转为json对象
+    _self.msg = msgg;
+})
+2.axios.min.js
+Vue.prototype.$http = axios;
+this.$http.get('ajax.php').then(function (data) {
+     _self.msg=data.data.msg;
+});
+
+二、过滤器filter
+    见filter.html
+
+三、for循环 见for.html
+    <li v-for="name in datas">{{ name }}</li>
+
+四、if条件 见if.html
+    <p v-if="score > 90">90分以上可以的</p>
+    <p v-else-if="score > 80">大于80分也还行</p>
+    <p v-else="score <= 80">小于80分去死吧</p>
+
+五、指令绑定v-bind   v-on
+    <a :href="url">vue指令绑定</a>
+    <a v-bind:href="url">vue指令绑定</a>
+     <button v-on:click="showsome()">点击我 事件绑定</button>
+
+六、computed计算，methods方法，created 调用ajax获取页面初始化所需的数据
+
+七、style绑定 v-bind:style
+
+八、监听watch  配合v-model= 使用
+
+九、组件
+    Vue.component("my-component",{
+        template:`<div><h1>联系方式</h1><p>{{msg}}</p></div>`,
+        data:function () {
+            return {
+                msg:135020102
+            }
+        }
+    })
+

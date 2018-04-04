@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定style</title>
+    <script src="./vue.min.js"></script>
+</head>
+<body>
+    <div id="app" v-bind:style="[top,onblur]">
+        <a v-bind:href="url" >欢迎来到德莱联盟</a>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                url:'https://www.baidu.com',
+                top:{
+                    'width':'100px',
+                    'height':'40px',
+                    'background':'red'
+                },
+                onblur:{
+                    'font-size':'12px'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

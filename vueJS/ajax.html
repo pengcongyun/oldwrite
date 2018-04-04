@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>vue ajax获取数据</title>
+    <title>vue ajax获取数据之vue-resource</title>
     <script src="./vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>-->
+    <script src="./vue-resource.min.js"></script>
 </head>
 <body>
 <div id="app">
-    {{ msg }}
+    {{ msg }} {{ msg.msg }}
 </div>
 <script>
     new Vue({
         el:"#app",
         data:{
             msg:'',
+
         },
         created:function () {
             var _self = this;
             this.$http.get('ajax.php').then(function(data) {
-                console.log(data.body);
-                _self.msg = data.body;
+                msgg=JSON.parse(data.body);//将字符串转为json对象
+                _self.msg = msgg;
             })
         }
     })

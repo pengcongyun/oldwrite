@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中ajax使用之axios </title>
+    <script src="./vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ msg }}</p>
+    <button v-on:click="getdata">get</button>
+</div>
+<script>
+    Vue.prototype.$http = axios;
+    new Vue({
+        el:'#app',
+        data:{
+            msg:'1',
+        },
+        /*created页面加载完立即执行*/
+//        created:function () {
+////            var _self = this;
+//            this.$http.get('ajax.php').then(function (response) {
+//                console.log(response.data.msg);
+//            });
+//        },
+        methods:{
+            getdata:function () {
+                var _self = this;
+                this.$http.get('ajax.php').then(function (response) {
+                    _self.msg=response.data.msg;
+                });
+            }
+        }
+    })
+</script>
+</body>
+</html>
