@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传格式限制和大小</title>
+</head>
+<body>
+<form action="">
+    <!--<input type="file" name="ff" onchange="checkfile(this)" id="ff">-->
+    <input type="file" name="ff" onchange="fileChange(this)" id="ff">
+</form>
+</body>
+<script>
+    function checkfile(target){
+        //得到上传文件的值
+        var fileName=target.value;
+        if(fileName==''){
+            return;
+        }
+        //返回String对象中子字符串最后出现的位置.
+        var seat=fileName.lastIndexOf(".");
+        //返回位于String对象中指定位置的子字符串并转换为小写.
+        var extension=fileName.substring(seat).toLowerCase();
+        //判断允许上传的文件格式
+        if(extension!=".jpg"&&extension!=".jpeg"&&extension!=".png"){
+            alert("不支持"+extension+"文件的上传!");
+            target.value='';
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
+<script type="text/javascript">
+    // 判断是否为IE浏览器： /msie/i.test(navigator.userAgent) 为一个简单正则
+    var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+    function fileChange(target){
+        var fileSize = 0;
+        if (isIE && !target.files) {    // IE浏览器
+            var filePath = target.value; // 获得上传文件的绝对路径
+            var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+            // GetFile(path) 方法从磁盘获取一个文件并返回。
+            var file = fileSystem.GetFile(filePath);
+            fileSize = file.Size;    // 文件大小，单位：b
+        }
+        else {    // 非IE浏览器
+            fileSize = target.files[0].size;
+        }
+        var size = fileSize / 1024 / 1024;
+        if (size > 1) {
+            alert("附件不能大于1M");
+            target.value='';
+        }
+    }
+</script>
+</html>
