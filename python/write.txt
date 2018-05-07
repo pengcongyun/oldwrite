@@ -1,0 +1,45 @@
+python 是一门高级的，面向对象的，解释性，脚本语言。
+主要特点：学习成本低，功能强大；开源的，强大的类库（内置模块，三方模块）；和其他语言契合性特别高的语言，可以轻松调用其他语言编写的语言；开发效率高但运算效率低（先用Python讲整个项目电梯框架搭建起来，在用其他语言重写）；
+
+Python安装：
+windows：下载安装包， Python2.7，pycharm(后）；
+    激活码：http://xidea.online
+linux 自带对应版本的Python：
+
+    常用目录：
+        1.lib里面存放着python所有模块  第三方 lib/site pachages;
+        2.doc里面存放手册
+        3.scripts默认Python是没有的
+Python环境变量
+    Python.exe python脚本环境变量
+    Pythonw.exe 图形化脚本环境变量
+.py脚本 .pyc临时文件 .pyw图形化文件
+
+#注释
+print() 打印
+
+字符串
+
+列表
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
