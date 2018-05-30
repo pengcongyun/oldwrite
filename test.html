@@ -4,31 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Title</title>
+    <script src="./jquery-1.10.2.min.js"></script>
 </head>
 <body>
-    <form action="">
-        <input type="file" name="ff" onchange="checkfile('ff')" id="ff">
-    </form>
+    <div>22</div>
+    <div id="zz">
+        <div class="cnl-article" style="text-indent: 2em;">2<div>2</div></div><div id="three">afsdfas</div>
+    </div>
 </body>
 <script>
-    function checkfile($id){
-        //得到上传文件的值
-        var fileName=document.getElementById($id).value;
-        if(fileName==''){
-            return;
-        }
-        //返回String对象中子字符串最后出现的位置.
-        var seat=fileName.lastIndexOf(".");
-        //返回位于String对象中指定位置的子字符串并转换为小写.
-        var extension=fileName.substring(seat).toLowerCase();
-        //判断允许上传的文件格式
-        if(extension!=".jpg"&&extension!=".jpeg"&&extension!=".png"){
-            alert("不支持"+extension+"文件的上传!");
-            document.getElementById($id).value='';
-            return false;
-        }else{
-            return true;
-        }
-    }
+    var reg=/<div class="cnl-article" style="text-indent: 2em;">?.*<\/div><div id="three">/ig;
+    var str=$('#zz').html();
+    var msg=str.match(reg);
+    console.log(msg[0]);
+//    console.log(msg[0].replace('<div class="cnl-article" style="text-indent: 2em;">','').replace('<div id="three">',''));
 </script>
 </html>
