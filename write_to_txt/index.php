@@ -19,7 +19,6 @@ if(is_writable($filename)){
         exit();
     }
     echo "写入文件 $filename 成功";
-
     fclose($handle);
 }else{
     echo "文件 $filename 不可写入";
