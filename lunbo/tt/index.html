@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹框ajax</title>
+    <style>
+        .pp{
+            float: left;
+            width: 496px;
+            height: 220px;
+            border: 1px solid blue;
+        }
+        #order .on{
+            background-color: red;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <button id="bt">弹窗</button>
+    <div style="/*display: none;*/
+position:fixed;
+top:0;
+right:0;
+left:0;
+bottom:0;
+margin:auto;width: 500px;height: 300px;border: 1px solid red;" id="tan">
+        <div style="width: 498px;height: 30px;border: 1px solid green;">
+            <input type="text" name="search"> <button id="ss">搜索</button>
+        </div>
+        <div id="content" style="width: 498px;height: 270px;border: 1px yellow solid;overflow: hidden;position: relative;">
+            <div id="pic" style="height: 220px;position: absolute;">
+                <!--<div class="pp">-->
+                    <!--<span></span>-->
+                <!--</div>-->
+                <!--<div class="pp">22</div>-->
+                <!--<div class="pp">33</div>-->
+            </div>
+            <div id="order" style="position: absolute;
+    bottom: 20px;
+    width: 120px;
+    height: 20px;
+    left: 110px;">
+                <!--<span class="on">1</span>-->
+                <!--<span>2</span>-->
+                <!--<span>3</span>-->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="jquery-1.10.2.min.js"></script>
+<script>
+    $('#ss').click(function () {
+        var search=$('input[name=search]').val();
+        $.post('http://www.old.com/lunbo/tt/getdata.php',{search:search},function (e) {
+            var length=0;
+            var html='';
+            var order='';
+            for(var i in ev){
+                html='<div class="pp">';
+                for(var j in ev[i]){
+                    html+='<span>'+ev[i][j]['city_id']+'</span><br/>';
+                }
+                html+='<div>';
+                length++;
+                order='<span>'+(i)+'</span>';
+                $('#pic').append(html);
+                $('#order').append(order);
+            }
+            $('#pic').css('width',498*length);
+        })
+        $('#tan').show();
+    });
+    $('#bt').click(function () {
+        $('#pic').html('');
+        $.post('http://www.old.com/lunbo/tt/getdata.php',function (e) {
+            var ev=JSON.parse(e);
+            var length=0;
+            var html='';
+            var order='';
+            for(var i in ev){
+                html='<div class="pp">';
+                for(var j in ev[i]){
+                    html+='<span>'+ev[i][j]['city_id']+'</span><br/>';
+                }
+                html+='<div>';
+                length++;
+                order='<span>'+(i)+'</span>';
+                $('#pic').append(html);
+                $('#order').append(order);
+            }
+            $('#pic').css('width',498*length);
+
+        })
+        $('#tan').show();
+    });
+    //自动根据偏移移动
+    function changeTo(x) {
+        var goleft=498*(x-1);
+        $("#pic").animate({left:'-'+goleft+"px"},1);
+        $("#order span").removeClass('on').eq(x-1).addClass('on');
+    }
+    // $('#order span').each(function (i) {
+    $('#order').on('click','span',function () {
+        // $(this).click(function () {
+            changeTo($(this).html());
+        // });
+    });
+</script>
+</html>
