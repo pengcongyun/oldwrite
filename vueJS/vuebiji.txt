@@ -42,3 +42,18 @@ this.$http.get('ajax.php').then(function (data) {
         }
     })
 
+十、数据提交只能用 post提交
+    var formData = new FormData();
+    formData.append('name', this.inputtext.name);
+    formData.append('pwd',  this.inputtext.password);
+
+    axios.post("form.php", formData).then(function(response){
+        console.log(response)
+    }).catch(function(){
+        console.log('FAILURE!!');
+    });
+    this.$http.post('form.php',formData).then(function(response) {
+        console.log(response)
+    }).catch(function(){
+        console.log('FAILURE!!');
+    });

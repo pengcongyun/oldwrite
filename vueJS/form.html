@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue表单提交</title>
+    <script src="./vue.min.js"></script>
+    <script src="./vue-resource.min.js"></script>
+    <!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+    <script src="./axios.min.js"></script>
+</head>
+<body>
+<div class="hello">
+    <ul>
+        <form @submit.prevent="submit">
+            <input type="text" name="name" v-model="inputtext.name">
+            <input type="text" name="password" v-model="inputtext.password">
+            <select name="category" id="" v-model="inputtext.category">
+                <option v-for="k in cates" v-bind:value="k.text">{{k.value}}</option>
+            </select>
+            <input type="submit" value="提交">
+        </form>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el: '.hello',
+        data: {
+            inputtext:{},
+            cates:[
+                    { text: 'One', value: 'A' },
+                    { text: 'Two', value: 'B' },
+                    { text: 'Three', value: 'C' }
+            ],
+        },
+        methods: {
+            submit: function() {
+                if(this.inputtext.name==null){
+                    alert('用户名不能为空');
+                    return false;
+                }
+                if(this.inputtext.password==null){
+                    alert('密码不能为空');
+                    return false;
+                }
+                var formData = new FormData();
+                formData.append('name', this.inputtext.name);
+                formData.append('pwd',  this.inputtext.password);
+                formData.append('category',  this.inputtext.category);
+                //两种方式
+                this.$http.post('form.php',formData).then(function(response) {
+                // axios.post("form.php", formData).then(function(response){
+                    console.log(response)
+                }).catch(function(){
+                    console.log('FAILURE!!');
+                });
+            },
+
+        },
+    })
+</script>
+</body>
+</html>
