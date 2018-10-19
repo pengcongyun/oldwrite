@@ -9,13 +9,11 @@
 header("Content-Type: text/html; charset=utf-8");
 $conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
-$sql="select * from `shop_product` where shop_id=50";
-$stmt=mysqli_query($conn,$sql);//执行sql查询语句
-$new_product_id=[101];
+$new_product_id=[114,115,116];
 foreach ($new_product_id as $id){
     $sql_product='select * from `product` where product_id='.$id;
     $row=mysqli_fetch_assoc(mysqli_query($conn,$sql_product));
-    for ($i=3;$i<168;$i++){
+    for ($i=3;$i<181;$i++){
         $price=$row['default_price'];
         $product_id=$row['product_id'];
         $shop_id=$i;
