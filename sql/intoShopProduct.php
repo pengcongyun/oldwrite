@@ -1,5 +1,5 @@
 <?php
-//计算查询时间长短
+//商铺商品 导入到 新商铺
 header("Content-Type: text/html; charset=utf-8");
 $conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
@@ -19,17 +19,4 @@ for ($i=0;$i<count($ids);$i++){
         mysqli_query($conn,$in_sql);
     }
 }
-//$ids=[103,104,105,106,107,108,109];
-//$data=ShopProduct::model()->findAll('shop_id=50');
-//for ($i=0;$i<count($ids);$i++){
-//    foreach ($data as $row){
-//        $shopproduct=new ShopProduct();
-//        $shopproduct->rebate_rate=$row['rebate_rate'];
-//        $shopproduct->single_settlement_price=$row['single_settlement_price'];
-//        $shopproduct->product_id=$row['product_id'];
-//        $shopproduct->shop_id=$ids[$i];
-//        $shopproduct->user_id=1;
-//        $shopproduct->insert(false);
-//    }
-//}
 echo 'ok';exit;
