@@ -7,16 +7,12 @@
     <script src="./jquery-1.10.2.min.js"></script>
 </head>
 <body>
-    <div>22</div>
-    <div id="zz">
-        <div class="cnl-article" style="text-indent: 2em;">2<div>2</div></div><div id="three">afsdfas</div>
-    </div>
+    <input type="text" name="xx" id="xx">
+    <button id="jt">箭头</button>
 </body>
 <script>
-    var reg=/<div class="cnl-article" style="text-indent: 2em;">?.*<\/div><div id="three">/ig;
-    var str=$('#zz').html();
-    var msg=str.match(reg);
-    console.log(msg[0]);
-//    console.log(msg[0].replace('<div class="cnl-article" style="text-indent: 2em;">','').replace('<div id="three">',''));
+    $('#xx').on('blur',function () {
+        alert(11)
+    })
 </script>
 </html>

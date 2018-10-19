@@ -35,7 +35,7 @@
     //自动根据偏移移动
     function changeTo(x) {
         var goleft=600*x;
-        $("#pic").animate({left:'-'+goleft+"px"},100);
+        $("#pic").animate({left:'-'+goleft+"px"},1000);
         $("#order span").removeClass('on').eq(x).addClass('on');
     }
     var curimg=0;
