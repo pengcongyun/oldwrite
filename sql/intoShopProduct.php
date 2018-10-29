@@ -9,7 +9,8 @@ $stmt=mysqli_query($conn,$sql);//执行sql查询语句
 //$ids=[173,174,175,176,177];
 //$ids=[178,179,180];
 //$ids=[185,214];
-for ($i=185;$i<215;$i++){
+//$ids=[215,240];
+for ($i=215;$i<241;$i++){
     foreach ($stmt as $row){
         $order_method=$row['order_method'];
         $price=$row['settlement_price'];
