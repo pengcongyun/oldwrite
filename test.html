@@ -9,6 +9,46 @@
 <body>
     <input type="text" name="xx" id="xx">
     <button id="jt">箭头</button>
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>  count<=7
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>   page<=4的情况  count>7
+    <span>5</span>
+    <span>6</span>
+    <i>...</i>
+    <span>8</span>
+
+
+    <span>1</span>
+    <i>...</i>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>   page>4  page+3<pageCount
+    <span>6</span>
+    <span>7</span>
+    <i>...</i>
+    <span>12</span>
+
+
+    <span>1</span>
+    <i>...</i>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>   page>4  page+3>=pageCount
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+
+
 </body>
 <script>
     $('#xx').on('blur',function () {
