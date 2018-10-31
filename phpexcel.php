@@ -4,14 +4,14 @@
 
 header('Content-Type: application/vnd.ms-excel;charset=gbk');
 
-header('Content-Disposition: attachment;filename="x.csv"');
+header('Content-Disposition: attachment;filename="'.date('Ymd').'.csv"');
 
 header('Cache-Control: max-age=0');
 
 
 
 // 从数据库中获取数据
-$conn=mysqli_connect("127.0.0.1",'root','root','yii_quanshen_archive')or die('error');
+$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
 $sql="select * from city_description";
 $stmt=mysqli_query($conn,$sql);
