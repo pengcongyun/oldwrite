@@ -28,3 +28,4 @@ foreach ($new_product_id as $id){
     }
 }
 echo '新商品ok';exit;
+//http://www.old.com/sql/intoShopNewProduct.php
