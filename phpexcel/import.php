@@ -7,15 +7,15 @@
  *  导入处理多个Excel
  */
 //连接数据库
-//$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
-$conn=mysqli_connect("192.168.2.21",'root','JJ5lyzDw','yii_niuniu')or die('error');
+$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
+//$conn=mysqli_connect("192.168.2.21",'root','JJ5lyzDw','yii_niuniu')or die('error');
 //$conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
 mysqli_query($conn,'set names utf8');
 require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
 
 $objReader = PHPExcel_IOFactory::createReader('Excel5');//use excel2007 for 2007 format
 $fileNames = [];
-for($i=3;$i<=257;$i++){
+for($i=3;$i<=5;$i++){
     $fileNames[]='./resource/'.$i.'.xls';
 }
 
@@ -34,17 +34,29 @@ foreach ($fileNames as $v){
         $b = $objPHPExcel->getActiveSheet()->getCell("J".$j)->getValue();//获取结算价格
         $c = $objPHPExcel->getActiveSheet()->getCell("M".$j)->getValue();//获取商铺商品ID
         $d = $objPHPExcel->getActiveSheet()->getCell("N".$j)->getValue();//是否售卖  1销售，2不销售
-        $sql = "update `shop_product` set order_price='".$a."',settlement_price='".$b."',is_sell='".$d."' where shop_product_id=".$c;
-        $res = mysqli_query($conn,$sql);
-        $count++;
-        if ($res) {
-            echo $c."更新成功！";
+        $k = $objPHPExcel->getActiveSheet()->getCell("K".$j)->getValue();//product_id
+        $l = $objPHPExcel->getActiveSheet()->getCell("L".$j)->getValue();//商铺ID
+        $g = $objPHPExcel->getActiveSheet()->getCell("G".$j)->getValue();//订购方式
+        if($d==1){
+            //更新
+//            $sql = "update `shop_product` set order_price='".$a."',settlement_price='".$b."',is_sell='".$d."' where shop_product_id=".$c;
+            //直接新加
+            $sql = "insert into `shop_product` (shop_product_id,order_method,order_price,settlement_price,product_id,shop_id,user_id) values ({$c},{$g},{$a},{$b},{$k},{$l},2)";
+            $res = mysqli_query($conn,$sql);
+            $count++;
+            if ($res) {
+                echo $c."更新成功！";
 
+            }else{
+                echo "更新失败！";
+                exit();
+            }
         }else{
-            echo "更新失败！";
-            exit();
+//            $sql="delete from shop_product where shop_product_id=".$c;
+//            mysqli_query($conn,$sql);
         }
+
     }
-    echo $count;exit;
 }
-// http://www.excel.com/import.php
+echo $count;exit;
+// http://www.old.com/phpexcel/import.php
