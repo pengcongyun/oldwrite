@@ -2,14 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: Admin
- * Date: 2018/11/6
- * Time: 17:01
- *  导出商铺商品
+ * Date: 2018/11/9
+ * Time: 9:50
+ *  导出多个Excel表
  */
-if($_GET) {
-    $conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
-    mysqli_query($conn, 'set names utf8');
-    $sql = 'select sob.organization_brand_name,s.alias,c.category_name,pb.product_brand_name,p.product_name,concat(pde.capacity,(case when pde.capacity_unit=2 then "升" else "毫升" end)) as rj,sp.order_method,p.default_price,sp.order_price,sp.settlement_price,sp.product_id,sp.shop_id,sp.shop_product_id from shop_product sp join shop s on sp.shop_id=s.shop_id join shop_organization_brand sob on s.shop_organization_brand_id=sob.shop_organization_brand_id join product p on sp.product_id=p.product_id join category c on c.category_id=p.category_id join product_brand pb on p.product_brand_id=pb.product_brand_id join product_description pde on p.product_id=pde.product_id where sp.shop_product_id>1 and sp.shop_id=' . $_GET['shop_id'];
+
+$conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
+mysqli_query($conn, 'set names utf8');
+for($i=3;$i<20;$i++){
+    $sql = 'select sob.organization_brand_name,s.alias,c.category_name,pb.product_brand_name,p.product_name,concat(pde.capacity,(case when pde.capacity_unit=2 then "升" else "毫升" end)) as rj,sp.order_method,p.default_price,sp.order_price,sp.settlement_price,sp.product_id,sp.shop_id,sp.shop_product_id from shop_product sp join shop s on sp.shop_id=s.shop_id join shop_organization_brand sob on s.shop_organization_brand_id=sob.shop_organization_brand_id join product p on sp.product_id=p.product_id join category c on c.category_id=p.category_id join product_brand pb on p.product_brand_id=pb.product_brand_id join product_description pde on p.product_id=pde.product_id where sp.shop_product_id>1 and sp.shop_id=' . $i;
     $stmt = mysqli_query($conn, $sql);
     require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
     $objPHPExcel = new PHPExcel();
@@ -47,26 +48,17 @@ if($_GET) {
             ->setCellValue('M' . ($k + 2), $row['shop_product_id'])
             ->setCellValue('N' . ($k + 2), "");
     }
-    //保存为 xls格式
-    header('Content-Type : application/vnd.ms-excel');
-    header('Content-Disposition:attachment;filename="' . $name . $_GET['shop_id'] . '.xls"');
+    //保存到目录文件夹
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-    $objWriter->save('php://output');
+    //给中文文件名转码，否则乱码
+    $objWriter->save("./exportResource/".iconv("utf-8", "gb2312", $i.$row['organization_brand_name'].$row['alias']).".xls");
 }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+echo '倒完';exit;
+    //保存为 xls格式 输出到页面，这个对多个不行
+//    header('Content-Type : application/vnd.ms-excel');
+//    header('Content-Disposition:attachment;filename="' . $name . $_GET['shop_id'] . '.xls"');
+//    $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+//    $objWriter->save('php://output');
 
-<form action="" method="get">
-    <input type="text" value="" name="shop_id">
-    <input type="submit">
-</form>
-</body>
-</html>
-<!--导出商铺商品详细信息-->
-<!--www.excel.com/shopproduct.php-->
+//www.old.com/phpexcel/exportMoreExcel.php
+
