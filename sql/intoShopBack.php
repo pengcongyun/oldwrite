@@ -1,5 +1,5 @@
 <?php
-//商铺商品 导入到 新商铺
+//商铺返空商品 导入到 新商铺
 header("Content-Type: text/html; charset=utf-8");
 $conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
@@ -22,4 +22,4 @@ for ($i=51;$i<258;$i++){
 }
 echo 'ok';exit;
 
-//http://www.old.com/sql/intoShopBack.php
+// http://www.old.com/sql/intoShopBack.php

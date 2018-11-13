@@ -15,7 +15,7 @@ require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
 
 $objReader = PHPExcel_IOFactory::createReader('Excel5');//use excel2007 for 2007 format
 $fileNames = [];
-for($i=3;$i<=5;$i++){
+for($i=125;$i<260;$i++){
     $fileNames[]='./resource/'.$i.'.xls';
 }
 
@@ -37,18 +37,38 @@ foreach ($fileNames as $v){
         $k = $objPHPExcel->getActiveSheet()->getCell("K".$j)->getValue();//product_id
         $l = $objPHPExcel->getActiveSheet()->getCell("L".$j)->getValue();//商铺ID
         $g = $objPHPExcel->getActiveSheet()->getCell("G".$j)->getValue();//订购方式
+        if($k==134){
+            $k=20;
+        }elseif ($k==127){
+            $k=56;
+        }elseif ($k==129){
+            $k=6;
+        }elseif ($k==130){
+            $k=4;
+        }elseif ($k==102){
+            $k=11;
+        }elseif ($k==128){
+            $k=55;
+        }elseif ($k==136){
+            $k=135;
+        }elseif ($k==137){
+            $k=10;
+        }elseif ($k==103){
+            $k=10;
+        }
         if($d==1){
             //更新
 //            $sql = "update `shop_product` set order_price='".$a."',settlement_price='".$b."',is_sell='".$d."' where shop_product_id=".$c;
             //直接新加
-            $sql = "insert into `shop_product` (shop_product_id,order_method,order_price,settlement_price,product_id,shop_id,user_id) values ({$c},{$g},{$a},{$b},{$k},{$l},2)";
+//            $sql = "insert into `shop_product` (shop_product_id,order_method,order_price,settlement_price,product_id,shop_id,user_id) values ({$c},{$g},{$a},{$b},{$k},{$l},2)";
+            $sql = "insert into `shop_product` (order_method,order_price,settlement_price,product_id,shop_id,user_id) values ({$g},{$a},{$b},{$k},{$l},1)";
             $res = mysqli_query($conn,$sql);
             $count++;
             if ($res) {
-                echo $c."更新成功！";
+                echo $c.'-'.$l."更新成功！";
 
             }else{
-                echo "更新失败！";
+                echo $l."更新失败！";
                 exit();
             }
         }else{

@@ -9,7 +9,8 @@
 
 $conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
 mysqli_query($conn, 'set names utf8');
-for($i=3;$i<20;$i++){
+//for($i=3;$i<260;$i++){
+for($i=130;$i<260;$i++){
     $sql = 'select sob.organization_brand_name,s.alias,c.category_name,pb.product_brand_name,p.product_name,concat(pde.capacity,(case when pde.capacity_unit=2 then "升" else "毫升" end)) as rj,sp.order_method,p.default_price,sp.order_price,sp.settlement_price,sp.product_id,sp.shop_id,sp.shop_product_id from shop_product sp join shop s on sp.shop_id=s.shop_id join shop_organization_brand sob on s.shop_organization_brand_id=sob.shop_organization_brand_id join product p on sp.product_id=p.product_id join category c on c.category_id=p.category_id join product_brand pb on p.product_brand_id=pb.product_brand_id join product_description pde on p.product_id=pde.product_id where sp.shop_product_id>1 and sp.shop_id=' . $i;
     $stmt = mysqli_query($conn, $sql);
     require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
@@ -51,7 +52,7 @@ for($i=3;$i<20;$i++){
     //保存到目录文件夹
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
     //给中文文件名转码，否则乱码
-    $objWriter->save("./exportResource/".iconv("utf-8", "gb2312", $i.$row['organization_brand_name'].$row['alias']).".xls");
+    $objWriter->save("./exportResource/".iconv("utf-8", "GBK", $row['organization_brand_name'].$row['alias'].$i).".xls");
 }
 echo '倒完';exit;
     //保存为 xls格式 输出到页面，这个对多个不行
