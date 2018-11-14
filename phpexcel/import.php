@@ -14,14 +14,14 @@ mysqli_query($conn,'set names utf8');
 require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
 
 $objReader = PHPExcel_IOFactory::createReader('Excel5');//use excel2007 for 2007 format
-$fileNames = [];
-for($i=125;$i<260;$i++){
-    $fileNames[]='./resource/'.$i.'.xls';
-}
-
+//$fileNames = [];
+//for($i=125;$i<260;$i++){
+//    $fileNames[]='./resource/'.$i.'.xls';
+//}
+$fileNames[]='./resource/'.$i.'.xls';
 $count=0;
-foreach ($fileNames as $v){
-    $objPHPExcel = $objReader->load($v); //$filename可以是上传的表格，或者是指定的表格
+//foreach ($fileNames as $v){
+//    $objPHPExcel = $objReader->load($v); //$filename可以是上传的表格，或者是指定的表格
 //    $objPHPExcel = $objReader->load('./resource/28.xls'); //$filename可以是上传的表格，或者是指定的表格
     $sheet = $objPHPExcel->getSheet(0);
     $highestRow = $sheet->getHighestRow(); // 取得总行数
@@ -77,6 +77,6 @@ foreach ($fileNames as $v){
         }
 
     }
-}
+//}
 echo $count;exit;
 // http://www.old.com/phpexcel/import.php
