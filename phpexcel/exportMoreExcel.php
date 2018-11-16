@@ -4,7 +4,7 @@
  * User: Admin
  * Date: 2018/11/9
  * Time: 9:50
- *  导出多个Excel表
+ *  导出多个商铺商品售卖Excel表
  */
 
 $conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');

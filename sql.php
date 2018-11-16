@@ -13,3 +13,6 @@ select shop_organization_brand_name,shop_alias,created,(case order_status when 1
 
 //导商铺
 select sob.organization_brand_name,c.alias,c.shop_id,c.shop_organization_brand_id from shop c join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id where c.shop_id>2 order by c.shop_organization_brand_id asc into outfile 'D:\shop.xls';
+
+
+select sob.organization_brand_name,c.alias,p.product_name,sp.order_price,sp.settlement_price,c.shop_id,c.shop_organization_brand_id,p.product_id from shop_product sp join shop c on sp.shop_id=c.shop_id join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id join product p on sp.product_id=p.product_id where c.shop_id>2 and sp.product_id in(17,18) order by c.shop_organization_brand_id asc,c.shop_id asc into outfile 'D:\1111.xls';

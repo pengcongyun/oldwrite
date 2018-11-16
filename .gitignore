@@ -1,3 +1,5 @@
 images
 node_modules
 pic
+/phpexcel/exportResource
+/phpexcel/resource
