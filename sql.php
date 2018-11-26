@@ -23,5 +23,7 @@ select sob.organization_brand_name,c.alias,p.product_name,sp.order_price,sp.sett
 
 <!--去重查询-->
 SELECT shop_id,product_id FROM shop_product GROUP BY shop_id,product_id HAVING COUNT(1) > 1;
+<!--更新字段值-->
+UPDATE test SET user= CONCAT(user,'china')  WHERE id= '2';
 
 
