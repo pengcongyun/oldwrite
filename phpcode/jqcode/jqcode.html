@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq二维码</title>
+    <script src="../jquery.js"></script>
+    <script type="text/javascript" src="./jquery.qrcode.min.js"></script>
+</head>
+<body>
+    <div class="send-erweima"></div>
+</body>
+<script>
+    function utf16to8(str) {
+        var out, i, len, c;
+        out = "";
+        len = str.length;
+        for(i = 0; i < len; i++) {
+            c = str.charCodeAt(i);
+            if ((c >= 0x0001) && (c <= 0x007F)) {
+                out += str.charAt(i);
+            } else if (c > 0x07FF) {
+                out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));
+                out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
+            } else {
+                out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));
+                out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
+            }
+        }
+        return out;
+    }
+
+    var url=utf16to8("39&川道拐&万科店");
+    $(".send-erweima").qrcode({
+        render: "canvas", //table方式
+        width: 124, //宽度
+        height:124, //高度
+        text: url, //任意内容
+    });
+    // $('#xx').hover(function () {
+    //     $('.send-erweima').show();
+    // },function () {
+    //     $('.send-erweima').hide();
+    // })
+</script>
+</html>

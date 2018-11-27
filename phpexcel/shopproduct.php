@@ -69,4 +69,4 @@ if($_GET) {
 </body>
 </html>
 <!--导出商铺商品详细信息-->
-<!--www.excel.com/shopproduct.php-->
+<!--www.old.com/phpexcel/shopproduct.php-->

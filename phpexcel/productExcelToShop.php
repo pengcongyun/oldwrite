@@ -7,8 +7,8 @@
  *  导入商品Excel到商铺
  */
 //连接数据库
-//$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
-$conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
+$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
+//$conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
 mysqli_query($conn,'set names utf8');
 require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
 $objReader = PHPExcel_IOFactory::createReader('Excel5');//use excel2007 for 2007 format

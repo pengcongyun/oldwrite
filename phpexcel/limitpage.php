@@ -1,12 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Admin
- * Date: 2018/6/25
- * Time: 18:22
+ * 分页导表 10 条/每张表
+ * www.old.com/phpexcel/limitpage.php
  */
 //连接数据库
-$conn=mysqli_connect("127.0.0.1",'root','root','yii_template')or die('error');
+$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
 //获取数量
 //$allsql="select count(*) as total from `zone`";
