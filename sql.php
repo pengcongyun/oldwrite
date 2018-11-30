@@ -27,3 +27,7 @@ SELECT shop_id,product_id FROM shop_product GROUP BY shop_id,product_id HAVING C
 UPDATE test SET user= CONCAT(user,'china')  WHERE id= '2';
 
 
+
+update back_empty set receiver_id=5,receiver='配送员A',verify_men_id=3,verify_men='cangku' where back_empty_id>1;
+
+
