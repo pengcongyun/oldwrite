@@ -15,7 +15,7 @@ select shop_organization_brand_name,shop_alias,created,(case order_status when 1
 select sob.organization_brand_name,c.alias,c.shop_id,c.shop_organization_brand_id from shop c join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id where c.shop_id>2 order by c.shop_organization_brand_id asc into outfile 'D:\shop.xls';
 
 //导商品条形码
-select p.product_name,(case when pb.type=1 then "整件" else "单瓶" end) as types,pb.barcode,pb.product_id,pb.product_barcode_id from product_barcode pb join product p on pb.product_id=p.product_id where pb.product_barcode_id>1 order by pb.product_barcode_id asc into outfile 'D:\sarcode.xls';
+select p.product_id,p.product_name,(case when pb.type=1 then "整件" else "单瓶" end) as types,pb.number_per_box,pb.barcode,(case when pb.use_type=1 then "出库" else "进货" end) as use_type,pb.product_barcode_id from product_barcode pb join product p on pb.product_id=p.product_id where pb.product_barcode_id>1 order by pb.product_id asc into outfile 'D:\sarcode.xls';
 
 
 
@@ -26,7 +26,7 @@ SELECT shop_id,product_id FROM shop_product GROUP BY shop_id,product_id HAVING C
 <!--更新字段值-->
 UPDATE test SET user= CONCAT(user,'china')  WHERE id= '2';
 
-
+select product_id from product_barcode group by barcode having(count(1))>1;
 
 update back_empty set receiver_id=5,receiver='配送员A',verify_men_id=3,verify_men='cangku' where back_empty_id>1;
 
