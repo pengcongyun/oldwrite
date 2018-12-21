@@ -15,7 +15,7 @@ require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
 $objReader = PHPExcel_IOFactory::createReader('Excel2007');//use excel2007 for 2007 format
 $count=0;
 //$objPHPExcel = $objReader->load('./resource/269.xls'); //$filename可以是上传的表格，或者是指定的表格
-$objPHPExcel = $objReader->load('./resource/277.xlsx'); //$filename可以是上传的表格，或者是指定的表格
+$objPHPExcel = $objReader->load('./resource/280.xlsx'); //$filename可以是上传的表格，或者是指定的表格
 $sheet = $objPHPExcel->getSheet(0);
 $highestRow = $sheet->getHighestRow(); // 取得总行数
     // $highestColumn = $sheet->getHighestColumn(); // 取得总列数
@@ -27,7 +27,7 @@ $highestRow = $sheet->getHighestRow(); // 取得总行数
         $a = $objPHPExcel->getActiveSheet()->getCell("I".$i)->getValue();//获取订购价格
         $b = $objPHPExcel->getActiveSheet()->getCell("J".$i)->getValue();//获取结算价格
         $c = $objPHPExcel->getActiveSheet()->getCell("D".$i)->getValue();//product_id
-        $d = 277;//商铺ID
+        $d = 280;//商铺ID
         $e = $objPHPExcel->getActiveSheet()->getCell("G".$i)->getValue();//订购方式
         $sql = "insert into `shop_product` (order_method,order_price,settlement_price,product_id,shop_id) values ({$e},{$a},{$b},{$c},{$d})";
         $res = mysqli_query($conn,$sql);

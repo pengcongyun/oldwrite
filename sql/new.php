@@ -28,3 +28,7 @@ SELECT shop_id,product_id FROM shop_product GROUP BY shop_id,product_id HAVING C
 
 SELECT shop_id,product_id FROM shop_product GROUP BY shop_id,product_id HAVING COUNT(1) > 1;
 
+update shop_product set order_price=112,settlement_price=112 where shop_id not in (65,66,67,68,69,70,115,116,214,247,268,37) and product_id=54;
+
+update shop_product set order_price=146,settlement_price=146 where shop_id>1 and product_id=64;
+
