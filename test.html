@@ -1,58 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Title</title>
-    <script src="./jquery-1.10.2.min.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.qrcode.min.js"></script>
 </head>
 <body>
-    <input type="text" name="xx" id="xx">
-    <button id="jt">箭头</button>
-
-    <span>1</span>
-    <span>2</span>
-    <span>3</span>
-    <span>4</span>  count<=7
-    <span>5</span>
-    <span>6</span>
-    <span>7</span>
-
-    <span>1</span>
-    <span>2</span>
-    <span>3</span>
-    <span>4</span>   page<=4的情况  count>7
-    <span>5</span>
-    <span>6</span>
-    <i>...</i>
-    <span>8</span>
-
-
-    <span>1</span>
-    <i>...</i>
-    <span>3</span>
-    <span>4</span>
-    <span>5</span>   page>4  page+3<pageCount
-    <span>6</span>
-    <span>7</span>
-    <i>...</i>
-    <span>12</span>
-
-
-    <span>1</span>
-    <i>...</i>
-    <span>3</span>
-    <span>4</span>
-    <span>5</span>   page>4  page+3>=pageCount
-    <span>6</span>
-    <span>7</span>
-    <span>8</span>
-
+<?php foreach ([111111,333333] as $row): ?>
+<div class="send" style="display: block;" data="<?php echo $row;?>"></div>
+<?php endforeach;?>
+<div class="send" style="display: block;" data="2222"></div>
 
 </body>
+
 <script>
-    $('#xx').on('blur',function () {
-        alert(11)
-    })
+    function utf16to8(str) {
+        var out, i, len, c;
+        out = "";
+        len = str.length;
+        for(i = 0; i < len; i++) {
+            c = str.charCodeAt(i);
+            if ((c >= 0x0001) && (c <= 0x007F)) {
+                out += str.charAt(i);
+            } else if (c > 0x07FF) {
+                out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));
+                out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
+            } else {
+                out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));
+                out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));
+            }
+        }
+        return out;
+    }
+    var lens=$(".send").length;
+    for(var i=0;i<lens;i++){
+        var url=$('.send').eq(i).attr('data');
+        $('.send').eq(i).qrcode({
+            render: "canvas", //table方式
+            width: 124,
+            height:124,
+            text: utf16to8(url)});
+    }
 </script>
 </html>
