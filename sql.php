@@ -30,4 +30,5 @@ select product_id from product_barcode group by barcode having(count(1))>1;
 
 update back_empty set receiver_id=5,receiver='配送员A',verify_men_id=3,verify_men='cangku' where back_empty_id>1;
 
+delete from back_empty where back_empty_id>=391 and back_empty_id<=449;
 
