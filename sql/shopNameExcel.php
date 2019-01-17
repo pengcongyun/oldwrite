@@ -6,12 +6,12 @@ header('Cache-Control: max-age=0');
 // 从数据库中获取数据
 $conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
-$sql='select c.shop_id,sob.organization_brand_name,c.alias from shop c join shop_organization_brand sob on c.shop_organization_brand_id=sob.shop_organization_brand_id where c.shop_id>2 order by c.shop_organization_brand_id asc';
+$sql='select c.shop_organization_brand_id,c.shop_id,sob.organization_brand_name,c.alias,c.address from shop c join shop_organization_brand sob on c.shop_organization_brand_id=sob.shop_organization_brand_id where c.shop_id>2 order by c.shop_organization_brand_id asc';
 $stmt=mysqli_query($conn,$sql);
 // PHP文件句柄，php://output 表示直接输出到浏览器
 $fp = fopen('php://output', 'a');
 // 输出Excel列头信息
-$head = array('商铺品牌', '店铺名称');
+$head = array('品牌ID','商铺ID','商铺品牌', '店铺名称','商铺地址');
 foreach ($head as $i => $v) {
     // CSV的Excel支持GBK编码，一定要转换，否则乱码
     $head[$i] = iconv('utf-8', 'gbk', $v);

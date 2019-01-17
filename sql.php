@@ -12,7 +12,7 @@ select sob.organization_brand_name,c.alias,op.created,(case o.order_status when 
 select shop_organization_brand_name,shop_alias,created,(case order_status when 1 then "下单成功" when 2 then "仓库确认" when 3 then "分拣完成" when 4 then "开始配送" else "配送完成" end),order_default_price,order_receivable_price from `order` where created>="2018-10-19 00:00:00" and created<"2018-10-23 00:00:00" and order_id>1 and order_status!=6 order by shop_id desc,created desc,order_status asc into outfile 'D:\1923.xlsx';
 
 //导商铺
-select sob.organization_brand_name,c.alias,c.shop_id,c.shop_organization_brand_id from shop c join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id where c.shop_id>2 order by c.shop_organization_brand_id asc into outfile 'D:\shop.xls';
+select sob.organization_brand_name,c.alias,c.username from shop c join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id where c.shop_id>2 order by c.shop_organization_brand_id asc into outfile 'D:\shop.xls';
 
 //导商品条形码
 select p.product_id,p.product_name,(case when pb.type=1 then "整件" else "单瓶" end) as types,pb.number_per_box,pb.barcode,(case when pb.use_type=1 then "出库" else "进货" end) as use_type,pb.product_barcode_id from product_barcode pb join product p on pb.product_id=p.product_id where pb.product_barcode_id>1 order by pb.product_id asc into outfile 'D:\sarcode.xls';

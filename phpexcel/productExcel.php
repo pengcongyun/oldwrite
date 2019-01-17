@@ -8,14 +8,15 @@
  */
 $conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
 mysqli_query($conn, 'set names utf8');
-$sql_id='select product_id from product where product_id>1 order by product_id asc';
-$ids=mysqli_query($conn,$sql_id);
-$all_id=[];
-foreach ($ids as $id){
-    $all_id[]=$id['product_id'];
-}
-$id=implode(',',$all_id);
-$sql = 'select c.category_name,pb.product_brand_name,p.product_name,concat(pd.capacity,(case when pd.capacity_unit=2 then "升" else "毫升" end)) as rj,p.order_method,p.default_price,p.product_id from product p join category c on p.category_id=c.category_id join product_brand pb on pb.product_brand_id=p.product_brand_id join product_description pd on p.product_id=pd.product_id where p.product_id in ('.$id.') order by p.product_brand_id';
+//$sql_id='select product_id from product where product_id>1 order by product_id asc';
+//$ids=mysqli_query($conn,$sql_id);
+//$all_id=[];
+//foreach ($ids as $id){
+//    $all_id[]=$id['product_id'];
+//}
+//$id=implode(',',$all_id);
+//$sql = 'select c.category_name,pb.product_brand_name,p.product_name,concat(pd.capacity,(case when pd.capacity_unit=2 then "升" else "毫升" end)) as rj,p.order_method,p.default_price,p.product_id from product p join category c on p.category_id=c.category_id join product_brand pb on pb.product_brand_id=p.product_brand_id join product_description pd on p.product_id=pd.product_id where p.product_id in ('.$id.') order by p.product_brand_id';
+$sql = 'select c.category_name,pb.product_brand_name,p.product_name,concat(pd.capacity,(case when pd.capacity_unit=2 then "升" else "毫升" end)) as rj,p.order_method,p.default_price,p.product_id from product p join category c on p.category_id=c.category_id join product_brand pb on pb.product_brand_id=p.product_brand_id join product_description pd on p.product_id=pd.product_id where p.product_id>1 order by p.product_brand_id';
 $stmt = mysqli_query($conn, $sql);
 require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
 $objPHPExcel = new PHPExcel();
