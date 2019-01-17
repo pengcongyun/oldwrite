@@ -16,7 +16,7 @@ mysqli_query($conn, 'set names utf8');
 //}
 //$id=implode(',',$all_id);
 //$sql = 'select c.category_name,pb.product_brand_name,p.product_name,concat(pd.capacity,(case when pd.capacity_unit=2 then "升" else "毫升" end)) as rj,p.order_method,p.default_price,p.product_id from product p join category c on p.category_id=c.category_id join product_brand pb on pb.product_brand_id=p.product_brand_id join product_description pd on p.product_id=pd.product_id where p.product_id in ('.$id.') order by p.product_brand_id';
-$sql = 'select c.category_name,pb.product_brand_name,p.product_name,concat(pd.capacity,(case when pd.capacity_unit=2 then "升" else "毫升" end)) as rj,p.order_method,p.default_price,p.product_id from product p join category c on p.category_id=c.category_id join product_brand pb on pb.product_brand_id=p.product_brand_id join product_description pd on p.product_id=pd.product_id where p.product_id>1 order by p.product_brand_id';
+$sql = 'select c.category_name,pb.product_brand_name,p.product_name,concat(p.capacity,(case when p.capacity_unit=2 then "升" else "毫升" end)) as rj,pp.order_method,pp.number_per_box,pp.default_price,p.product_id,pp.product_price_id from product_price pp join product p on pp.product_id=p.product_id join category c on p.category_id=c.category_id join product_brand pb on pb.product_brand_id=p.product_brand_id where p.product_id>1 order by p.product_brand_id';
 $stmt = mysqli_query($conn, $sql);
 require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
 $objPHPExcel = new PHPExcel();
@@ -26,8 +26,10 @@ $objPHPExcel->setActiveSheetIndex(0)
     ->setCellValue('C1', '商品名称')
     ->setCellValue('D1', '商品规格')
     ->setCellValue('E1', '订购方式(1整件2单瓶)')
-    ->setCellValue('F1', '标准单价')
-    ->setCellValue('G1', '商品ID');
+    ->setCellValue('F1', '每件数量')
+    ->setCellValue('G1', '标准单价')
+    ->setCellValue('H1', '商品ID')
+    ->setCellValue('I1', '商品定价ID');
 
 foreach ($stmt as $k => $row) {
     $objPHPExcel->setActiveSheetIndex(0)
@@ -36,8 +38,10 @@ foreach ($stmt as $k => $row) {
         ->setCellValue('C' . ($k + 2), $row['product_name'])
         ->setCellValue('D' . ($k + 2), $row['rj'])
         ->setCellValue('E' . ($k + 2), $row['order_method'])
-        ->setCellValue('F' . ($k + 2), $row['default_price'])
-        ->setCellValue('G' . ($k + 2), $row['product_id']);
+        ->setCellValue('F' . ($k + 2), $row['number_per_box'])
+        ->setCellValue('G' . ($k + 2), $row['default_price'])
+        ->setCellValue('H' . ($k + 2), $row['product_id'])
+        ->setCellValue('I' . ($k + 2), $row['product_price_id']);
 }
 //保存到目录文件夹
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
