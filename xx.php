@@ -11,10 +11,11 @@
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
 $conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
-$sql="select shop_id from `shop` where shop_organization_brand_id=154";
+//$sql="select shop_id from `shop` where shop_organization_brand_id=154";
+$sql="select shop_product_id from `shop_product` where shop_id=321";
 $stmt=mysqli_query($conn,$sql);//执行sql查询语句
 $arr=[];
 foreach ($stmt as $row){
-    $arr[]=$row['shop_id'];
+    $arr[]=$row['shop_product_id'];
 }
 var_dump(implode(',',$arr));
