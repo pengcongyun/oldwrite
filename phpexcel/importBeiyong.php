@@ -8,13 +8,15 @@
  */
 //连接数据库
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii2_niuniu')or die('error');
-//$conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
+//$conn=mysqli_connect("127.0.0.1",'root','root','pp')or die('error');
+$conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
 mysqli_query($conn,'set names utf8');
 require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
 $objReader = PHPExcel_IOFactory::createReader('Excel5');//use excel2007 for 2007 format
 //$objReader = PHPExcel_IOFactory::createReader('Excel2007');//use excel2007 for 2007 format
 $count=0;
-$objPHPExcel = $objReader->load('./resource/307.xls'); //$filename可以是上传的表格，或者是指定的表格
+$shop_id=315;
+$objPHPExcel = $objReader->load('./resource/314.xls'); //$filename可以是上传的表格，或者是指定的表格
 //$objPHPExcel = $objReader->load('./resource/300.xlsx'); //$filename可以是上传的表格，或者是指定的表格
 $sheet = $objPHPExcel->getSheet(0);
 $highestRow = $sheet->getHighestRow(); // 取得总行数
@@ -29,7 +31,7 @@ $highestRow = $sheet->getHighestRow(); // 取得总行数
         $c = $objPHPExcel->getActiveSheet()->getCell("H".$i)->getValue();//product_price_id
         $d = $objPHPExcel->getActiveSheet()->getCell("G".$i)->getValue();//product_id
         $e = $objPHPExcel->getActiveSheet()->getCell("F".$i)->getValue();//每件数据
-        $f = 307;//商铺ID
+        $f = $shop_id;//商铺ID
         $g = $objPHPExcel->getActiveSheet()->getCell("E".$i)->getValue();//订购方式
 
         $in_sql = "insert into `shop_product` (order_price,settlement_price,order_method,number_per_box,product_id,product_price_id,shop_id) values
@@ -47,3 +49,4 @@ $highestRow = $sheet->getHighestRow(); // 取得总行数
 //}
 echo 'ok';exit;
 // http://www.old.com/phpexcel/importBeiyong.php
+// http://www.pa.com/phpexcel/importBeiyong.php

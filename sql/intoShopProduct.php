@@ -2,10 +2,13 @@
 //商铺商品 导入到 新商铺
 header("Content-Type: text/html; charset=utf-8");
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii2_niuniu')or die('error');
+//$conn=mysqli_connect("127.0.0.1",'root','root','pp')or die('error');
 //$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
+$bz_shop_id=50;
 //$i=297;
-$sql="select * from `shop_product` where shop_id=301";
+$in_shop_ids=[311,312,346,347,354,357,363,364,365,366,367,368,369,371,372,373,374,376];
+$sql="select * from `shop_product` where shop_id=".$bz_shop_id;
 $stmt=mysqli_query($conn,$sql);//执行sql查询语句
 //$ids=[168,169,170,171,172];
 //$ids=[173,174,175,176,177];
@@ -13,7 +16,9 @@ $stmt=mysqli_query($conn,$sql);//执行sql查询语句
 //$ids=[185,214];
 //$ids=[215,240];
 //     257
-for ($i=302;$i<=303;$i++){
+//var_dump($stmt);exit;345
+//for ($i=351;$i<=353;$i++){
+foreach ($in_shop_ids as $i){
     foreach ($stmt as $row){
         $order_method=$row['order_method'];
         $number_per_box=$row['number_per_box'];
@@ -29,3 +34,4 @@ for ($i=302;$i<=303;$i++){
 }
 echo 'ok';exit;
 //http://www.old.com/sql/intoShopProduct.php
+//http://www.pa.com/sql/intoShopProduct.php
