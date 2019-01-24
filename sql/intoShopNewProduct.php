@@ -11,23 +11,23 @@ header("Content-Type: text/html; charset=utf-8");
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii2_niuniu')or die('error');
 //$conn=mysqli_connect("127.0.0.1",'root','root','pp')or die('error');
 mysqli_query($conn,'set names utf8');
-$new_product_id=[60];
-$shop_ids=[318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,356];
+$new_product_id=[193];
+//$shop_ids=[318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,356];
 foreach ($new_product_id as $id){
     $sql_product='select * from `product_price` where product_price_id='.$id;
     $row=mysqli_fetch_assoc(mysqli_query($conn,$sql_product));
-//    for($i=3;$i<=300;$i++) {
+    for($i=3;$i<=381;$i++) {
         //去重添加
-    foreach ($shop_ids as $k=>$v){
-        $sql_exist='select * from shop_product where product_price_id='.$id.' and shop_id='.$v;
+//    foreach ($shop_ids as $k=>$v){
+        $sql_exist='select * from shop_product where product_price_id='.$id.' and shop_id='.$i;
         $count=mysqli_num_rows(mysqli_query($conn,$sql_exist));
         if($count==0){
-            $price = $row['default_price'];
+            $price = 75;
             $number_per_box = $row['number_per_box'];
             $order_method = $row['order_method'];
             $product_price_id = $row['product_price_id'];
             $product_id = $row['product_id'];
-            $shop_id = $v;
+            $shop_id = $i;
             $in_sql = "insert into `shop_product` (order_price,settlement_price,order_method,number_per_box,product_id,product_price_id,shop_id) values
 ({$price},{$price},{$order_method},{$number_per_box},{$product_id},{$product_price_id},{$shop_id})";
             mysqli_query($conn, $in_sql);

@@ -9,9 +9,10 @@
 header("Content-Type: text/html; charset=utf-8");
 //$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
 //$conn=mysqli_connect("127.0.0.1",'root','root','pp')or die('error');
+//$conn=mysqli_connect("127.0.0.1",'root','root','yii2_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
-$new_product_id=[15];
-$shop_brand_ids=[26,23];
+$new_product_id=[187];
+$shop_brand_ids=[154];
 $shop_ids=[];
 foreach ($shop_brand_ids as $shop_brand_id){
     $sqls='select shop_id from shop where shop_organization_brand_id='.$shop_brand_id.' order by shop_id asc';
@@ -28,7 +29,7 @@ foreach ($new_product_id as $id){
         $sql_exist='select * from shop_product where product_price_id='.$id.' and shop_id='.$shop;
         $count=mysqli_num_rows(mysqli_query($conn,$sql_exist));
         if($count==0){
-            $price = 43;
+            $price = 58;
             $number_per_box = $row['number_per_box'];
             $order_method = $row['order_method'];
             $product_price_id = $row['product_price_id'];
