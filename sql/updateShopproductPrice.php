@@ -13,6 +13,7 @@ header("Content-Type: text/html; charset=utf-8");
 mysqli_query($conn,'set names utf8');
 //$product_ids=[23,47,35];//
 //$product_ids=[23,47,35,2,113,8,9,63,68,7];
+
 $price=42;
 $price_id=14;
 //foreach($product_ids as $product_id){

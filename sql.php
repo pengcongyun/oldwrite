@@ -17,7 +17,12 @@ select sob.organization_brand_name,c.alias,c.username from shop c join shop_orga
 //导商品条形码
 select p.product_id,p.product_name,(case when pb.type=1 then "整件" else "单瓶" end) as types,pb.number_per_box,pb.barcode,(case when pb.use_type=1 then "出库" else "进货" end) as use_type,pb.product_barcode_id from product_barcode pb join product p on pb.product_id=p.product_id where pb.product_barcode_id>1 order by pb.product_id asc into outfile 'D:\sarcode.xls';
 
-
+SELECT c.category_id,pb.product_brand_id,p.product_id,pp.product_price_id, pp.number_per_box,c.category_name,pb.product_brand_name,p.product_name,
+case p.product_package when 1 then '玻璃瓶装' when 2 then '塑料瓶装' when 3 then '陶瓷瓶装' when 4 then '易拉罐装' when 5 then '铝瓶装' when 6 then '纸盒装' when 7 then '桶装' when 8 then '礼盒装' end as product_package,
+CONCAT(p.capacity, case p.capacity_unit when 1 then 'ml' when 2 then 'L' when 3 then 'g' end, ' * ', pp.number_per_box) capacity,
+p.inventory_number FROM `product_price` pp, `product` p LEFT JOIN product_brand pb ON pb.product_brand_id=p.product_brand_id LEFT JOIN category c ON c.category_id=p.category_id
+WHERE pp.product_price_id>1 AND p.product_id=pp.product_id
+ORDER BY p.product_name into outfile 'D:\kucuns.xls';
 
 select sob.organization_brand_name,c.alias,p.product_name,sp.order_price,sp.settlement_price,c.shop_id,c.shop_organization_brand_id,p.product_id from shop_product sp join shop c on sp.shop_id=c.shop_id join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id join product p on sp.product_id=p.product_id where c.shop_id>2 and sp.product_id in(17,18) order by c.shop_organization_brand_id asc,c.shop_id asc into outfile 'D:\1111.xls';
 
@@ -32,3 +37,18 @@ update back_empty set receiver_id=5,receiver='配送员A',verify_men_id=3,verify
 
 delete from back_empty where back_empty_id>=391 and back_empty_id<=449;
 
+delete from back_empty where shop_id not in (174,85,102,93,45,31,30,29,28,27,26,25,126,87,88,77,133,210);
+
+update product set inventory_number=0;
+
+update `order` set settlement_status=1 where settlement_status=2 and created>'2019-01-01 00:00:00' and shop_id=67;
+
+update return_goods set created='2019-01-05 00:00:00' where return_goods_id=323;
+update return_goods_product set created='2019-01-05 00:00:00' where return_goods_id=323;
+
+update back_empty set created='2019-01-06 00:00:00' where back_empty_id=4298;
+update back_empty_product set created='2019-01-06 00:00:00' where back_empty_id=4298;
+
+delete from back_empty_product where back_empty_id=3462;
+delete from back_empty_description where back_empty_id=3462;
+delete from back_empty where back_empty_id=3462;
