@@ -12,7 +12,7 @@ $_GET['start']="2019-01-01 00:00:00";
 //$_GET['end']="2018-11-15 14:00:00";
 $brand_name='';
 $shop_name='';
-$sql='select sob.organization_brand_name,c.alias,op.created,(case o.order_status when 1 then "下单成功" when 2 then "仓库确认" when 3 then "分拣完成" when 4 then "开始配送" else "配送完成" end) as order_method,op.product_name,concat(opd.product_capacity,(case when opd.product_capacity_unit=2 then "升" else "毫升" end)) as capacity_str,op.number_per_box,op.order_price,op.settlement_price,op.product_number,op.order_price*op.product_number as dd_total,op.settlement_price*op.product_number as js_total,o.order_order_price,o.order_receivable_price from order_product op join order_product_description opd on op.order_product_id=opd.order_product_id join `order` o on op.order_id=o.order_id join shop c on o.shop_id=c.shop_id join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id where op.order_product_id>1 and o.order_status!=6 and c.shop_id='.$shop_id;
+$sql='select sob.organization_brand_name,c.alias,op.created,(case o.order_status when 1 then "下单成功" when 2 then "仓库确认" when 3 then "分拣完成" when 4 then "开始配送" else "配送完成" end) as order_method,op.product_name,concat(op.product_capacity,(case when op.product_capacity_unit=2 then "升" else "毫升" end)) as capacity_str,op.number_per_box,op.order_price,op.settlement_price,op.product_number,op.order_price*op.product_number as dd_total,op.settlement_price*op.product_number as js_total,o.order_order_price,o.order_receivable_price from order_product op join `order` o on op.order_id=o.order_id join shop c on o.shop_id=c.shop_id join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id where op.order_product_id>1 and o.order_status!=6 and c.shop_id='.$shop_id;
 if(!empty($_GET['start'])){
     $sql.=' and op.created>="'.$_GET['start'].'"';
 }
@@ -21,7 +21,7 @@ if(!empty($_GET['start'])){
 //}
 $sql.=' order by o.shop_id desc,op.created desc,o.order_status asc';
 $stmt=mysqli_query($conn,$sql);
-$group_sql='select count(*) as c from order_product op join order_product_description opd on op.order_product_id=opd.order_product_id join `order` o on op.order_id=o.order_id join shop c on o.shop_id=c.shop_id join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id where op.order_product_id>1 and o.order_status!=6 and c.shop_id='.$shop_id.' and op.created>="'.$_GET['start'].'" group by op.created order by o.shop_id desc,op.created desc,o.order_status asc';
+$group_sql='select count(*) as c from order_product op join `order` o on op.order_id=o.order_id join shop c on o.shop_id=c.shop_id join shop_organization_brand sob on sob.shop_organization_brand_id=c.shop_organization_brand_id where op.order_product_id>1 and o.order_status!=6 and c.shop_id='.$shop_id.' and op.created>="'.$_GET['start'].'" group by op.created order by o.shop_id desc,op.created desc,o.order_status asc';
 $counts=mysqli_query($conn,$group_sql);
 
 $objPHPExcel->setActiveSheetIndex(0)
@@ -40,7 +40,7 @@ $objPHPExcel->setActiveSheetIndex(0)
     ->setCellValue('M1', '订购总金额')
     ->setCellValue('N1', '结算总金额');
 
-var_dump($stmt);exit;
+//var_dump($stmt);exit;
 foreach ($stmt as $k=>$row){
     $brand_name=$row['organization_brand_name'];
     $shop_name=$row['alias'];

@@ -1,14 +1,14 @@
 <?php
 //商铺商品 导入到 新商铺
 header("Content-Type: text/html; charset=utf-8");
-//$conn=mysqli_connect("127.0.0.1",'root','root','yii2_test')or die('error');
+$conn=mysqli_connect("127.0.0.1",'root','root','yii2_test')or die('error');
 //$conn=mysqli_connect("127.0.0.1",'root','root','pp')or die('error');
 //$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
-$bz_shop_id=19;
+$bz_shop_id=50;
 //$i=297;
 //$in_shop_ids=[311,312,346,347,354,357,363,364,365,366,367,368,369,371,372,373,374,376];
-$in_shop_ids=[388];
+$in_shop_ids=[390,391];
 $sql="select * from `shop_product` where shop_id=".$bz_shop_id;
 $stmt=mysqli_query($conn,$sql);//执行sql查询语句
 //$ids=[168,169,170,171,172];
@@ -21,16 +21,18 @@ $stmt=mysqli_query($conn,$sql);//执行sql查询语句
 //for ($i=351;$i<=353;$i++){
 foreach ($in_shop_ids as $i){
     foreach ($stmt as $row){
-        $order_method=$row['order_method'];
-        $number_per_box=$row['number_per_box'];
-        $order_price=$row['order_price'];
-        $price=$row['settlement_price'];
-        $product_id=$row['product_id'];
-        $product_price_id=$row['product_price_id'];
-        $shop_id=$i;
-        $in_sql="insert into `shop_product` (order_method,number_per_box,order_price,settlement_price,product_id,product_price_id,shop_id) values
-({$order_method},{$number_per_box},{$order_price},{$price},{$product_id},{$product_price_id},{$shop_id})";
-        mysqli_query($conn,$in_sql);
+
+            $order_method = $row['order_method'];
+            $number_per_box = $row['number_per_box'];
+            $order_price = $row['order_price'];
+            $price = $row['settlement_price'];
+            $product_id = $row['product_id'];
+            $product_price_id = $row['product_price_id'];
+            $shop_id = $i;
+            $in_sql = "insert into `shop_product` (order_method,number_per_box,order_price,settlement_price,product_id,product_price_id,shop_id) values
+    ({$order_method},{$number_per_box},{$order_price},{$price},{$product_id},{$product_price_id},{$shop_id})";
+            mysqli_query($conn, $in_sql);
+
     }
 }
 echo 'ok';exit;

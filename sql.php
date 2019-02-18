@@ -43,12 +43,29 @@ update product set inventory_number=0;
 
 update `order` set settlement_status=1 where settlement_status=2 and created>'2019-01-01 00:00:00' and shop_id=67;
 
-update return_goods set created='2019-01-05 00:00:00' where return_goods_id=323;
-update return_goods_product set created='2019-01-05 00:00:00' where return_goods_id=323;
+update return_goods set created='2019-01-09 00:00:00' where return_goods_id=326;
+update return_goods_product set created='2019-01-09 00:00:00' where return_goods_id=326;
 
-update back_empty set created='2019-01-06 00:00:00' where back_empty_id=4298;
-update back_empty_product set created='2019-01-06 00:00:00' where back_empty_id=4298;
+update back_empty set created='2019-01-25 00:00:00' where back_empty_id=4361;
+update back_empty_product set created='2019-01-25 00:00:00' where back_empty_id=4361;
 
-delete from back_empty_product where back_empty_id=3462;
-delete from back_empty_description where back_empty_id=3462;
-delete from back_empty where back_empty_id=3462;
+update `order` set created='2018-12-31 00:00:00',distribution_time='2018-12-31 00:00:00',sorting_time='2018-12-31 00:00:00',delivery_time='2018-12-31 00:00:00',finish_time='2018-12-31 00:00:00',last_updated='2018-12-31 00:00:00' where order_id=13585;
+update `order_product` set created='2018-12-31 00:00:00' where order_id=13585;
+
+
+delete from back_empty_product where back_empty_id=2979;
+delete from back_empty_description where back_empty_id=2979;
+delete from back_empty where back_empty_id=2979;
+
+delete from return_goods_product where return_goods_id in (324,325);
+delete from return_goods_description where return_goods_id in (324,325);
+delete from return_goods where return_goods_id in (324,325);
+
+
+<!--update order_product set order_price=79 where order_product_id=65106;-->
+<!--update `order` set order_order_price=1189 where order_id=12983;-->
+
+update order_product set order_price=79 where order_product_id=63442;
+update `order` set order_order_price=1864 where order_id=12983;
+
+update `order` set order_code=20181231296,created='2018-12-31 00:00:00' where order_id=13593;
