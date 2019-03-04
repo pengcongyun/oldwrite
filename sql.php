@@ -69,3 +69,21 @@ update order_product set order_price=79 where order_product_id=63442;
 update `order` set order_order_price=1864 where order_id=12983;
 
 update `order` set order_code=20181231296,created='2018-12-31 00:00:00' where order_id=13593;
+
+
+delete from order_product_update_history where order_product_id=63566;
+delete from order_product_barcode where order_product_id=63566;
+delete from order_product where order_product_id=63566;
+
+delete from order_product_update_history where order_product_id=69061;
+delete from `order_product` where order_product_id=69061;
+
+
+<!--库存去重，取大规格number_per_box-->
+SELECT c.category_name,pb.product_brand_name,p.product_name,
+case p.product_package when 1 then '玻璃瓶装' when 2 then '塑料瓶装' when 3 then '陶瓷瓶装' when 4 then '易拉罐装' when 5 then '铝瓶装' when 6 then '纸盒装' when 7 then '桶装' when 8 then '礼盒装' end as product_package,
+CONCAT(p.capacity, case p.capacity_unit when 1 then 'ml' when 2 then 'L' when 3 then 'g' end,'*',max(pp.number_per_box)) capacitys,
+p.inventory_number FROM `product` p LEFT JOIN product_brand pb ON pb.product_brand_id=p.product_brand_id LEFT JOIN category c ON c.category_id=p.category_id left join product_price pp on p.product_id=pp.product_id
+WHERE  p.product_id>1 group by p.product_name,p.product_package,p.capacity,p.product_package
+ORDER BY p.product_name,p.product_id into outfile 'D:\kucuns.xls';
+
