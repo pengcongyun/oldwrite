@@ -64,4 +64,6 @@ select order_code from `order` where length(order_code)<13 into outfile 'D:\99.x
 select s.alias,p.product_name,case p.product_package when 1 then '玻璃瓶装' when 2 then '塑料瓶装' when 3 then '陶瓷瓶装' when 4 then '易拉罐装' when 5 then '铝瓶装' when 6 then '纸盒装' when 7 then '桶装' when 8 then '礼盒装' end as product_package,CONCAT(p.capacity, case p.capacity_unit when 1 then 'ml' when 2 then 'L' end, ' * ', sp.number_per_box) capacity,sp.shop_product_id,sp.order_price,sp.settlement_price from shop_product sp join shop s on sp.shop_id=s.shop_id join product p on sp.product_id=p.product_id where sp.product_price_id in (22,28,24,13,25,11,94,75,90,91,92,81,79,80,78) and s.shop_organization_brand_id in (18,33,37,4,12,64) order by s.shop_organization_brand_id desc into outfile "D:\shopProduct.xls";
 =======
 >>>>>>> 2e65b7259fc90107a7bef0bcf61fba615ec4df39
+10---3
+update shop set transport_line=3 where transport_line=10;
 
