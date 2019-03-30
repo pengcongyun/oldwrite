@@ -49,6 +49,10 @@ update return_goods_product set created='2019-01-05 00:00:00' where return_goods
 update back_empty set created='2019-01-06 00:00:00' where back_empty_id=4298;
 update back_empty_product set created='2019-01-06 00:00:00' where back_empty_id=4298;
 
-delete from back_empty_product where back_empty_id=3462;
-delete from back_empty_description where back_empty_id=3462;
-delete from back_empty where back_empty_id=3462;
+delete from back_empty_product where back_empty_id=5785;
+delete from back_empty_description where back_empty_id=5785;
+delete from back_empty where back_empty_id=5785;
+
+69408
+delete from order_product_barcode where order_product_id=69408;
+delete from order_product where order_product_id=69408;
