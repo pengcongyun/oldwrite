@@ -9,7 +9,7 @@
 if($_GET) {
     $conn = mysqli_connect("39.104.156.225", 'root', 'WpFwf4LP', 'yii_niuniu') or die('error');
     mysqli_query($conn, 'set names utf8');
-    $sql = 'select sob.organization_brand_name,s.alias,c.category_name,pb.product_brand_name,p.product_name,concat(pde.capacity,(case when pde.capacity_unit=2 then "升" else "毫升" end)) as rj,sp.order_method,p.default_price,sp.order_price,sp.settlement_price,sp.product_id,sp.shop_id,sp.shop_product_id from shop_product sp join shop s on sp.shop_id=s.shop_id join shop_organization_brand sob on s.shop_organization_brand_id=sob.shop_organization_brand_id join product p on sp.product_id=p.product_id join category c on c.category_id=p.category_id join product_brand pb on p.product_brand_id=pb.product_brand_id join product_description pde on p.product_id=pde.product_id where sp.shop_product_id>1 and sp.shop_id=' . $_GET['shop_id'];
+    $sql = 'select sob.organization_brand_name,s.alias,c.category_name,pb.product_brand_name,p.product_name,concat(p.capacity,(case when p.capacity_unit=2 then "升" else "毫升" end)) as rj,sp.order_method,pp.default_price,sp.order_price,sp.settlement_price,sp.product_price_id,sp.shop_id,sp.shop_product_id from shop_product sp join shop s on sp.shop_id=s.shop_id join shop_organization_brand sob on s.shop_organization_brand_id=sob.shop_organization_brand_id join product_price pp on pp.product_price_id=sp.product_price_id join product p on pp.product_id=p.product_id join category c on c.category_id=p.category_id join product_brand pb on p.product_brand_id=pb.product_brand_id where sp.shop_product_id>1 and sp.shop_id=' . $_GET['shop_id'];
     $stmt = mysqli_query($conn, $sql);
     require_once dirname(__FILE__) . '/Classes/PHPExcel.php';
     $objPHPExcel = new PHPExcel();
@@ -24,7 +24,7 @@ if($_GET) {
         ->setCellValue('H1', '标准单价')
         ->setCellValue('I1', '订购金额')
         ->setCellValue('J1', '结算单价')
-        ->setCellValue('K1', '商品ID')
+        ->setCellValue('K1', '商品价格ID')
         ->setCellValue('L1', '商铺ID')
         ->setCellValue('M1', '商铺商品ID')
         ->setCellValue('N1', '备注');
@@ -42,7 +42,7 @@ if($_GET) {
             ->setCellValue('H' . ($k + 2), $row['default_price'])
             ->setCellValue('I' . ($k + 2), $row['order_price'])
             ->setCellValue('J' . ($k + 2), $row['settlement_price'])
-            ->setCellValue('K' . ($k + 2), $row['product_id'])
+            ->setCellValue('K' . ($k + 2), $row['product_price_id'])
             ->setCellValue('L' . ($k + 2), $row['shop_id'])
             ->setCellValue('M' . ($k + 2), $row['shop_product_id'])
             ->setCellValue('N' . ($k + 2), "");

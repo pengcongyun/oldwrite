@@ -43,12 +43,13 @@ update product set inventory_number=0;
 
 update `order` set settlement_status=1 where settlement_status=2 and created>'2019-01-01 00:00:00' and shop_id=67;
 
-update return_goods set created='2019-01-05 00:00:00' where return_goods_id=323;
-update return_goods_product set created='2019-01-05 00:00:00' where return_goods_id=323;
+update return_goods set created='2019-01-09 00:00:00' where return_goods_id=326;
+update return_goods_product set created='2019-01-09 00:00:00' where return_goods_id=326;
 
-update back_empty set created='2019-01-06 00:00:00' where back_empty_id=4298;
-update back_empty_product set created='2019-01-06 00:00:00' where back_empty_id=4298;
+update back_empty set created='2019-01-25 00:00:00' where back_empty_id=4361;
+update back_empty_product set created='2019-01-25 00:00:00' where back_empty_id=4361;
 
+<<<<<<< HEAD
 delete from back_empty_product where back_empty_id=5785;
 delete from back_empty_description where back_empty_id=5785;
 delete from back_empty where back_empty_id=5785;
@@ -56,3 +57,54 @@ delete from back_empty where back_empty_id=5785;
 69408
 delete from order_product_barcode where order_product_id=69408;
 delete from order_product where order_product_id=69408;
+=======
+update `order` set created='2018-12-31 00:00:00',distribution_time='2018-12-31 00:00:00',sorting_time='2018-12-31 00:00:00',delivery_time='2018-12-31 00:00:00',finish_time='2018-12-31 00:00:00',last_updated='2018-12-31 00:00:00' where order_id=13585;
+update `order_product` set created='2018-12-31 00:00:00' where order_id=13585;
+
+
+delete from back_empty_product where back_empty_id=6613;
+delete from back_empty_description where back_empty_id=6613;
+delete from back_empty where back_empty_id=6613;
+
+delete from return_goods_product where return_goods_id in (442,332,331,330,329,328,327);
+delete from return_goods_description where return_goods_id in (442,332,331,330,329,328,327);
+delete from return_goods where return_goods_id in (442,332,331,330,329,328,327);
+
+
+<!--update order_product set order_price=79 where order_product_id=65106;-->
+<!--update `order` set order_order_price=1189 where order_id=12983;-->
+
+update order_product set order_price=79 where order_product_id=63442;
+update `order` set order_order_price=1864 where order_id=12983;
+
+update `order` set order_code=20181231296,created='2018-12-31 00:00:00' where order_id=13593;
+
+
+delete from order_product_update_history where order_product_id=63566;
+delete from order_product_barcode where order_product_id=63566;
+delete from order_product where order_product_id=63566;
+
+delete from order_product_update_history where order_product_id=69061;
+delete from `order_product` where order_product_id=69061;
+
+update `order` set  settlement_status=1 where order_id in (12857,12955);
+
+update `order` set settlement_status=1 where order_id>=13181 and shop_id=189;
+
+update back_empty set settlement_status=1 where back_empty_id>=4213  and shop_id=133;
+
+<!--库存去重，取大规格number_per_box-->
+SELECT c.category_name,pb.product_brand_name,p.product_name,
+case p.product_package when 1 then '玻璃瓶装' when 2 then '塑料瓶装' when 3 then '陶瓷瓶装' when 4 then '易拉罐装' when 5 then '铝瓶装' when 6 then '纸盒装' when 7 then '桶装' when 8 then '礼盒装' end as product_package,
+CONCAT(p.capacity, case p.capacity_unit when 1 then 'ml' when 2 then 'L' when 3 then 'g' end,'*',max(pp.number_per_box)) capacitys,
+p.inventory_number FROM `product` p LEFT JOIN product_brand pb ON pb.product_brand_id=p.product_brand_id LEFT JOIN category c ON c.category_id=p.category_id left join product_price pp on p.product_id=pp.product_id
+WHERE  p.product_id>1 group by p.product_name,p.product_package,p.capacity,p.product_package
+ORDER BY p.product_name,p.product_id into outfile 'D:\kucuns.xls';
+
+update `order` set  shop_organization_brand_name='钢管厂五区小郡肝串串香',shop_alias='华阳店',shop_id=398 where order_id=13467 or order_id=13948;update `order_product` set shop_id=398 where order_id=13467 or order_id=13948;
+
+
+update `order` set settlement_status=1 where created>'2019-02-16 00:00:00' and created<'2019-03-15 00:00:00' and shop_id=149;
+update `return_goods` set settlement_status=1 where created>'2019-02-16 00:00:00' and created<'2019-03-15 00:00:00' and shop_id=149;
+update `back_empty` set settlement_status=1 where created>'2019-02-16 00:00:00' and created<'2019-03-15 00:00:00' and shop_id=149;
+>>>>>>> 2e65b7259fc90107a7bef0bcf61fba615ec4df39

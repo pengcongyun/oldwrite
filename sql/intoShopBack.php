@@ -5,7 +5,6 @@ header("Content-Type: text/html; charset=utf-8");
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii2_test')or die('error');
 mysqli_query($conn,'set names utf8');
 $bz_shop_id=50;
-//$i=300;
 $newShopId=[414];
 $sql="select * from `shop_product_back_empty` where shop_id=".$bz_shop_id;
 $stmt=mysqli_query($conn,$sql);//执行sql查询语句
