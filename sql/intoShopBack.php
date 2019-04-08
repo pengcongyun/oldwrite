@@ -1,11 +1,11 @@
 <?php
 //商铺返空商品 导入到 新商铺
 header("Content-Type: text/html; charset=utf-8");
-//$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
+$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii2_test')or die('error');
 mysqli_query($conn,'set names utf8');
 $bz_shop_id=50;
-$newShopId=[424];
+$newShopId=[425];
 $sql="select * from `shop_product_back_empty` where shop_id=".$bz_shop_id;
 $stmt=mysqli_query($conn,$sql);//执行sql查询语句
 
