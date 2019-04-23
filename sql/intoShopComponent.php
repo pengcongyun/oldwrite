@@ -7,12 +7,12 @@ $conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('err
 mysqli_query($conn,'set names utf8');
 
 $bz_shop_id=433;
-$newShopId=[438];
+$in_shop_ids=[440];
 
 $sql="select * from `shop_product` where shop_id=".$bz_shop_id;
 $stmt=mysqli_query($conn,$sql);//执行sql查询语句
 //for ($i=308;$i<=309;$i++){
-foreach ($newShopId as $i){
+foreach ($in_shop_ids as $i){
     foreach ($stmt as $row){
         $sql3="select * from shop_product where shop_id=".$i." and product_price_id=".$row['product_price_id'];
         $new_shop_product_id=mysqli_fetch_assoc(mysqli_query($conn,$sql3))['shop_product_id'];

@@ -7,7 +7,7 @@ $conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('err
 mysqli_query($conn,'set names utf8');
 
 $bz_shop_id=433;
-$in_shop_ids=[438];
+$in_shop_ids=[440];
 
 $sql="select * from `shop_product` where shop_id=".$bz_shop_id;
 $stmt=mysqli_query($conn,$sql);//执行sql查询语句
