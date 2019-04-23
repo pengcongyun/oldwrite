@@ -84,8 +84,8 @@ delete from order_product_update_history where order_product_id=63566;
 delete from order_product_barcode where order_product_id=63566;
 delete from order_product where order_product_id=63566;
 
-delete from order_product_update_history where order_product_id=69061;
-delete from `order_product` where order_product_id=69061;
+delete from order_product_barcode where order_product_id=78898;
+delete from `order_product` where order_product_id=78898;
 
 update `order` set  settlement_status=1 where order_id in (12857,12955);
 

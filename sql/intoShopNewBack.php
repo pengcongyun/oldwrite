@@ -7,16 +7,16 @@
  */
 //新返空 导入到 各大商铺
 header("Content-Type: text/html; charset=utf-8");
-//$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
+$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii2_niuniu')or die('error');
-//$conn=mysqli_connect("127.0.0.1",'root','root','yii2_test')or die('error');
+//$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
 $new_product_id=[
-    ['product_id'=>31,'back_name'=>1,'back_price'=>1]
+    ['product_id'=>242,'back_name'=>1,'back_price'=>1]
 ];
 
 foreach ($new_product_id as $id){
-    for($i=3;$i<=425;$i++) {
+    for($i=3;$i<=437;$i++) {
 //        去重添加
         $sql_exist='select * from shop_product_back_empty where back_empty_name='.$id['back_name'].' and product_id='.$id['product_id'].' and shop_id='.$i;
         $count=mysqli_num_rows(mysqli_query($conn,$sql_exist));

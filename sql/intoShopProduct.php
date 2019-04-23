@@ -1,13 +1,13 @@
 <?php
 //商铺商品 导入到 新商铺
 header("Content-Type: text/html; charset=utf-8");
-//$conn=mysqli_connect("127.0.0.1",'root','root','yii2_test')or die('error');
+//$conn=mysqli_connect("127.0.0.1",'root','root','yii2_niuniu')or die('error');
 //$conn=mysqli_connect("127.0.0.1",'root','root','pp')or die('error');
-//$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
+$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
 
-$bz_shop_id=293;
-$in_shop_ids=[431];
+$bz_shop_id=433;
+$in_shop_ids=[438];
 
 $sql="select * from `shop_product` where shop_id=".$bz_shop_id;
 $stmt=mysqli_query($conn,$sql);//执行sql查询语句
@@ -24,17 +24,21 @@ foreach ($in_shop_ids as $i){
 //            if(in_array($row['product_price_id'],[22,24])){
 //
 //            }else{
-                $order_method = $row['order_method'];
-                $number_per_box = $row['number_per_box'];
-                $order_price = $row['order_price'];
-                $price = $row['settlement_price'];
-                $product_id = $row['product_id'];
-                $product_price_id = $row['product_price_id'];
-                $shop_id = $i;
-                $in_sql = "insert into `shop_product` (order_method,number_per_box,order_price,settlement_price,product_id,product_price_id,shop_id) values
+        $same_sql="select * from `shop_product` where shop_id='.$i.' and product_price_id=".$row['product_price_id'];
+        $count=mysqli_num_rows(mysqli_query($conn,$same_sql));
+        if($count==0) {
+            $order_method = $row['order_method'];
+            $number_per_box = $row['number_per_box'];
+            $order_price = $row['order_price'];
+            $price = $row['settlement_price'];
+            $product_id = $row['product_id'];
+            $product_price_id = $row['product_price_id'];
+            $shop_id = $i;
+            $in_sql = "insert into `shop_product` (order_method,number_per_box,order_price,settlement_price,product_id,product_price_id,shop_id) values
     ({$order_method},{$number_per_box},{$order_price},{$price},{$product_id},{$product_price_id},{$shop_id})";
-                mysqli_query($conn, $in_sql);
+            mysqli_query($conn, $in_sql);
 //            }
+        }
     }
 }
 echo 'ok';exit;
