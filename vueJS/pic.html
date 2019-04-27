@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片上传</title>
+    <script src="./vue.min.js"></script>
+    <script src="./node_modules/vue-picture-input/umd/vue-picture-input.js"></script>
+</head>
+<body>
+<template>
+    <div class="hello">
+        <picture-input ref="pictureInput" @change="onChange" width="600" height="600" margin="16" accept="image/jpeg,image/png" size="10" buttonClass="btn"></picture-input>
+    </div>
+</template>
+</body>
+<script>
+    new Vue({
+        el:'',
+        name: 'app',
+        data () {
+            return {
+            }
+        },
+        methods: {
+            onChange () {
+                console.log('New picture selected!')
+                if (this.$refs.pictureInput.image) {
+                    console.log('Picture loaded.')
+                } else {
+                    console.log('FileReader API not supported: use the <form>, Luke!')
+                }
+            }
+        }
+    })
+</script>
+</html>

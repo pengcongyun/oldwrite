@@ -54,6 +54,10 @@ delete from back_empty_product where back_empty_id=5785;
 delete from back_empty_description where back_empty_id=5785;
 delete from back_empty where back_empty_id=5785;
 
+delete from back_empty_product where back_empty_id in (12789,12790,12791,12792,12793,12794);
+delete from back_empty_description where back_empty_id in (12789,12790,12791,12792,12793,12794);
+delete from back_empty where back_empty_id in (12789,12790,12791,12792,12793,12794);
+
 69408
 delete from order_product_barcode where order_product_id=69408;
 delete from order_product where order_product_id=69408;
@@ -84,8 +88,8 @@ delete from order_product_update_history where order_product_id=63566;
 delete from order_product_barcode where order_product_id=63566;
 delete from order_product where order_product_id=63566;
 
-delete from order_product_update_history where order_product_id=69061;
-delete from `order_product` where order_product_id=69061;
+delete from order_product_barcode where order_product_id=78898;
+delete from `order_product` where order_product_id=78898;
 
 update `order` set  settlement_status=1 where order_id in (12857,12955);
 
@@ -108,3 +112,8 @@ update `order` set settlement_status=1 where created>'2019-02-16 00:00:00' and c
 update `return_goods` set settlement_status=1 where created>'2019-02-16 00:00:00' and created<'2019-03-15 00:00:00' and shop_id=149;
 update `back_empty` set settlement_status=1 where created>'2019-02-16 00:00:00' and created<'2019-03-15 00:00:00' and shop_id=149;
 >>>>>>> 2e65b7259fc90107a7bef0bcf61fba615ec4df39
+
+
+update `order` set created='2019-02-07 00:00:00',shop_transport_line=9,delivery_men_id=9,delivery_men='万利军' where order_id=25188;
+update `order` set shop_transport_line=3,delivery_men_id=3,delivery_men='黄永洪' where order_id=25189;
+update `order_porter` set porter_men_id=9,porter_men='万利军' where order_id=25188;
