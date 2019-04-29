@@ -9,6 +9,7 @@ mysqli_query($conn,'set names utf8');
 $bz_shop_id=433;
 $in_shop_ids=[452,453];
 
+
 $sql="select * from `shop_product` where shop_id=".$bz_shop_id;
 $stmt=mysqli_query($conn,$sql);//执行sql查询语句
 //for ($i=308;$i<=309;$i++){
