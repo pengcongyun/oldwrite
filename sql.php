@@ -54,9 +54,9 @@ delete from back_empty_product where back_empty_id=5785;
 delete from back_empty_description where back_empty_id=5785;
 delete from back_empty where back_empty_id=5785;
 
-delete from back_empty_product where back_empty_id in (12789,12790,12791,12792,12793,12794);
-delete from back_empty_description where back_empty_id in (12789,12790,12791,12792,12793,12794);
-delete from back_empty where back_empty_id in (12789,12790,12791,12792,12793,12794);
+delete from back_empty_product where back_empty_id>=9880 and back_empty_id<=9890;
+delete from back_empty_description where back_empty_id>=9880 and back_empty_id<=9890;;
+delete from back_empty where back_empty_id>=9880 and back_empty_id<=9890;
 
 69408
 delete from order_product_barcode where order_product_id=69408;
@@ -65,6 +65,9 @@ delete from order_product where order_product_id=69408;
 update `order` set created='2018-12-31 00:00:00',distribution_time='2018-12-31 00:00:00',sorting_time='2018-12-31 00:00:00',delivery_time='2018-12-31 00:00:00',finish_time='2018-12-31 00:00:00',last_updated='2018-12-31 00:00:00' where order_id=13585;
 update `order_product` set created='2018-12-31 00:00:00' where order_id=13585;
 
+
+update `order` set shop_organization_brand_name='团购终端',shop_alias='杨彬',shop_id=400 where order_id=16383;
+update `order_product` set shop_id=400 where order_id=16383;
 
 delete from back_empty_product where back_empty_id=6613;
 delete from back_empty_description where back_empty_id=6613;
