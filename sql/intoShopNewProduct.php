@@ -11,7 +11,7 @@ $conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('err
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii2_niuniu')or die('error');
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');
-$new_product_price_id=[370];
+$new_product_price_id=[377];
 //$sql_shop='select shop_id from `shop` where shop_organization_brand_id=154';
 //$res=mysqli_query($conn,$sql_shop);
 //$shop_ids=[];
@@ -23,14 +23,14 @@ $new_product_price_id=[370];
 foreach ($new_product_price_id as $id){
     $sql_product='select * from `product_price` where product_price_id='.$id;
     $row=mysqli_fetch_assoc(mysqli_query($conn,$sql_product));
-    for($i=3;$i<=437;$i++) {
+    for($i=3;$i<=461;$i++) {
         //去重添加
 //    foreach ($shop_ids as $k=>$v){
         $sql_exist='select * from shop_product where product_price_id='.$id.' and shop_id='.$i;
         $count=mysqli_num_rows(mysqli_query($conn,$sql_exist));
         if($count==0){
-            $order_price=94;
-            $settle_price=84;
+            $order_price=122;
+            $settle_price=122;
             $number_per_box = $row['number_per_box'];
             $order_method = $row['order_method'];
             $product_price_id = $row['product_price_id'];
