@@ -66,8 +66,8 @@ update `order` set created='2018-12-31 00:00:00',distribution_time='2018-12-31 0
 update `order_product` set created='2018-12-31 00:00:00' where order_id=13585;
 
 
-update `order` set shop_organization_brand_name='团购终端',shop_alias='杨彬',shop_id=400 where order_id=16383;
-update `order_product` set shop_id=400 where order_id=16383;
+update `order` set shop_organization_brand_name='罗一手奶汤面',shop_alias='三圣乡店',shop_id=466 where order_id in (28097,28095);
+update `order_product` set shop_id=466 where order_id in (28097,28095);
 
 update `back_empty` set shop_organization_brand_name='情妹一香坊',shop_alias='杜甫草堂店',shop_id=18 where back_empty_id=8167;
 update `back_empty_product` set shop_id=18 where back_empty_id=8167;
