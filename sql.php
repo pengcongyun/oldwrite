@@ -123,3 +123,22 @@ update `back_empty` set settlement_status=1 where created>'2019-02-16 00:00:00' 
 update `order` set created='2019-02-07 00:00:00',shop_transport_line=9,delivery_men_id=9,delivery_men='万利军' where order_id=25188;
 update `order` set shop_transport_line=3,delivery_men_id=3,delivery_men='黄永洪' where order_id=25189;
 update `order_porter` set porter_men_id=9,porter_men='万利军' where order_id=25188;
+
+
+SELECT data1.shop_id,data1.shop_organization_brand_name,data1.shop_alias,data1.receiver,data1.product_id,data1.product_category,data1.product_brand_name,data1.product_name,data1.product_package,data1.capacity,data1.product_num,
+MAX(pp.number_per_box) number_per_box, data1.transport_price,
+0+CAST(data1.product_num/MAX(pp.number_per_box) AS char) product_num_piece
+FROM
+(SELECT rg.shop_id,rg.shop_organization_brand_name,rg.shop_alias,s.transport_price,rg.receiver,
+rgp.product_id,rgp.product_category,rgp.product_brand_name,rgp.product_name,
+case rgp.product_package when 1 then '玻璃瓶装' when 2 then '塑料瓶装' when 3 then '陶瓷瓶装' when 4 then '易拉罐装' when 5 then '铝瓶装' when 6 then '纸盒装' when 7 then '桶装' when 8 then '礼盒装' when 9 then '其他' end as product_package,
+CONCAT(rgp.product_capacity, case rgp.product_capacity_unit when 1 then 'ml' when 2 then 'L' when 3 then 'g' when 4 then 'kg' when 5 then '支' when 6 then '台' when 7 then '个' when 8 then '把' when 9 then '本' when 10 then '根' when 11 then '包' when 12 then '罐' when 13 then '盒' when 14 then '桶' when 15 then '瓶' when 16 then '条' when 17 then '顶' end) capacity,
+sum(rgp.return_goods_receive_number) AS product_num
+FROM `return_goods_product` rgp
+LEFT JOIN `return_goods` rg on rg.return_goods_id=rgp.return_goods_id
+LEFT JOIN shop s on s.shop_id=rgp.shop_id
+WHERE rg.receive_time>='2019-04-30 15:00:00' and rg.receive_time<'2019-05-31 15:00:00' and rg.return_goods_status>=4
+GROUP BY rg.receiver, rg.shop_id, rgp.product_id) data1
+LEFT JOIN product_price pp ON pp.product_id=data1.product_id
+GROUP BY data1.receiver, data1.shop_id, data1.product_id
+ORDER BY data1.receiver, data1.shop_organization_brand_name, data1.shop_id, product_num_piece DESC;
