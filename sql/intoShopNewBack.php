@@ -7,7 +7,7 @@
  */
 //新返空 导入到 各大商铺
 header("Content-Type: text/html; charset=utf-8");
-$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
+//$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii2_niuniu')or die('error');
 //$conn=mysqli_connect("127.0.0.1",'root','root','yii_niuniu')or die('error');
 mysqli_query($conn,'set names utf8');

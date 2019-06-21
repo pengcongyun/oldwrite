@@ -142,3 +142,6 @@ GROUP BY rg.receiver, rg.shop_id, rgp.product_id) data1
 LEFT JOIN product_price pp ON pp.product_id=data1.product_id
 GROUP BY data1.receiver, data1.shop_id, data1.product_id
 ORDER BY data1.receiver, data1.shop_organization_brand_name, data1.shop_id, product_num_piece DESC;
+
+
+UPDATE activity_shop s, activity c SET s.deposit_price=2.4 WHERE s.activity_id = c.activity_id and c.gift_product_price_id=98;
