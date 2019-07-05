@@ -223,3 +223,6 @@ GROUP BY shop_id
 ) table2
 where s.shop_id>2 and table1.shop_id=s.shop_id and table2.shop_id=s.shop_id and s.shop_status=1
 order by table1.less_product_order_number/table2.order_number desc;
+
+
+select count(*),receiver from back_empty where back_empty_id>2 and applicant_time>='2019-06-30 15:00:00' and applicant_time<='2019-07-01 15:00:00' and back_empty_type=1 group by receiver_id;

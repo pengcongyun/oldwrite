@@ -5,14 +5,11 @@
  * Date: 2019/1/18
  * Time: 10:36
  */
-//echo date('Y-m-d H:i:s','1550371320');
-function generate_password( $length = 12 ) {
-    $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_0123456789';
-    $password = '';
-    for ( $i = 0; $i < $length; $i++ )
-    {
-        $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
-    }
-    return $password;
+$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
+mysqli_query($conn,'set names utf8');
+$sql="select shop_id from shop_product where shop_product_id>1";
+$stmt=mysqli_query($conn,$sql);//执行sql查询语句
+$ids=[];
+foreach ($stmt as $k){
+    $ids[]=$k['shop_product_id'];
 }
-echo generate_password(32);
