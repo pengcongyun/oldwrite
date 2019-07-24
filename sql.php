@@ -69,8 +69,8 @@ update `order_product` set created='2018-12-31 00:00:00' where order_id=13585;
 update `order` set shop_organization_brand_name='罗一手奶汤面',shop_alias='三圣乡店',shop_id=466 where order_id in (28097,28095);
 update `order_product` set shop_id=466 where order_id in (28097,28095);
 
-update `back_empty` set shop_organization_brand_name='情妹一香坊',shop_alias='杜甫草堂店',shop_id=18 where back_empty_id=8167;
-update `back_empty_product` set shop_id=18 where back_empty_id=8167;
+update `back_empty` set shop_organization_brand_name='钢管厂五区小郡肝串串香',shop_alias='动物园店',shop_id=262 where back_empty_id=26273;
+update `back_empty_product` set shop_id=262 where back_empty_id=26273;
 
 delete from back_empty_product where back_empty_id=6613;
 delete from back_empty_description where back_empty_id=6613;

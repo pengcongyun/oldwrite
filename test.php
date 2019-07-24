@@ -17,3 +17,13 @@ delete from back_empty where back_empty_id=1579;
 
 delete from back_empty where back_empty_id in (129,599,687,865,1054,1199);
 
+
+update activity_shop set deposit_price=2.4 where activity_id in (104,105) and deposit_price=14.4;
+update activity_shop set deposit_price=2.4 where activity_id in (104,105) and deposit_price=10.8;
+update activity_shop set deposit_price=3.5 where activity_id in (104,105) and deposit_price=9.48;
+update activity_shop set deposit_price=3 where activity_id in (104,105) and deposit_price=9;
+update activity_shop set deposit_price=2.4 where activity_id in (104,105) and deposit_price=8.4;
+
+
+
+
