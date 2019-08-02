@@ -226,3 +226,6 @@ order by table1.less_product_order_number/table2.order_number desc;
 
 
 select count(*),receiver from back_empty where back_empty_id>2 and applicant_time>='2019-06-30 15:00:00' and applicant_time<='2019-07-01 15:00:00' and back_empty_type=1 group by receiver_id;
+
+
+select o.order_code from `order` o left join order_product op on o.order_id=op.order_id left join shop s on s.shop_id=op.shop_id left join product p on p.product_id=op.product_id left join category c on c.category_id=p.category_id WHERE c.parent_category_id=11 and  p.category_id!=1007 and o.order_status not in (6,7) and o.finish_time>='2019-06-01 00:00:00' and o.finish_time<='2019-06-30 23:59:59"' and o.order_type=1 and op.activity_type=0 and op.product_id=98 and o.shop_id=91 group by o.shop_id,op.product_id;
