@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<a href="http://barcode.cnaidc.com/html/cnaidc.php?filetype=PNG&dpi=300&scale=2&rotation=0&font_family=Arial.ttf&font_size=14&text=6901347997326&thickness=40&start=NULL&code=BCGcode128" download="22">下载</a>-->
+<!--<a href="http://storage.niuniustore.com/img/u138.png" download="">下载</a>-->
+
+
+<div>
+    <img id="svgcode_note" style="width: 150px;height: 56px"/>
+</div>
+<!--<a href="" download="" id="hh">点击下载</a>-->
+<a href="" id="hh" download="">点击下载</a>
+
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="JsBarcode.all.min.js"></script>
+</body>
+<script>
+    $("#hh").click(function () {
+        // JsBarcode("#svgcode_note", "2345864");
+        // $("#hh").attr("href",$("#svgcode_note").attr("src"))
+    });
+    JsBarcode("#svgcode_note", "2345864",{
+        format: "CODE128",
+        width:2,
+        height:50,
+        displayValue:true,
+        font:"Arial",
+        font_size:14
+        // lineColor:"#ff0000"
+    });
+    $("#hh").attr("href",$("#svgcode_note").attr("src"))
+
+</script>
+</html>
