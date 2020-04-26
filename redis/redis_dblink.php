@@ -2,12 +2,12 @@
 header("Content-Type: text/html; charset=utf-8");
 $redis=new Redis();
 $redis->connect('localhost',6379);
-//$redis->delete('test');//删除redis ---test
+$redis->delete('test');//删除redis ---test
 $result=$redis->get('test');
 if(empty($result)||$result===false){
-    $conn=mysqli_connect("127.0.0.1",'root','root','test')or die('error');
+    $conn=mysqli_connect("127.0.0.1",'root','root','longzheng')or die('error');
     mysqli_query($conn,'set names utf8');
-    $sql="select * from md limit 2";
+    $sql="select * from agent limit 10";
     $result=mysqli_query($conn,$sql);//获取所有
     foreach ($result as $k){
         $res[]=$k;
@@ -17,5 +17,5 @@ if(empty($result)||$result===false){
 $res=$redis->get('test');
 $restults=json_decode($res);
 foreach ($restults as $row){
-    echo $row->Iname.$row->Age.$row->AreaName.'<br>';
+    echo $row->agent_name.$row->username.$row->agent_phone.'<br>';
 }
