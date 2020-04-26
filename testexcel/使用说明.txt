@@ -1,0 +1,5 @@
+1.把文件下载到本地，放在在Apache环境下
+2.d.xlsx是刀剑的服务玩家列表，本程序只适合此种xlsx文件结构，其他结构请修改index.php源码
+3.访问zip.php的功能是把生成的files文件夹打包成files.zip
+4.访问index.php即可生成files文件夹，里面0.js---n.js 分别存放各个服务器人名，server_name_list.js存放服务器列表。
+5.Classes 存放的是php读取excel的功能模块，具体任务逻辑都在index.php

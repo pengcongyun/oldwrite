@@ -5,9 +5,9 @@ $redis->connect('localhost',6379);
 $redis->delete('test');//删除redis ---test
 $result=$redis->get('test');
 if(empty($result)||$result===false){
-    $conn=mysqli_connect("127.0.0.1",'root','root','longzheng')or die('error');
+    $conn=mysqli_connect("127.0.0.1",'root','root','test_niuniu')or die('error');
     mysqli_query($conn,'set names utf8');
-    $sql="select * from agent limit 10";
+    $sql="select * from `order` limit 10000";
     $result=mysqli_query($conn,$sql);//获取所有
     foreach ($result as $k){
         $res[]=$k;
@@ -17,5 +17,5 @@ if(empty($result)||$result===false){
 $res=$redis->get('test');
 $restults=json_decode($res);
 foreach ($restults as $row){
-    echo $row->agent_name.$row->username.$row->agent_phone.'<br>';
+    echo $row->shop_organization_brand_name.'-'.$row->shop_alias.'-'.$row->delivery_men.'<br>';
 }
