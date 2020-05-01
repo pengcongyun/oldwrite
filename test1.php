@@ -16,3 +16,16 @@ if (false !== strpos($url, "https")) {
 }
 $resultStr = curl_exec($ch);
 $result = json_decode($resultStr, true);
+
+
+
+
+
+/*$("input[name=legal_person_phone]").val('<?=$row['legal_person_phone']?>');*/
+
+
+
+
+
+
+

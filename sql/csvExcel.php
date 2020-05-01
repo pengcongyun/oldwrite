@@ -36,4 +36,4 @@ while ($row = mysqli_fetch_row($stmt)) {
     fputcsv($fp, $row);
 }
 
-//http://www.old.com/sql/phpexcel.php?start=2018-11-05 14:00:00&end=2018-11-06 14:00:00
+//http://www.old.com/sql/csvExcel.php?start=2018-11-05 14:00:00&end=2018-11-06 14:00:00

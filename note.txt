@@ -1,0 +1,7 @@
+https://oneinstack.com/install/
+
+mysql -uroot -ppengyun120
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'pengyun120' WITH GRANT OPTION;
+flush privileges;
+
+service iptables stop

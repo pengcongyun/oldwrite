@@ -5,14 +5,15 @@
  * Date: 2019/1/18
  * Time: 10:36
  */
-//echo date('Y-m-d H:i:s','1550371320');
-function generate_password( $length = 12 ) {
-    $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_0123456789';
-    $password = '';
-    for ( $i = 0; $i < $length; $i++ )
-    {
-        $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
-    }
-    return $password;
-}
-echo generate_password(32);
+//$conn=mysqli_connect("39.104.156.225",'root','WpFwf4LP','yii_niuniu')or die('error');
+//mysqli_query($conn,'set names utf8');
+//$sql="select shop_id from shop_product where shop_product_id>1";
+//$stmt=mysqli_query($conn,$sql);//执行sql查询语句
+//$ids=[];
+//foreach ($stmt as $k){
+//    $ids[]=$k['shop_product_id'];
+//}
+//'570,236,294,114,573,578,448,425,467,135,136,453,149,90,567,168,179,188,564,584,595,145,20,556,557,139,582,251,535,569,562,447'
+
+unlink('D:/phpStudy/WWW/yii2_niuniu/images/data/test1.csv');
+echo 11;
