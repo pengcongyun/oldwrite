@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="applicable-device" content="mobile" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="msapplication-tap-highlight" content="no" />
+<title>Title</title>
+<style>
+    *{
+        box-sizing:border-box;
+        -moz-box-sizing:border-box; /* Firefox */
+        -webkit-box-sizing:border-box; /* Safari */
+    }
+    body{
+        color:#333;
+        font-size: 0.3rem;
+        margin:0;
+        padding:0;
+        background: url("3.png") no-repeat;
+        width: 750px;
+        max-height: 4875px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .body{
+        position: relative;
+        margin-top: 1100px;
+        margin-left: 100px;
+    }
+    .first{
+        margin-top: 50px;
+        position: relative;
+    }
+    .first .title{
+        width: 570px;
+        display: block;
+        font-size:0.36rem;
+        font-family:粗体;
+    }
+    .first .answer{
+        margin-top: 40px;
+        position: relative;
+        width: 400px;
+    }
+
+    .first .answer .re_inp{
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        float: left;
+        color: #333333;
+        position: relative;
+    }
+    .first .answer .re_inp input{
+        width: 50px;
+        height: 50px;
+        margin-top: 40px;
+        opacity: 0;
+        cursor: pointer;
+        border-radius: 40px;
+    }
+    .first .answer .re_inp label{
+        position: absolute;
+        left: 0px;
+        top: -3px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #c57b35;
+        cursor: pointer;
+        border-radius: 40px;
+    }
+    .first .answer .re_inp input:checked+label:after{
+        opacity: 1;
+        content: url('1.png');
+        position: absolute;
+        background: #c5812a;
+        left: 0px;
+        top: -3px;
+        border-top: none;
+        border-right: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+    }
+    .first .answer .type{
+        margin-top: 40px;
+        font-size: 0.3rem;
+        color: #333333;
+        width: 400px;
+        margin-left: 50px;
+        height: 40px;
+        line-height: 40px;
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <div class="body">
+        <form action="">
+            <div class="first">
+                <span class="title">1.您的班级</span><br>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="a" id="a1" value="1" autocomplete="off" checked>
+                        <label for="a1"></label>
+                    </div>
+                    <span class="type">18酒店管理一班</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="a" id="a2" value="2" autocomplete="off">
+                        <label for="a2"></label>
+                    </div>
+                    <span class="type">18酒店管理二班</span>
+                </div>
+            </div>
+            <div class="first">
+                <span class="title">2.您的性别</span><br>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="b" id="b1" value="1" autocomplete="off" checked>
+                        <label for="b1"></label>
+                    </div>
+                    <span class="type">男</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="b" id="b2" value="2" autocomplete="off">
+                        <label for="b2"></label>
+                    </div>
+                    <span class="type">女</span>
+                </div>
+            </div>
+            <div class="first">
+                <span class="title">3.您使用过拼多多吗？</span><br>
+                <div>(如使用过，继续第4题，如果没有，请跳至第九题)</div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="c" id="c1" value="1" autocomplete="off" checked>
+                        <label for="c1"></label>
+                    </div>
+                    <span class="type">使用过</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="c" id="c2" value="2" autocomplete="off">
+                        <label for="c2"></label>
+                    </div>
+                    <span class="type">没使用过</span>
+                </div>
+            </div>
+            <div class="first">
+                <span class="title">4.您认为拼多多的客源市场定位为？</span><br>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="d" id="d1" value="1" autocomplete="off" checked>
+                        <label for="d1"></label>
+                    </div>
+                    <span class="type">低档</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="d" id="d2" value="2" autocomplete="off">
+                        <label for="d2"></label>
+                    </div>
+                    <span class="type">中档</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="d" id="d3" value="2" autocomplete="off">
+                        <label for="d3"></label>
+                    </div>
+                    <span class="type">高档</span>
+                </div>
+            </div>
+            <div class="first">
+                <span class="title">5.您觉得拼多多的产品？</span><br>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="e" id="e1" value="1" autocomplete="off" checked>
+                        <label for="e1"></label>
+                    </div>
+                    <span class="type">太差</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="e" id="e2" value="2" autocomplete="off">
+                        <label for="e2"></label>
+                    </div>
+                    <span class="type">差</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="e" id="e3" value="3" autocomplete="off">
+                        <label for="e3"></label>
+                    </div>
+                    <span class="type">一般</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="e" id="e4" value="4" autocomplete="off">
+                        <label for="e4"></label>
+                    </div>
+                    <span class="type">好</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="e" id="e5" value="5" autocomplete="off">
+                        <label for="e5"></label>
+                    </div>
+                    <span class="type">很好</span>
+                </div>
+            </div>
+            <div class="first">
+                <span class="title">6.您觉得拼多多的价格？</span><br>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="f" id="f1" value="1" autocomplete="off" checked>
+                        <label for="f1"></label>
+                    </div>
+                    <span class="type">低</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="f" id="f2" value="2" autocomplete="off">
+                        <label for="f2"></label>
+                    </div>
+                    <span class="type">中</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="f" id="f3" value="2" autocomplete="off">
+                        <label for="f3"></label>
+                    </div>
+                    <span class="type">高</span>
+                </div>
+            </div>
+            <div class="first">
+                <span class="title">7.您觉得拼多多的营销渠道？</span><br>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="g" id="g1" value="1" autocomplete="off" checked>
+                        <label for="g1"></label>
+                    </div>
+                    <span class="type">单一</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="g" id="g2" value="2" autocomplete="off">
+                        <label for="g2"></label>
+                    </div>
+                    <span class="type">一般</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="g" id="g3" value="2" autocomplete="off">
+                        <label for="g3"></label>
+                    </div>
+                    <span class="type">多样</span>
+                </div>
+            </div>
+            <div class="first">
+                <span class="title">8.您觉得拼多多的促销方式？</span><br>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="h" id="h1" value="1" autocomplete="off" checked>
+                        <label for="h1"></label>
+                    </div>
+                    <span class="type">不好</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="h" id="h2" value="2" autocomplete="off">
+                        <label for="h2"></label>
+                    </div>
+                    <span class="type">一般</span>
+                </div>
+                <div class="answer">
+                    <div class="re_inp">
+                        <input type="radio" name="h" id="h3" value="2" autocomplete="off">
+                        <label for="h3"></label>
+                    </div>
+                    <span class="type">不错</span>
+                </div>
+            </div>
+            <div class="first">
+                <span class="title">9.请简述您使用或不愿使用拼多多的原因</span><br>
+                <textarea name="i" style="margin-top: 40px;width: 530px;height: 340px;border: 1px solid #e6e5e5;font-size: 0.3rem;border-radius:8px;">因为没下载，所以不使用</textarea>
+            </div>
+            <div style="margin-top: 100px;position: relative;text-align: center;width: 570px;">
+                <input type="submit" style="background: url('2.png');width: 480px;height: 85px;border-radius: 85px;border: none;" value="">
+            </div>
+        </form>
+    </div>
+</body>
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script>
+    /*弹窗专用*/
+    window.onresize=function () {
+        f();
+    };
+    f();
+    function f(){
+        var a = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        var b = document.documentElement.getBoundingClientRect().width;
+        var c=a/(b*100/750)
+        if(c<=12){
+            $('.icon').css('margin-top','0.28rem')
+        }else {
+            $('.icon').css('margin-top',(c-12)+'rem')
+        }
+    }
+    ;(function (designWidth, maxWidth) {
+        var doc = document,
+            win = window;
+        var docEl = doc.documentElement;
+        var tid;
+        var rootItem, rootStyle;
+
+        function refreshRem() {
+            var width = docEl.getBoundingClientRect().width;
+            if (!maxWidth) {
+                maxWidth = 540;
+            }
+            ;
+            if (width > maxWidth) {
+                width = maxWidth;
+            }
+            //与淘宝做法不同，直接采用简单的rem换算方法1rem=100px
+            var rem = width * 100 / designWidth;
+            //兼容UC开始
+            rootStyle = "html{font-size:" + rem + 'px !important}';
+            rootItem = document.getElementById('rootsize') || document.createElement("style");
+            if (!document.getElementById('rootsize')) {
+                document.getElementsByTagName("head")[0].appendChild(rootItem);
+                rootItem.id = 'rootsize';
+            }
+            if (rootItem.styleSheet) {
+                rootItem.styleSheet.disabled || (rootItem.styleSheet.cssText = rootStyle)
+            } else {
+                try {
+                    rootItem.innerHTML = rootStyle
+                } catch (f) {
+                    rootItem.innerText = rootStyle
+                }
+            }
+            //兼容UC结束
+            docEl.style.fontSize = rem + "px";
+        };
+        refreshRem();
+
+        win.addEventListener("resize", function () {
+            clearTimeout(tid); //防止执行两次
+            tid = setTimeout(refreshRem, 300);
+        }, false);
+
+        win.addEventListener("pageshow", function (e) {
+            if (e.persisted) { // 浏览器后退的时候重新计算
+                clearTimeout(tid);
+                tid = setTimeout(refreshRem, 300);
+            }
+        }, false);
+
+        if (doc.readyState === "complete") {
+            doc.body.style.fontSize = "16px";
+        } else {
+            doc.addEventListener("DOMContentLoaded", function (e) {
+                doc.body.style.fontSize = "16px";
+            }, false);
+        }
+    })(750, 1200);
+
+</script>
+</html>

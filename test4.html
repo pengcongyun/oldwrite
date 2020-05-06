@@ -3,6 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<<<<<<< HEAD
+    <script src="jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <button class="bt1">我是1</button>
+    <button class="bt2">我是2</button>
+    <button class="bt3">我是3</button>
+</body>
+<script>
+    var arr=[0,1,2,3,4,5,6,7,8,9,10,11];
+    var cas=arr.slice(5,10);
+    console.log(arr);
+    console.log(cas);
+
+    $('.bt1').click(function () {
+        arr.push(3);
+        console.log(arr);
+    });
+    $('.bt2').click(function () {
+        arr.push(4);
+        console.log(arr);
+    })
+=======
 </head>
 <body>
 <!--<a href="http://barcode.cnaidc.com/html/cnaidc.php?filetype=PNG&dpi=300&scale=2&rotation=0&font_family=Arial.ttf&font_size=14&text=6901347997326&thickness=40&start=NULL&code=BCGcode128" download="22">下载</a>-->
@@ -34,5 +57,6 @@
     });
     $("#hh").attr("href",$("#svgcode_note").attr("src"))
 
+>>>>>>> acb41bbc0625de7de15ca9b4530e50a66ea5ae8d
 </script>
 </html>

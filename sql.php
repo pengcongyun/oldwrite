@@ -69,8 +69,9 @@ update `order_product` set created='2018-12-31 00:00:00' where order_id=13585;
 update `order` set shop_organization_brand_name='零售终端',shop_alias='李倩',shop_id=382 where order_id=47992;
 update `order_product` set shop_id=382 where order_id=47992;
 
-update `back_empty` set shop_organization_brand_name='钢管厂五区小郡肝串串香',shop_alias='动物园店',shop_id=262 where back_empty_id=26273;
-update `back_empty_product` set shop_id=262 where back_empty_id=26273;
+
+update `back_empty` set shop_organization_brand_name='福知味火锅',shop_alias='新都南门桥店',shop_id=307 where back_empty_id=8102;
+update `back_empty_product` set shop_id=307 where back_empty_id=8102;
 
 delete from back_empty_product where back_empty_id=6613;
 delete from back_empty_description where back_empty_id=6613;
