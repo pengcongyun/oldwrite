@@ -50,9 +50,9 @@ update back_empty set created='2019-01-25 00:00:00' where back_empty_id=4361;
 update back_empty_product set created='2019-01-25 00:00:00' where back_empty_id=4361;
 
 <<<<<<< HEAD
-delete from back_empty_product where back_empty_id=5785;
-delete from back_empty_description where back_empty_id=5785;
-delete from back_empty where back_empty_id=5785;
+delete from back_empty_product where back_empty_id=5783;
+delete from back_empty_description where back_empty_id=5783;
+delete from back_empty where back_empty_id=5783;
 
 delete from back_empty_product where back_empty_id>=9880 and back_empty_id<=9890;
 delete from back_empty_description where back_empty_id>=9880 and back_empty_id<=9890;;
@@ -229,3 +229,17 @@ select count(*),receiver from back_empty where back_empty_id>2 and applicant_tim
 
 
 select o.order_code from `order` o left join order_product op on o.order_id=op.order_id left join shop s on s.shop_id=op.shop_id left join product p on p.product_id=op.product_id left join category c on c.category_id=p.category_id WHERE c.parent_category_id=11 and  p.category_id!=1007 and o.order_status not in (6,7) and o.finish_time>='2019-06-01 00:00:00' and o.finish_time<='2019-06-30 23:59:59"' and o.order_type=1 and op.activity_type=0 and op.product_id=98 and o.shop_id=91 group by o.shop_id,op.product_id;
+
+update shop set shop_organization_brand_id=442,alias='468店' where shop_id=783;
+update `order` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
+update `back_empty` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
+update `return_goods` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
+update `breakage` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
+update `apply_order` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
+update `pre_order` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
+update `shop_bill` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
+update `shop_suggestion` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
+update `shop_visit` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
+
+
+
