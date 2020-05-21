@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html结构，css样式，javascript行为</title>
+    <link rel="stylesheet" href="">
+    <style>
+        *{
+
+        }
+        #top{
+            height: 100px;
+            width: 200px;
+        }
+        .top{
+            background-color: red;
+        }
+        [class="top"]{
+            font-weight: bold;
+            font-size:30px;
+        }
+
+    </style>
+</head>
+<body>
+<!--选择器-->
+<div id="top" class="top" style="font-size:12px !important;">
+    曾经沧海难为水
+</div>
+<!--选择器优先级-->
+id>class>标签选择器>通配符*
+行间样式>头部样式>引入样式
+
+</body>
+</html>
