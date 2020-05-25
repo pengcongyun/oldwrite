@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子</title>
+    <style>
+        .top{
+            width: 500px;
+            height: 150px;
+            border:1px solid red;
+            padding: 12px 5px;  /*内边距  从内往外撑变大宽高*/
+            margin: 100px 200px; /*外边距  4个值 上右下左 顺时针*/
+        }
+        /*真实宽：500+5+5+1+1=510*/
+        /*真实高：150+12+12+1+1*/
+        .banner{
+            width: 100px;
+            height: 300px;
+            background-color: #00FF00;
+            position: absolute; /*绝对定位 脱离原来位置进行定位   相对于最近的有定位的父级进行定位，如果没有相对于文档定位 更灵活*/
+            left: 110px; /*right*/
+            top: 130px;/*bottom*/
+        }
+        .rel_top{
+            width: 500px;
+            height: 300px;
+            background-color: #f0ad4e;
+            position: relative; /*保留原来位置进行定位  相当于自己原来的位置进行定位  作为参照物 机架*/
+            left: 110px;
+            top: 130px;
+        }
+        .rel_fixed{ /*固定居中*/
+            background-color: #00FF00;
+            width: 500px;
+            height: 500px;
+            position: fixed; /*固定定位*/
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -250px;
+        }
+        .pa1{
+            background-color: #00FF00;
+            width: 500px;
+            height: 500px;
+            margin-top: 100px;
+            margin-left: 120px;
+            overflow: hidden;
+        }
+        .pa2{
+            background-color: #ff5a5a;
+            width: 200px;
+            height: 200px;
+            margin-top: 190px;
+            margin-left: 90px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        大发大
+    </div>
+    <div class="banner">
+        had事发地点
+    </div>
+
+    <div class="rel_top">
+        relative
+    </div>
+    <div class="rel_fixed">
+        fixed定位
+    </div>
+
+    <div class="pa1">
+        <div class="pa2">垂直方向上,margin-top过大会带着父类移动bug</div>
+        如何触发盒子的bfc,修复bug
+        1,position:absolute;2.display:inline-block;3.float:left/right;4.overflow:hidden; 大盒子溢出部分隐藏
+    </div>
+
+    <div style="float: left;width: 300px;height: 300px;background-color: red;opacity: 0.5">
+        <div style="width: 100px;height: 100px;background-color: black;">
+            浮动产生浮动流
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            text-align: center; /*right 文本对齐方式*/
+            line-height: 18px; /*文本所占高度*/
+        }
+        p{
+            text-indent: 2em; /*首行缩进 em=font-size */
+        }
+        del{
+            text-decoration: none;  /*underline   清除下划线或者其他线 a del */
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+        }
+        a:after{
+            content: '哈哈哈';
+            background-color: #00FF00;
+        }
+        a:before{
+            content: '你好啊';
+            text-decoration: underline;
+        }
+        span{
+            display: inline;
+        }
+        div{
+            display: block;
+        }
+        img{
+            /*display: inline-block;*/
+            /*display: block;*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        发电房卡SDK佛罗伦萨大放辣椒的返空，啥大富科技爱豆世纪返空了发生的离开啊都是发多少发大水发健身房进口量达监考老师放大镜第三方达发是发大发
+    </div>
+    <p>
+        发电房卡SDK佛罗伦萨大放辣椒的返空，啥大富科技爱豆世纪返空了发生的离开啊都是发多少发大水发健身房进口量达监考老师放大镜第三方达发是发大发
+    </p>
+    <del>爽肤水</del>
+    <a href="">伪类选择器</a>
+    <br>
+    1行级元素  span strong em a del
+        内容决定元素所占位置，不可通过css改变宽高
+    <span style="height: 200px;width: 50px;">
+        哈哈哈
+    </span>
+    <br>
+    2块级元素 div p ul li ol form address
+        独占一行，可通过css改变宽高
+    <br>
+
+    3行级块元素 内容决定大小，可改变宽高
+    图片只设置宽高其中一个，其他一个会等比例缩放
+    <br>
+    <!--图片并列显示无空格 不要回车空格-->
+    <img src="../01.jpg" alt=""><img src="../01.jpg" alt=""><img src="../01.jpg" alt=""><img src="../01.jpg" alt="">
+
+</body>
+</html>

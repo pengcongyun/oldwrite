@@ -18,7 +18,31 @@
         [class="top"]{
             font-weight: bold;
             font-size:30px;
+            color:#ffffff;
         }
+        div span{
+            color:red;
+        }
+
+        div.d2{
+            font-size:16px; /*默认字体大小16px*/
+            font-weight: bold; /*默认normal  lighter bolder  100-900*/
+            font-style: italic;  /*斜体 em*/
+            font-family: Arial;  /*段落的字体*/
+            color: red;  /* 1.普通英文单词（red,blue）2.颜色代码 3或者6个组成 #fff  00-ff 3.颜色函数 rgb(0,0,0) 0-255  阿里 #f40 淘宝红*/
+            width: 10px;
+            height: 30px;
+            border:1px solid red;
+            border-left-color:blue; /*单个边距颜色*/
+            border-right-color: transparent; /*透明色*/
+
+            /*border 单独写以及每条边单独设置*/
+            /*border-width: 3px;*/
+            /*border-style: solid;*/
+            /*border-color: #00FF00;*/
+
+        }
+
 
     </style>
 </head>
@@ -30,6 +54,28 @@
 <!--选择器优先级-->
 id>class>标签选择器>通配符*
 行间样式>头部样式>引入样式
+<br>
+父子选择器/派生选择器
+<div>
+    <span>父子里的</span>
+</div>
+直接子元素选择器
+<!--div>em{}-->
+<div>
+    <em></em>
+</div>
+并列选择器
+<!--div.hhh{}-->
+<div>1</div>
+<div class="hhh">2 2</div>
+<span class="hhh">33</span>
+分组选择器
+<!--.d1,-->
+<!--.d2{-->
+<!--}-->
+<div class="d1"></div>
+<div class="d2"></div>
+
 
 </body>
 </html>
