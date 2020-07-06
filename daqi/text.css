@@ -1,0 +1,81 @@
+
+
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+}
+input{
+    outline:none;
+    margin: 0;
+    padding: 0;
+}
+input::-ms-clear{display:none;}
+input::-ms-reveal{display:none;}
+
+
+*{
+    font-family: 微软雅黑;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+#background{
+    background: url(./bj.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/11.jpg',sizingMethod='scale');
+    min-width: 1400px;
+    min-height:540px
+
+}
+.package{
+    width: 1400px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    min-height:540px
+}
+.title{
+    font-size: 72px;
+    color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+}
+.tip{
+    width: 976px;
+    height: auto;
+    margin-top: 50px;
+}
+.cont{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.left_img{
+    width: 656px;
+    height: auto;
+
+}
+.right_img{
+    width: 656px;
+    height: auto;
+    margin-left: 54px;
+}
+

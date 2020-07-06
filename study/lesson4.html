@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*伪类清除浮动*/
+        .top::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .one::before{
+            content: "你好啊";
+        }
+        p{
+            overflow: hidden; /*多余隐藏*/
+            text-overflow: ellipsis; /*超出部分...*/
+            line-height: 35px;
+            white-space: nowrap; /*规定段落不进行换行*/
+            width: 300px;
+        }
+        /*p标签不能套块级元素 div*/
+
+        /*span 加上position:absolute ,float:left/right其中一个== display:inline-block   */
+        .wrap{
+            float: left;
+            width: 100px;
+            height: 20px;
+            background-color: red;
+            vertical-align: middle; /*文字对齐*/
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="one">
+
+        </div>
+        <div class="two">
+
+        </div>
+    </div>
+    <p>
+        你发递四方速递解放路水电费就开始打防守打法富士达是打发
+    </p>
+    <span class="wrap">
+        1243
+    </span>呵呵
+</body>
+</html>

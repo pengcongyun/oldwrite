@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: rgb(204,232,207);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .center{
+            position: fixed;
+            width: 1000px;
+            height: 400px;
+            left: 50%;
+            top:50%;
+            margin-left: -500px;
+            margin-top:-200px;
+            /*border: 1px solid black;*/
+        }
+        .bottom{
+            position: relative;
+            width: 40%;
+            height: 70px;
+            background-color: #ff5a5a;
+            left: 50%;
+            margin-left: -20%;
+            margin-top: 30%;
+        }
+        .left{
+            position: relative;
+            width: 200px;
+            margin-left: 10%;
+            float: left;
+        }
+        .right{
+            position: relative;
+            width: 200px;
+            margin-right: 10%;
+            float: right;
+        }
+        .right::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    <a href="http://www.baidu.com"><img src="../01.jpg" alt="" class="left"></a>
+    <a href=""><img src="../01.jpg" alt="" class="right"></a>
+    <div class="bottom">
+
+    </div>
+</div>
+</body>
+</html>

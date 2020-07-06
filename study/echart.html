@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #top{
+            width: 500px;
+            min-height: 500px;
+            border-bottom: 1px solid #f0ad4e;
+            border-left: 1px solid #3c3c3c;
+            position:relative;
+        }
+        #top .element{
+            float: left;
+            position:absolute;
+            width: 20px;
+            height: 202px;
+            background-color: #2D93CA;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+    </div>
+</body>
+<script src="../jquery.js"></script>
+<script>
+    $(function () {
+        var len=$("#top .element").length;
+        console.log(len);
+        var i=0;
+        for(i;i<len;i++){
+            // $("#top .element").eq(i).css({left:30*i+'px'});
+            $("#top .element").eq(i).css('left',30*i)
+        }
+    })
+</script>
+</html>

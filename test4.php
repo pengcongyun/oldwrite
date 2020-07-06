@@ -9,4 +9,7 @@
 //copy('D:/phpstudy/WWW/yii2_niuniu/images/product/20181203171419005.png','D:/phpstudy/WWW/yii2_niuniu/images/20181203171419005.png');
 
 $image_url=trim(strrchr('http://images.niuniustore.com/tmp/20190919143229698.png', '/'),'/');
-echo $image_url;
+echo $image_url.'<br>';
+
+$str=trim(strrchr("xxx|sad|",'|'),'|');
+echo $str;

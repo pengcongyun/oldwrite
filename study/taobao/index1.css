@@ -1,0 +1,37 @@
+/*@模块引入
+@reset.css
+*/
+@import url(reset.css); /*颜色 内容 边距 间距*/
+
+/*样式重置*/
+body,p,h1,h2,h3,h4,h5,h6{
+    margin:0;
+}
+ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+img{
+    border:none;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    color: #3c3c3c;
+}
+i{
+    font-style: normal;
+}
+input{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font:12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+p{
+    line-height: 1.5; /*  1.5*16   200%:2*16  继承时使用  */
+}
+
+
