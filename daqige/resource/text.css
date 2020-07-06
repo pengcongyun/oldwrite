@@ -28,7 +28,7 @@ input::-ms-reveal{display:none;}
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/11.jpg',sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./11.jpg',sizingMethod='scale');
     min-width: 1400px;
     min-height:540px
 
@@ -48,7 +48,7 @@ input::-ms-reveal{display:none;}
     min-height:540px
 }
 .title{
-    font-size: 72px;
+    font-size: 78px;
     color: #FFFFFF;
     width: 100%;
     height: auto;
