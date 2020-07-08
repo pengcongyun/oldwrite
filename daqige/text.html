@@ -11,12 +11,12 @@
         /*#ff{*/
         /*width: 100%;*/
         /*height: 100%;*/
-        /*background:url(../.././22.jpg) no-repeat center center;*/
+        /*background:url(../../../img/22.jpg) no-repeat center center;*/
         /*background-size:cover;*/
         /*-moz-background-size:cover; !* 老版本的 Firefox *!*/
 
         /*!*background: url("") no-repeat center center;*!*/
-        /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../.././11.jpg',sizingMethod='scale');*/
+        /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../img/11.jpg',sizingMethod='scale');*/
         /*}*/
 
     </style>
@@ -26,11 +26,17 @@
 
 <div id="background">
     <div class="package" id="login">
-        <span class="title">马边彝族自治县政务大厅信用查询系统</span>
-        <img src="./resource/tip.png" class="tip">
-        <div class="cont">
-            <a href="http://www.gsxt.gov.cn/index.html" target="_blank"><img src="./resource/right.png" class="left_img"></a>
-            <a href="http://zxgk.court.gov.cn/" target="_blank"><img src="./resource/left.png" class="right_img"></a>
+        <div class="package_xl">
+            <span class="title">马边彝族自治县政务大厅信用查询系统</span>
+            <div class="tip"><img src="./resource/tip.png"></div>
+            <div class="cont">
+                <a href="https://www.creditchina.gov.cn/" target="_blank"><img src="./resource/11.png" class="left_img"></a>
+                <a href="http://www.pbccrc.org.cn/" target="_blank"><img src="./resource/22.png" class="right_img"></a>
+            </div>
+            <div class="cont">
+                <a href="http://ha.gsxt.gov.cn/index.html" target="_blank"><img src="./resource/33.png" class="left_img"></a>
+                <a href="http://zxgk.court.gov.cn/" target="_blank"><img src="./resource/44.png" class="right_img"></a>
+            </div>
         </div>
     </div>
 </div>
@@ -44,8 +50,18 @@
     var d=document.getElementById('login');
     c.style.height=a+"px";
     d.style.height=a+"px";
+    if(a>730){
+        $('.package_xl').css('top',(a-730)/2)
+    }else {
+        $('.package_xl').css('top',0)
+    }
     window.onresize = function() {
         var b=document.documentElement.clientHeight;
+        if(b>730){
+            $('.package_xl').css('top',(b-730)/2)
+        }else {
+            $('.package_xl').css('top',0)
+        }
         document.getElementById('background').style.height=b+'px';
         document.getElementById('login').style.height=b+'px';
     };
