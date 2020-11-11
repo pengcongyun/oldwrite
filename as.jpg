@@ -1,1 +1,441 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-store" /><meta http-equiv="Connection" content="Close" /><script>function JumpSelf(){	self.location="/?WebShieldSessionVerify=42agbACJcjJSHKCJSq56";}</script><script>setTimeout("JumpSelf()",700);</script></head><body></body></html><html><head><meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-store" /><meta http-equiv="Connection" content="Close" /><script>function JumpSelf(){	self.location="/?WebShieldSessionVerify=42agbACJcjJSHKCJSq56";}</script><script>setTimeout("JumpSelf()",700);</script></head><body></body></html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-store" /><meta http-equiv="Connection" content="Close" /><script>function JumpSelf(){	self.location="/?WebShieldSessionVerify=42agbACJcjJSHKCJSq56";}</script><script>setTimeout("JumpSelf()",700);</script></head><body></body></html><html><head><meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-store" /><meta http-equiv="Connection" content="Close" /><script>function JumpSelf(){	self.location="/?WebShieldSessionVerify=42agbACJcjJSHKCJSq56";}</script><script>setTimeout("JumpSelf()",700);</script></head><body></body></html>﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>免费在线条形码生成器-条码生成制作工具</title>
+<meta name="keywords" content="条码生成,条形码生成器,条码制作,在线条码生成器,条形码生成软件,条形码在线生成">
+<meta name="description" content="条形码生成器是一款免费在线条码生成器,输入条形码号即可制作条形码,EAN13商品条码制作,code39条码,code128,UPC条码生成,GS1128,快递条形码等各种条码生成.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="http://barcode.cnaidc.com/html/images/tiaoma.jpg "/>
+<meta property="og:release_date" content="2018-12-29"/>
+<meta property="og:title" content="免费在线条形码生成器-条码生成制作工具"/>
+<meta property="og:description" content="条形码生成器是一款免费在线条码生成器,输入条形码号即可制作条形码,EAN13商品条码制作,code39条码,code128,UPC条码生成,GS1128,快递条形码等各种条码生成."/>
+<link type="text/css" rel="stylesheet" href="style.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+<link href="http://barcode.cnaidc.com/html/zzsc.css" rel="stylesheet" type="text/css">
+<script src="http://barcode.cnaidc.com/html/jquery-1.8.3.min.js"></script>
+<script src="http://barcode.cnaidc.com/html/jquery.jqprint-0.3.js"></script>
+<script type="text/javascript" src="http://barcode.cnaidc.com/html/zzsc.js"></script>
+<script src="barcode.js"></script>
+
+
+<script language="javascript">
+
+function printbar(){
+	$("#div_print").jqprint();
+}
+</script>
+ 
+
+
+</head>
+<body class="BCGcode128b" style="height:1000px" >
+
+
+
+
+<div id="wrapper">
+  <div id="webheader">
+ <!--   <div id="weblogo">
+      <h1><a href="http://barcode.cnaidc.com">条码生成器 </a></h1>
+      <p> design by <a href="http://barcode.cnaidc.com" target="_blank">Barcode.cnaidc.com</a></p>
+    </div>-->
+    <div id="logort"> </div>
+  </div>
+  <!-- end #header -->
+  <div id="menu">
+    <ul>
+      <li><a href="http://tiaoma.cnaidc.com" target="_blank">商品条码查询</a></li>
+      <li><a href="http://barcode.cnaidc.com" target="_blank">条码生成</a></li>
+      <li><a href="http://qrcode.cnaidc.com" target="_blank">二维码生成</a></li>
+      <li><a href="http://tmsq.cnaidc.com" target="_blank">商品条码申请</a></li>
+     <li><a href="http://tiaoma.mvp.baixing.com/weixinsaomaluru" target="_blank" >微信扫码价录入</a></li>
+      
+    </ul>
+  </div>
+<div id="headlad">
+
+<table>
+<!--广告u182589-->  <tr>
+    <td style="width:960px; height=90px">
+<script type="text/javascript" src="//a.cnaidc.com/production/3nv5rg.js?mhqqjwej=p"></script></td>
+  </tr>
+
+
+<tr>
+    <td style="width:960px; height=50px"> <a href="http://wpa.qq.com/msgrd?v=3&uin=26454645&site=qq&menu=yes" target="_blank"><img src="images/bn960x70.gif" width="960" height="70" /></a></td>
+  </tr>
+<!--淘宝广告
+  <tr>
+    <td style="width:960px; height=100px"><a href="https://huanledazhong.taobao.com/search.htm?spm=a1z10.1-c.w5002-1190716724.1.AYftA6&search=y" target="_blank"><img src="images/tonz960100.gif" width="960" height="100" /></a></td>
+  </tr>-->
+</table>
+</div>
+
+
+
+<div class="b6"></div>
+    <div id="page">
+
+   
+    <div class="header">
+
+
+  <!--内容开始-->  
+    <header>
+        <ul>
+          <li>
+<p> <img src="images/tiaoma.jpg" alt="条形码生成器" width="121" height="75"  style="float:left;"><span  style="font:16px";><strong>条形码生成器</strong>:</span> 一款免费的在线Code128条码生成器,输入条码内容即可生成条形码,简单快速的Code128条形码生成器;生成code39 code128 code93 EAN128 EAN8 UPC MSI快递条形码等类型的条形码。欢迎加入条码生成 QQ群:7856386,批量软件或申请商品条码请联系QQ：26454645</p>
+          </li></ul>
+        <nav>
+            <label for="type">1:请选择条码类型</label>
+            <select size="1" id="type" name="type"><option value="BCGcodabar.php">Codabar</option><option value="BCGcode11.php">Code11</option><option value="BCGcode39index.php">Code39</option><option value="BCGcode39extended.php">Code 39 Extended</option><option value="BCGcode93.php">Code93</option><option value="BCGcode128.php">Code128</option><option value="BCGcode128b.php" selected="selected">Code128</option><option value="BCGean8.php">EAN8位商品</option><option value="BCGean13.php">EAN13位商品</option><option value="BCGgs1128.php">GS1128 (EAN-128)</option><option value="BCGisbn.php">ISBN</option><option value="BCGi25.php">Interleaved 2 of 5</option><option value="BCGs25.php">Standard 2 of 5</option><option value="BCGmsi.php">MSI Plessey</option><option value="BCGupca.php">UPC-A</option><option value="BCGupce.php">UPC-E</option><option value="BCGupcext2.php">UPC Extenstion 2 Digits</option><option value="BCGupcext5.php">UPC Extenstion 5 Digits</option><option value="BCGpostnet.php">Postnet</option><option value="BCGintelligentmail.php">Intelligent Mail</option><option value="BCGothercode.php">Other Barcode</option></select>            <a class="info explanation" href="#"><img src="info.gif" alt="Explanation" /></a>
+        </nav>
+           
+    </header>
+</div>
+   <form action="/html/BCGcode128b.php" method="post">
+    
+    <h2>当前条码类型是：Code128条形码.  <a style="text-decoration:none" href="http://www.cnaidc.com/tech/3467.html" target="_blank">常见条码类型说明</a></h2>
+     
+    <div class="configurations">
+      <section class="configurations">
+        <h3>2:请配置以下内</h3>
+<!--广告u2102606--><script type="text/javascript" src="//a.cnaidc.com/common/js/resource/6qgxw.js?upe=yveovo"></script>
+          </br><table>
+              <colgroup>
+                  <col class="col1" />
+                  <col class="col2" />
+              </colgroup>
+              <tbody>
+                  <tr>
+                      <td><label for="filetype">生成图片格式</label><!--<span class="wxds">hot</span>--></td>
+                      <td><select size="1" id="filetype" name="filetype"><option value="PNG" selected="selected">PNG格式 - Portable Network Graphics</option><option value="JPEG">JPEG格式 - Joint Photographic Experts Group</option><option value="GIF">GIF格式 - Graphics Interchange Format</option></select></td>
+                        
+                     
+                      
+                  </tr>
+                  <tr>
+                      <td><label for="dpi">分辨率</label></td>
+                      <td class="zhujie"><input id="dpi" name="dpi" type="number" min="72" max="300" required="required" value="300" /> &nbsp;&nbsp;默认72数值越大图片越清晰 范围72-300<span id="dpiUnavailable">分辨率设置只在PNG或JPEG格式下有效</span></td>
+                  </tr>
+                    <tr>
+                        <td><label for="thickness">高度</label></td>
+                        <td class="zhujie"><input id="thickness" name="thickness" type="number" min="20" max="90" step="5" required="required" value="40" />&nbsp;&nbsp;设置条码的高度,数据越大高度越高。范围20-90</td>
+                    </tr>                  <tr>
+                      <td><label for="scale">大小</label></td>
+                      <td class="zhujie"><input id="scale" name="scale" type="number" min="1" max="6" required="required" value="2" />&nbsp;&nbsp;条码尺寸大小数值越大尺寸越大,范围1-6</td>
+                  </tr>
+                  <tr>
+                      <td><label for="rotation">旋转</label></td>
+                      <td class="zhujie"><select size="1" id="rotation" name="rotation"><option value="0" selected="selected">不旋转</option><option value="90">90&deg; 度</option><option value="180">180&deg; 度</option><option value="270">270&deg; 度</option></select> &nbsp;&nbsp;可以进行90-270度的旋转</td>
+                  </tr>
+                  <tr>
+                      <td><label for="font_family">字体/字号大小</label></td>
+                      <td class="zhujie"><select size="1" id="font_family" name="font_family"><option value="0" selected="selected">No Label</option><option value="Arial.ttf" selected="selected">Arial.ttf</option><option value="shangpintiaoma.ttf">shangpintiaoma.ttf</option><option value="tt0142m_.ttf">tt0142m_.ttf</option><option value="tt0144m_.ttf">tt0144m_.ttf</option></select> <input id="font_size" name="font_size" type="number" min="1" max="30" value="14" />&nbsp;&nbsp;调整字体及字体的大小,范围1-30</td>
+                  </tr>
+                  <tr>
+                      <td><label for="text">输入条码号</label></td>
+                      <td>
+                          <div class="generate" style="float: left"><input id="text" name="text" type="text" required="required" value="" /> <input type="submit"  value="生成" /></div> 
+                          <div class="possiblechars" style="float: right;margin-right: 20px; position: relative;"><a href="#" class="info characters"><img src="info2.gif" alt="Help" /></a></div>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+
+        </section>
+    </div> 
+  
+   
+   <!--内容结束-->     
+   
+
+
+
+<ul id="specificOptions">
+    <li class="option">
+        <div class="title">
+            <label for="start">代码集</label>
+        </div>
+        <div class="value">
+            <select size="1" id="start" name="start"><option value="NULL">自动</option><option value="A">Code 128-A</option><option value="B">Code 128-B</option><option value="C">Code 128-C</option></select>        </div>
+    </li>
+</ul>
+
+<div id="validCharacters">
+    <h3>Valid Characters</h3>
+    <input type="button" value="NUL" data-output="%00" data-escaped="true" /><input type="button" value="SOH" data-output="%01" data-escaped="true" /><input type="button" value="STX" data-output="%02" data-escaped="true" /><input type="button" value="ETX" data-output="%03" data-escaped="true" /><input type="button" value="EOT" data-output="%04" data-escaped="true" /><input type="button" value="ENQ" data-output="%05" data-escaped="true" /><input type="button" value="ACK" data-output="%06" data-escaped="true" /><input type="button" value="BEL" data-output="%07" data-escaped="true" /><input type="button" value="BS" data-output="%08" data-escaped="true" /><input type="button" value="TAB" data-output="%09" data-escaped="true" /><input type="button" value="LF" data-output="%0A" data-escaped="true" /><input type="button" value="VT" data-output="%0B" data-escaped="true" /><input type="button" value="FF" data-output="%0C" data-escaped="true" /><input type="button" value="CR" data-output="%0D" data-escaped="true" /><input type="button" value="SO" data-output="%0E" data-escaped="true" /><input type="button" value="SI" data-output="%0F" data-escaped="true" /><input type="button" value="DLE" data-output="%10" data-escaped="true" /><input type="button" value="DC1" data-output="%11" data-escaped="true" /><input type="button" value="DC2" data-output="%12" data-escaped="true" /><input type="button" value="DC3" data-output="%13" data-escaped="true" /><input type="button" value="DC4" data-output="%14" data-escaped="true" /><input type="button" value="NAK" data-output="%15" data-escaped="true" /><input type="button" value="SYN" data-output="%16" data-escaped="true" /><input type="button" value="ETB" data-output="%17" data-escaped="true" /><input type="button" value="CAN" data-output="%18" data-escaped="true" /><input type="button" value="EM" data-output="%19" data-escaped="true" /><input type="button" value="SUB" data-output="%1A" data-escaped="true" /><input type="button" value="ESC" data-output="%1B" data-escaped="true" /><input type="button" value="FS" data-output="%1C" data-escaped="true" /><input type="button" value="GS" data-output="%1D" data-escaped="true" /><input type="button" value="RS" data-output="%1E" data-escaped="true" /><input type="button" value="US" data-output="%1F" data-escaped="true" /><input type="button" value="&nbsp;" data-output="%20" data-escaped="true" /><input type="button" value="!" data-output="%21" data-escaped="true" /><input type="button" value="&quot;" data-output="%22" data-escaped="true" /><input type="button" value="#" data-output="%23" data-escaped="true" /><input type="button" value="$" data-output="%24" data-escaped="true" /><input type="button" value="%" data-output="%25" data-escaped="true" /><input type="button" value="&" data-output="%26" data-escaped="true" /><input type="button" value="'" data-output="%27" data-escaped="true" /><input type="button" value="(" data-output="%28" data-escaped="true" /><input type="button" value=")" data-output="%29" data-escaped="true" /><input type="button" value="*" data-output="%2A" data-escaped="true" /><input type="button" value="+" data-output="%2B" data-escaped="true" /><input type="button" value="," data-output="%2C" data-escaped="true" /><input type="button" value="-" data-output="%2D" data-escaped="true" /><input type="button" value="." data-output="%2E" data-escaped="true" /><input type="button" value="/" data-output="%2F" data-escaped="true" /><input type="button" value="0" data-output="%30" data-escaped="true" /><input type="button" value="1" data-output="%31" data-escaped="true" /><input type="button" value="2" data-output="%32" data-escaped="true" /><input type="button" value="3" data-output="%33" data-escaped="true" /><input type="button" value="4" data-output="%34" data-escaped="true" /><input type="button" value="5" data-output="%35" data-escaped="true" /><input type="button" value="6" data-output="%36" data-escaped="true" /><input type="button" value="7" data-output="%37" data-escaped="true" /><input type="button" value="8" data-output="%38" data-escaped="true" /><input type="button" value="9" data-output="%39" data-escaped="true" /><input type="button" value=":" data-output="%3A" data-escaped="true" /><input type="button" value=";" data-output="%3B" data-escaped="true" /><input type="button" value="&lt;" data-output="%3C" data-escaped="true" /><input type="button" value="=" data-output="%3D" data-escaped="true" /><input type="button" value="&gt;" data-output="%3E" data-escaped="true" /><input type="button" value="?" data-output="%3F" data-escaped="true" /><input type="button" value="@" data-output="%40" data-escaped="true" /><input type="button" value="A" data-output="%41" data-escaped="true" /><input type="button" value="B" data-output="%42" data-escaped="true" /><input type="button" value="C" data-output="%43" data-escaped="true" /><input type="button" value="D" data-output="%44" data-escaped="true" /><input type="button" value="E" data-output="%45" data-escaped="true" /><input type="button" value="F" data-output="%46" data-escaped="true" /><input type="button" value="G" data-output="%47" data-escaped="true" /><input type="button" value="H" data-output="%48" data-escaped="true" /><input type="button" value="I" data-output="%49" data-escaped="true" /><input type="button" value="J" data-output="%4A" data-escaped="true" /><input type="button" value="K" data-output="%4B" data-escaped="true" /><input type="button" value="L" data-output="%4C" data-escaped="true" /><input type="button" value="M" data-output="%4D" data-escaped="true" /><input type="button" value="N" data-output="%4E" data-escaped="true" /><input type="button" value="O" data-output="%4F" data-escaped="true" /><input type="button" value="P" data-output="%50" data-escaped="true" /><input type="button" value="Q" data-output="%51" data-escaped="true" /><input type="button" value="R" data-output="%52" data-escaped="true" /><input type="button" value="S" data-output="%53" data-escaped="true" /><input type="button" value="T" data-output="%54" data-escaped="true" /><input type="button" value="U" data-output="%55" data-escaped="true" /><input type="button" value="V" data-output="%56" data-escaped="true" /><input type="button" value="W" data-output="%57" data-escaped="true" /><input type="button" value="X" data-output="%58" data-escaped="true" /><input type="button" value="Y" data-output="%59" data-escaped="true" /><input type="button" value="Z" data-output="%5A" data-escaped="true" /><input type="button" value="[" data-output="%5B" data-escaped="true" /><input type="button" value="\" data-output="%5C" data-escaped="true" /><input type="button" value="]" data-output="%5D" data-escaped="true" /><input type="button" value="^" data-output="%5E" data-escaped="true" /><input type="button" value="_" data-output="%5F" data-escaped="true" /><input type="button" value="`" data-output="%60" data-escaped="true" /><input type="button" value="a" data-output="%61" data-escaped="true" /><input type="button" value="b" data-output="%62" data-escaped="true" /><input type="button" value="c" data-output="%63" data-escaped="true" /><input type="button" value="d" data-output="%64" data-escaped="true" /><input type="button" value="e" data-output="%65" data-escaped="true" /><input type="button" value="f" data-output="%66" data-escaped="true" /><input type="button" value="g" data-output="%67" data-escaped="true" /><input type="button" value="h" data-output="%68" data-escaped="true" /><input type="button" value="i" data-output="%69" data-escaped="true" /><input type="button" value="j" data-output="%6A" data-escaped="true" /><input type="button" value="k" data-output="%6B" data-escaped="true" /><input type="button" value="l" data-output="%6C" data-escaped="true" /><input type="button" value="m" data-output="%6D" data-escaped="true" /><input type="button" value="n" data-output="%6E" data-escaped="true" /><input type="button" value="o" data-output="%6F" data-escaped="true" /><input type="button" value="p" data-output="%70" data-escaped="true" /><input type="button" value="q" data-output="%71" data-escaped="true" /><input type="button" value="r" data-output="%72" data-escaped="true" /><input type="button" value="s" data-output="%73" data-escaped="true" /><input type="button" value="t" data-output="%74" data-escaped="true" /><input type="button" value="u" data-output="%75" data-escaped="true" /><input type="button" value="v" data-output="%76" data-escaped="true" /><input type="button" value="w" data-output="%77" data-escaped="true" /><input type="button" value="x" data-output="%78" data-escaped="true" /><input type="button" value="y" data-output="%79" data-escaped="true" /><input type="button" value="z" data-output="%7A" data-escaped="true" /><input type="button" value="{" data-output="%7B" data-escaped="true" /><input type="button" value="|" data-output="%7C" data-escaped="true" /><input type="button" value="}" data-output="%7D" data-escaped="true" /><input type="button" value="~" data-output="%7E" data-escaped="true" /><input type="button" value="DEL" data-output="%7F" data-escaped="true" /></div>
+
+<div id="explanation">
+    <h3>Explanation</h3>
+    <ul>
+        <li>Code 128 is a high-density alphanumeric symbology.</li>
+        <li>Used extensively worldwide.</li>
+        <li>Code 128 is designed to encode 128 full ASCII characters.</li>
+        <li>The symbology includes a checksum digit.</li>
+        <li>Code 128A handles capital letters<br />Code 128B handles capital letters and lowercase<br />Code 128C handles group of 2 numbers</li>
+        <li>Your browser may not be able to write the special characters (NUL, SOH, etc.) but you can write them with the code.</li>
+    </ul>
+</div>
+
+﻿
+
+            <div class="output">
+                <section class="output">
+                    <h3>3:生成输出 右键条码图片另存为可下载到本地</h3>
+                    
+   <div id="imageOutput">
+
+ 
+
+                  
+                        条码尚未生成,请配置以上参数生成</br>                     <!--广告 u1182589--><br></br><script type="text/javascript" src="//a.cnaidc.com/production/3nv5rg.js?mhqqjwej=p"></script> 
+                    </div>
+
+                </section>
+
+            </div>
+        </form>
+
+
+</div>
+
+ 
+        <div class="footer">
+       
+            <footer>
+<p>友情链接：：<a href="http://www.fabuke.net">发布客</a> |<a href="http://www.cnaidc.com">中国自动识别网</a> | <a href="http://tiaoma.cnaidc.com" target="_blank">条码查询</a> <a href="http://barcode.cnaidc.com/html/BCGean13.php" target="_blank">EAN13商品条码生成</a> | <a href="http://barcode.cnaidc.com/html/BCGcode39.php" target="_blank">CODE39</a> | <a href="http://barcode.cnaidc.com/html/BCGcode128.php" target="_blank">CODE128</a> | <a href="http://barcode.cnaidc.com/html/BCGcode93.php" target="_blank">CODE93</a> | <a href="http://barcode.cnaidc.com/html/BCGgs1128.php" target="_blank">GS1-128</a> | <a href="http://barcode.cnaidc.com/html/BCGupca.php" target="_blank">UPCA</a> | <a href="http://barcode.cnaidc.com/html/BCGcodabar.php" target="_blank">CODEBAR</a> | <a href="http://barcode.cnaidc.com/html/BCGs25.php" target="_blank">Standard 2of5</a> |  <a href="http://barcode.cnaidc.com/html/BCGisbn.php" target="_blank">ISBN</a> | <a href="http://barcode.cnaidc.com/html/BCGmsi.php" target="_blank">MSI条码</a></p> 
+Copyright (c) 2013 Barbode.cnaidc.com All rights reserved.粤ICP备14059655号<script src="http://s20.cnzz.com/stat.php?id=3026019&web_id=3026019" language="JavaScript"></script><br />            
+</footer>
+        </div>
+<!--在线客服  -->
+<div id="top"></div>
+<!--在线客服  -->
+
+
+    </body>
+	
+</html>﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>免费在线条形码生成器-条码生成制作工具</title>
+<meta name="keywords" content="条码生成,条形码生成器,条码制作,在线条码生成器,条形码生成软件,条形码在线生成">
+<meta name="description" content="条形码生成器是一款免费在线条码生成器,输入条形码号即可制作条形码,EAN13商品条码制作,code39条码,code128,UPC条码生成,GS1128,快递条形码等各种条码生成.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="http://barcode.cnaidc.com/html/images/tiaoma.jpg "/>
+<meta property="og:release_date" content="2018-12-29"/>
+<meta property="og:title" content="免费在线条形码生成器-条码生成制作工具"/>
+<meta property="og:description" content="条形码生成器是一款免费在线条码生成器,输入条形码号即可制作条形码,EAN13商品条码制作,code39条码,code128,UPC条码生成,GS1128,快递条形码等各种条码生成."/>
+<link type="text/css" rel="stylesheet" href="style.css" />
+ <link rel="shortcut icon" href="favicon.ico" />
+<link href="http://barcode.cnaidc.com/html/zzsc.css" rel="stylesheet" type="text/css">
+<script src="http://barcode.cnaidc.com/html/jquery-1.8.3.min.js"></script>
+<script src="http://barcode.cnaidc.com/html/jquery.jqprint-0.3.js"></script>
+<script type="text/javascript" src="http://barcode.cnaidc.com/html/zzsc.js"></script>
+<script src="barcode.js"></script>
+
+
+<script language="javascript">
+
+function printbar(){
+	$("#div_print").jqprint();
+}
+</script>
+ 
+
+
+</head>
+<body class="BCGcode128b" style="height:1000px" >
+
+
+
+
+<div id="wrapper">
+  <div id="webheader">
+ <!--   <div id="weblogo">
+      <h1><a href="http://barcode.cnaidc.com">条码生成器 </a></h1>
+      <p> design by <a href="http://barcode.cnaidc.com" target="_blank">Barcode.cnaidc.com</a></p>
+    </div>-->
+    <div id="logort"> </div>
+  </div>
+  <!-- end #header -->
+  <div id="menu">
+    <ul>
+      <li><a href="http://tiaoma.cnaidc.com" target="_blank">商品条码查询</a></li>
+      <li><a href="http://barcode.cnaidc.com" target="_blank">条码生成</a></li>
+      <li><a href="http://qrcode.cnaidc.com" target="_blank">二维码生成</a></li>
+      <li><a href="http://tmsq.cnaidc.com" target="_blank">商品条码申请</a></li>
+     <li><a href="http://tiaoma.mvp.baixing.com/weixinsaomaluru" target="_blank" >微信扫码价录入</a></li>
+      
+    </ul>
+  </div>
+<div id="headlad">
+
+<table>
+<!--广告u182589-->  <tr>
+    <td style="width:960px; height=90px">
+<script type="text/javascript" src="//a.cnaidc.com/production/3nv5rg.js?mhqqjwej=p"></script></td>
+  </tr>
+
+
+<tr>
+    <td style="width:960px; height=50px"> <a href="http://wpa.qq.com/msgrd?v=3&uin=26454645&site=qq&menu=yes" target="_blank"><img src="images/bn960x70.gif" width="960" height="70" /></a></td>
+  </tr>
+<!--淘宝广告
+  <tr>
+    <td style="width:960px; height=100px"><a href="https://huanledazhong.taobao.com/search.htm?spm=a1z10.1-c.w5002-1190716724.1.AYftA6&search=y" target="_blank"><img src="images/tonz960100.gif" width="960" height="100" /></a></td>
+  </tr>-->
+</table>
+</div>
+
+
+
+<div class="b6"></div>
+    <div id="page">
+
+   
+    <div class="header">
+
+
+  <!--内容开始-->  
+    <header>
+        <ul>
+          <li>
+<p> <img src="images/tiaoma.jpg" alt="条形码生成器" width="121" height="75"  style="float:left;"><span  style="font:16px";><strong>条形码生成器</strong>:</span> 一款免费的在线Code128条码生成器,输入条码内容即可生成条形码,简单快速的Code128条形码生成器;生成code39 code128 code93 EAN128 EAN8 UPC MSI快递条形码等类型的条形码。欢迎加入条码生成 QQ群:7856386,批量软件或申请商品条码请联系QQ：26454645</p>
+          </li></ul>
+        <nav>
+            <label for="type">1:请选择条码类型</label>
+            <select size="1" id="type" name="type"><option value="BCGcodabar.php">Codabar</option><option value="BCGcode11.php">Code11</option><option value="BCGcode39index.php">Code39</option><option value="BCGcode39extended.php">Code 39 Extended</option><option value="BCGcode93.php">Code93</option><option value="BCGcode128.php">Code128</option><option value="BCGcode128b.php" selected="selected">Code128</option><option value="BCGean8.php">EAN8位商品</option><option value="BCGean13.php">EAN13位商品</option><option value="BCGgs1128.php">GS1128 (EAN-128)</option><option value="BCGisbn.php">ISBN</option><option value="BCGi25.php">Interleaved 2 of 5</option><option value="BCGs25.php">Standard 2 of 5</option><option value="BCGmsi.php">MSI Plessey</option><option value="BCGupca.php">UPC-A</option><option value="BCGupce.php">UPC-E</option><option value="BCGupcext2.php">UPC Extenstion 2 Digits</option><option value="BCGupcext5.php">UPC Extenstion 5 Digits</option><option value="BCGpostnet.php">Postnet</option><option value="BCGintelligentmail.php">Intelligent Mail</option><option value="BCGothercode.php">Other Barcode</option></select>            <a class="info explanation" href="#"><img src="info.gif" alt="Explanation" /></a>
+        </nav>
+           
+    </header>
+</div>
+   <form action="/html/BCGcode128b.php" method="post">
+    
+    <h2>当前条码类型是：Code128条形码.  <a style="text-decoration:none" href="http://www.cnaidc.com/tech/3467.html" target="_blank">常见条码类型说明</a></h2>
+     
+    <div class="configurations">
+      <section class="configurations">
+        <h3>2:请配置以下内</h3>
+<!--广告u2102606--><script type="text/javascript" src="//a.cnaidc.com/common/js/resource/6qgxw.js?upe=yveovo"></script>
+          </br><table>
+              <colgroup>
+                  <col class="col1" />
+                  <col class="col2" />
+              </colgroup>
+              <tbody>
+                  <tr>
+                      <td><label for="filetype">生成图片格式</label><!--<span class="wxds">hot</span>--></td>
+                      <td><select size="1" id="filetype" name="filetype"><option value="PNG" selected="selected">PNG格式 - Portable Network Graphics</option><option value="JPEG">JPEG格式 - Joint Photographic Experts Group</option><option value="GIF">GIF格式 - Graphics Interchange Format</option></select></td>
+                        
+                     
+                      
+                  </tr>
+                  <tr>
+                      <td><label for="dpi">分辨率</label></td>
+                      <td class="zhujie"><input id="dpi" name="dpi" type="number" min="72" max="300" required="required" value="300" /> &nbsp;&nbsp;默认72数值越大图片越清晰 范围72-300<span id="dpiUnavailable">分辨率设置只在PNG或JPEG格式下有效</span></td>
+                  </tr>
+                    <tr>
+                        <td><label for="thickness">高度</label></td>
+                        <td class="zhujie"><input id="thickness" name="thickness" type="number" min="20" max="90" step="5" required="required" value="40" />&nbsp;&nbsp;设置条码的高度,数据越大高度越高。范围20-90</td>
+                    </tr>                  <tr>
+                      <td><label for="scale">大小</label></td>
+                      <td class="zhujie"><input id="scale" name="scale" type="number" min="1" max="6" required="required" value="2" />&nbsp;&nbsp;条码尺寸大小数值越大尺寸越大,范围1-6</td>
+                  </tr>
+                  <tr>
+                      <td><label for="rotation">旋转</label></td>
+                      <td class="zhujie"><select size="1" id="rotation" name="rotation"><option value="0" selected="selected">不旋转</option><option value="90">90&deg; 度</option><option value="180">180&deg; 度</option><option value="270">270&deg; 度</option></select> &nbsp;&nbsp;可以进行90-270度的旋转</td>
+                  </tr>
+                  <tr>
+                      <td><label for="font_family">字体/字号大小</label></td>
+                      <td class="zhujie"><select size="1" id="font_family" name="font_family"><option value="0" selected="selected">No Label</option><option value="Arial.ttf" selected="selected">Arial.ttf</option><option value="shangpintiaoma.ttf">shangpintiaoma.ttf</option><option value="tt0142m_.ttf">tt0142m_.ttf</option><option value="tt0144m_.ttf">tt0144m_.ttf</option></select> <input id="font_size" name="font_size" type="number" min="1" max="30" value="14" />&nbsp;&nbsp;调整字体及字体的大小,范围1-30</td>
+                  </tr>
+                  <tr>
+                      <td><label for="text">输入条码号</label></td>
+                      <td>
+                          <div class="generate" style="float: left"><input id="text" name="text" type="text" required="required" value="" /> <input type="submit"  value="生成" /></div> 
+                          <div class="possiblechars" style="float: right;margin-right: 20px; position: relative;"><a href="#" class="info characters"><img src="info2.gif" alt="Help" /></a></div>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+
+        </section>
+    </div> 
+  
+   
+   <!--内容结束-->     
+   
+
+
+
+<ul id="specificOptions">
+    <li class="option">
+        <div class="title">
+            <label for="start">代码集</label>
+        </div>
+        <div class="value">
+            <select size="1" id="start" name="start"><option value="NULL">自动</option><option value="A">Code 128-A</option><option value="B">Code 128-B</option><option value="C">Code 128-C</option></select>        </div>
+    </li>
+</ul>
+
+<div id="validCharacters">
+    <h3>Valid Characters</h3>
+    <input type="button" value="NUL" data-output="%00" data-escaped="true" /><input type="button" value="SOH" data-output="%01" data-escaped="true" /><input type="button" value="STX" data-output="%02" data-escaped="true" /><input type="button" value="ETX" data-output="%03" data-escaped="true" /><input type="button" value="EOT" data-output="%04" data-escaped="true" /><input type="button" value="ENQ" data-output="%05" data-escaped="true" /><input type="button" value="ACK" data-output="%06" data-escaped="true" /><input type="button" value="BEL" data-output="%07" data-escaped="true" /><input type="button" value="BS" data-output="%08" data-escaped="true" /><input type="button" value="TAB" data-output="%09" data-escaped="true" /><input type="button" value="LF" data-output="%0A" data-escaped="true" /><input type="button" value="VT" data-output="%0B" data-escaped="true" /><input type="button" value="FF" data-output="%0C" data-escaped="true" /><input type="button" value="CR" data-output="%0D" data-escaped="true" /><input type="button" value="SO" data-output="%0E" data-escaped="true" /><input type="button" value="SI" data-output="%0F" data-escaped="true" /><input type="button" value="DLE" data-output="%10" data-escaped="true" /><input type="button" value="DC1" data-output="%11" data-escaped="true" /><input type="button" value="DC2" data-output="%12" data-escaped="true" /><input type="button" value="DC3" data-output="%13" data-escaped="true" /><input type="button" value="DC4" data-output="%14" data-escaped="true" /><input type="button" value="NAK" data-output="%15" data-escaped="true" /><input type="button" value="SYN" data-output="%16" data-escaped="true" /><input type="button" value="ETB" data-output="%17" data-escaped="true" /><input type="button" value="CAN" data-output="%18" data-escaped="true" /><input type="button" value="EM" data-output="%19" data-escaped="true" /><input type="button" value="SUB" data-output="%1A" data-escaped="true" /><input type="button" value="ESC" data-output="%1B" data-escaped="true" /><input type="button" value="FS" data-output="%1C" data-escaped="true" /><input type="button" value="GS" data-output="%1D" data-escaped="true" /><input type="button" value="RS" data-output="%1E" data-escaped="true" /><input type="button" value="US" data-output="%1F" data-escaped="true" /><input type="button" value="&nbsp;" data-output="%20" data-escaped="true" /><input type="button" value="!" data-output="%21" data-escaped="true" /><input type="button" value="&quot;" data-output="%22" data-escaped="true" /><input type="button" value="#" data-output="%23" data-escaped="true" /><input type="button" value="$" data-output="%24" data-escaped="true" /><input type="button" value="%" data-output="%25" data-escaped="true" /><input type="button" value="&" data-output="%26" data-escaped="true" /><input type="button" value="'" data-output="%27" data-escaped="true" /><input type="button" value="(" data-output="%28" data-escaped="true" /><input type="button" value=")" data-output="%29" data-escaped="true" /><input type="button" value="*" data-output="%2A" data-escaped="true" /><input type="button" value="+" data-output="%2B" data-escaped="true" /><input type="button" value="," data-output="%2C" data-escaped="true" /><input type="button" value="-" data-output="%2D" data-escaped="true" /><input type="button" value="." data-output="%2E" data-escaped="true" /><input type="button" value="/" data-output="%2F" data-escaped="true" /><input type="button" value="0" data-output="%30" data-escaped="true" /><input type="button" value="1" data-output="%31" data-escaped="true" /><input type="button" value="2" data-output="%32" data-escaped="true" /><input type="button" value="3" data-output="%33" data-escaped="true" /><input type="button" value="4" data-output="%34" data-escaped="true" /><input type="button" value="5" data-output="%35" data-escaped="true" /><input type="button" value="6" data-output="%36" data-escaped="true" /><input type="button" value="7" data-output="%37" data-escaped="true" /><input type="button" value="8" data-output="%38" data-escaped="true" /><input type="button" value="9" data-output="%39" data-escaped="true" /><input type="button" value=":" data-output="%3A" data-escaped="true" /><input type="button" value=";" data-output="%3B" data-escaped="true" /><input type="button" value="&lt;" data-output="%3C" data-escaped="true" /><input type="button" value="=" data-output="%3D" data-escaped="true" /><input type="button" value="&gt;" data-output="%3E" data-escaped="true" /><input type="button" value="?" data-output="%3F" data-escaped="true" /><input type="button" value="@" data-output="%40" data-escaped="true" /><input type="button" value="A" data-output="%41" data-escaped="true" /><input type="button" value="B" data-output="%42" data-escaped="true" /><input type="button" value="C" data-output="%43" data-escaped="true" /><input type="button" value="D" data-output="%44" data-escaped="true" /><input type="button" value="E" data-output="%45" data-escaped="true" /><input type="button" value="F" data-output="%46" data-escaped="true" /><input type="button" value="G" data-output="%47" data-escaped="true" /><input type="button" value="H" data-output="%48" data-escaped="true" /><input type="button" value="I" data-output="%49" data-escaped="true" /><input type="button" value="J" data-output="%4A" data-escaped="true" /><input type="button" value="K" data-output="%4B" data-escaped="true" /><input type="button" value="L" data-output="%4C" data-escaped="true" /><input type="button" value="M" data-output="%4D" data-escaped="true" /><input type="button" value="N" data-output="%4E" data-escaped="true" /><input type="button" value="O" data-output="%4F" data-escaped="true" /><input type="button" value="P" data-output="%50" data-escaped="true" /><input type="button" value="Q" data-output="%51" data-escaped="true" /><input type="button" value="R" data-output="%52" data-escaped="true" /><input type="button" value="S" data-output="%53" data-escaped="true" /><input type="button" value="T" data-output="%54" data-escaped="true" /><input type="button" value="U" data-output="%55" data-escaped="true" /><input type="button" value="V" data-output="%56" data-escaped="true" /><input type="button" value="W" data-output="%57" data-escaped="true" /><input type="button" value="X" data-output="%58" data-escaped="true" /><input type="button" value="Y" data-output="%59" data-escaped="true" /><input type="button" value="Z" data-output="%5A" data-escaped="true" /><input type="button" value="[" data-output="%5B" data-escaped="true" /><input type="button" value="\" data-output="%5C" data-escaped="true" /><input type="button" value="]" data-output="%5D" data-escaped="true" /><input type="button" value="^" data-output="%5E" data-escaped="true" /><input type="button" value="_" data-output="%5F" data-escaped="true" /><input type="button" value="`" data-output="%60" data-escaped="true" /><input type="button" value="a" data-output="%61" data-escaped="true" /><input type="button" value="b" data-output="%62" data-escaped="true" /><input type="button" value="c" data-output="%63" data-escaped="true" /><input type="button" value="d" data-output="%64" data-escaped="true" /><input type="button" value="e" data-output="%65" data-escaped="true" /><input type="button" value="f" data-output="%66" data-escaped="true" /><input type="button" value="g" data-output="%67" data-escaped="true" /><input type="button" value="h" data-output="%68" data-escaped="true" /><input type="button" value="i" data-output="%69" data-escaped="true" /><input type="button" value="j" data-output="%6A" data-escaped="true" /><input type="button" value="k" data-output="%6B" data-escaped="true" /><input type="button" value="l" data-output="%6C" data-escaped="true" /><input type="button" value="m" data-output="%6D" data-escaped="true" /><input type="button" value="n" data-output="%6E" data-escaped="true" /><input type="button" value="o" data-output="%6F" data-escaped="true" /><input type="button" value="p" data-output="%70" data-escaped="true" /><input type="button" value="q" data-output="%71" data-escaped="true" /><input type="button" value="r" data-output="%72" data-escaped="true" /><input type="button" value="s" data-output="%73" data-escaped="true" /><input type="button" value="t" data-output="%74" data-escaped="true" /><input type="button" value="u" data-output="%75" data-escaped="true" /><input type="button" value="v" data-output="%76" data-escaped="true" /><input type="button" value="w" data-output="%77" data-escaped="true" /><input type="button" value="x" data-output="%78" data-escaped="true" /><input type="button" value="y" data-output="%79" data-escaped="true" /><input type="button" value="z" data-output="%7A" data-escaped="true" /><input type="button" value="{" data-output="%7B" data-escaped="true" /><input type="button" value="|" data-output="%7C" data-escaped="true" /><input type="button" value="}" data-output="%7D" data-escaped="true" /><input type="button" value="~" data-output="%7E" data-escaped="true" /><input type="button" value="DEL" data-output="%7F" data-escaped="true" /></div>
+
+<div id="explanation">
+    <h3>Explanation</h3>
+    <ul>
+        <li>Code 128 is a high-density alphanumeric symbology.</li>
+        <li>Used extensively worldwide.</li>
+        <li>Code 128 is designed to encode 128 full ASCII characters.</li>
+        <li>The symbology includes a checksum digit.</li>
+        <li>Code 128A handles capital letters<br />Code 128B handles capital letters and lowercase<br />Code 128C handles group of 2 numbers</li>
+        <li>Your browser may not be able to write the special characters (NUL, SOH, etc.) but you can write them with the code.</li>
+    </ul>
+</div>
+
+﻿
+
+            <div class="output">
+                <section class="output">
+                    <h3>3:生成输出 右键条码图片另存为可下载到本地</h3>
+                    
+   <div id="imageOutput">
+
+ 
+
+                  
+                        条码尚未生成,请配置以上参数生成</br>                     <!--广告 u1182589--><br></br><script type="text/javascript" src="//a.cnaidc.com/production/3nv5rg.js?mhqqjwej=p"></script> 
+                    </div>
+
+                </section>
+
+            </div>
+        </form>
+
+
+</div>
+
+ 
+        <div class="footer">
+       
+            <footer>
+<p>友情链接：：<a href="http://www.fabuke.net">发布客</a> |<a href="http://www.cnaidc.com">中国自动识别网</a> | <a href="http://tiaoma.cnaidc.com" target="_blank">条码查询</a> <a href="http://barcode.cnaidc.com/html/BCGean13.php" target="_blank">EAN13商品条码生成</a> | <a href="http://barcode.cnaidc.com/html/BCGcode39.php" target="_blank">CODE39</a> | <a href="http://barcode.cnaidc.com/html/BCGcode128.php" target="_blank">CODE128</a> | <a href="http://barcode.cnaidc.com/html/BCGcode93.php" target="_blank">CODE93</a> | <a href="http://barcode.cnaidc.com/html/BCGgs1128.php" target="_blank">GS1-128</a> | <a href="http://barcode.cnaidc.com/html/BCGupca.php" target="_blank">UPCA</a> | <a href="http://barcode.cnaidc.com/html/BCGcodabar.php" target="_blank">CODEBAR</a> | <a href="http://barcode.cnaidc.com/html/BCGs25.php" target="_blank">Standard 2of5</a> |  <a href="http://barcode.cnaidc.com/html/BCGisbn.php" target="_blank">ISBN</a> | <a href="http://barcode.cnaidc.com/html/BCGmsi.php" target="_blank">MSI条码</a></p> 
+Copyright (c) 2013 Barbode.cnaidc.com All rights reserved.粤ICP备14059655号<script src="http://s20.cnzz.com/stat.php?id=3026019&web_id=3026019" language="JavaScript"></script><br />            
+</footer>
+        </div>
+<!--在线客服  -->
+<div id="top"></div>
+<!--在线客服  -->
+
+
+    </body>
+	
+</html>
