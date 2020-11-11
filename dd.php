@@ -10,8 +10,6 @@
 <body>
 <form action="http://api.newniu.com/heshi/order/order?signature=23" method="post">
     <input type="text" name="body">
-
-    <input type="submit">
 </form>
 </body>
 </html>
