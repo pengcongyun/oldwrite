@@ -2,7 +2,7 @@ select sob.organization_brand_name,c.alias,date_format(op.created,"%Y-%m-%d"),op
 
 
 select o.order_code,o.shop_organization_brand_name,o.shop_alias,od.order_note from order_description od join `order` o on od.order_id=o.order_id where od.order_note!='' and o.created>"2018-10-12 00:00:00" and o.created<"2018-10-19 00:00:00" into outfile 'D:\xx.xls';
-
+select order_code,shop_organization_brand_name,shop_alias,order_note from order_description join `order` on order_id=od.order_id where od.order_note!='' and o.created >'2017-10-12 00:00:00' and o.created<'2018-10-19 00:00:00' into outfile 'D:\xx.xls';
 
 
 select back_empty_id from back_empty where shop_id in (25,26,27,28,29,30,31,45,93);
