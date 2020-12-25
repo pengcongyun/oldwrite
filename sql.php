@@ -242,6 +242,6 @@ update `shop_bill` set shop_organization_brand_name='自然馋',shop_alias='468�
 update `shop_suggestion` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
 update `shop_visit` set shop_organization_brand_name='自然馋',shop_alias='468店' where shop_id=783;
 
-update `return_goods` set shop_organization_brand_name='零售终端',shop_alias='李倩',shop_id=382 where return_goods_id=3066;
-update `return_goods_product` set shop_id=382 where return_goods_id=3066;
+update `return_goods` set shop_organization_brand_name='零售终端',shop_alias='李晓艳',shop_id=1252 where return_goods_id=6489;
+update `return_goods_product` set shop_id=1252 where return_goods_id=6489;
 
