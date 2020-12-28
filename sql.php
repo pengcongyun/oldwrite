@@ -245,3 +245,8 @@ update `shop_visit` set shop_organization_brand_name='自然馋',shop_alias='468
 update `return_goods` set shop_organization_brand_name='零售终端',shop_alias='李晓艳',shop_id=1252 where return_goods_id=6489;
 update `return_goods_product` set shop_id=1252 where return_goods_id=6489;
 
+update `order` set shop_organization_brand_name='麻辣唐',shop_alias='倪家桥店',shop_id=1318,shop_settlement=1 where order_id=148777;
+update order_description set shop_id=1318 where order_id=148777;
+update order_product set shop_id=1318 where order_id=148777;
+
+update shop_bill set shop_id=1318 where order_id=148777;
