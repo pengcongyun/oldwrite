@@ -250,3 +250,32 @@ update order_description set shop_id=1318 where order_id=148777;
 update order_product set shop_id=1318 where order_id=148777;
 
 update shop_bill set shop_id=1318 where order_id=148777;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
