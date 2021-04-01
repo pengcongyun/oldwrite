@@ -117,8 +117,8 @@ delete from configuration where configuration_id>1;
 delete from `user` where user_id>2;
 
 
-update user_channel set channel_status=1 where user_id=3;
-update user_channel_permission set channel_permission_status=1 where user_id=3;
+update user_channel set channel_status=1 where user_id=236;
+update user_channel_permission set channel_permission_status=1 where user_id=236;
 
 
 
